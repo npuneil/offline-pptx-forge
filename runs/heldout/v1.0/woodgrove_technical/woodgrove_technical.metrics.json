@@ -1,0 +1,180 @@
+{
+ "harness": "1.0",
+ "brief": "woodgrove_technical",
+ "template": "microsoft",
+ "lane": "local",
+ "model": "qwen3-coder-30b",
+ "llm_calls": 1,
+ "prompt_tokens": 1880,
+ "completion_tokens": 2192,
+ "decode_tps": 46.3,
+ "ttft_s": 7.384,
+ "generate_s": 54.78,
+ "render_s": 0.15,
+ "total_s": 54.93,
+ "power": {
+  "seconds": 54.77,
+  "samples": 210,
+  "gpu_avg_w": 40.6,
+  "gpu_peak_w": 44.8,
+  "gpu_wh": 0.6175,
+  "platform_wh": 0.1521,
+  "total_wh": 0.7697
+ },
+ "economics": {
+  "lane": "local",
+  "energy_wh": 0.77,
+  "cost_usd": 0.0001,
+  "co2e_g": 0.282,
+  "water_ml": 0.0,
+  "basis": "measured GPU board power (nvidia-smi, 250 ms) + 10 W platform allowance; electricity only"
+ },
+ "grade": {
+  "auto_score": 90.4,
+  "auto_grade": "A-",
+  "scores": {
+   "visual_richness": 20.4,
+   "text_lightness": 20.0,
+   "analogy": 10.0,
+   "brief_coverage": 15.0,
+   "claim_discipline": 15.0,
+   "structure": 10.0
+  },
+  "detail": {
+   "visual_richness": {
+    "infographic_share": 0.89,
+    "distinct_layouts": 7,
+    "icons_per_slide": 2.7,
+    "canvas_diagrams": 1
+   },
+   "text_lightness": {
+    "avg_words_per_slide": 27.2,
+    "max_words": 43
+   },
+   "analogy": {
+    "analogy_slides": 2,
+    "analogy_cue_slides": 0
+   },
+   "brief_coverage": {
+    "covered": 10.0,
+    "topics": 10,
+    "missing": []
+   },
+   "claim_discipline": {
+    "numbers_on_canvas": 25,
+    "untraceable": [],
+    "guardrail_violations": []
+   },
+   "structure": {
+    "strict_json": true,
+    "slides": 11,
+    "notes_slides": 10,
+    "fallbacks": 0,
+    "overflows": 0,
+    "shrunk_texts": 1
+   }
+  }
+ },
+ "pptx": "runs/heldout/v1.0/woodgrove_technical/woodgrove_technical-microsoft.pptx",
+ "render_summary": [
+  {
+   "index": 0,
+   "layout": "title",
+   "words": 18,
+   "overflows": 0,
+   "shrunk": 0,
+   "icons": 4,
+   "issues": []
+  },
+  {
+   "index": 1,
+   "layout": "stack",
+   "words": 32,
+   "overflows": 0,
+   "shrunk": 0,
+   "icons": 3,
+   "issues": []
+  },
+  {
+   "index": 2,
+   "layout": "analogy",
+   "words": 43,
+   "overflows": 0,
+   "shrunk": 0,
+   "icons": 2,
+   "issues": []
+  },
+  {
+   "index": 3,
+   "layout": "canvas",
+   "words": 30,
+   "overflows": 0,
+   "shrunk": 1,
+   "icons": 4,
+   "issues": []
+  },
+  {
+   "index": 4,
+   "layout": "flow",
+   "words": 25,
+   "overflows": 0,
+   "shrunk": 0,
+   "icons": 3,
+   "issues": []
+  },
+  {
+   "index": 5,
+   "layout": "bars",
+   "words": 28,
+   "overflows": 0,
+   "shrunk": 0,
+   "icons": 1,
+   "issues": []
+  },
+  {
+   "index": 6,
+   "layout": "analogy",
+   "words": 37,
+   "overflows": 0,
+   "shrunk": 0,
+   "icons": 2,
+   "issues": []
+  },
+  {
+   "index": 7,
+   "layout": "hub",
+   "words": 19,
+   "overflows": 0,
+   "shrunk": 0,
+   "icons": 5,
+   "issues": []
+  },
+  {
+   "index": 8,
+   "layout": "statement",
+   "words": 18,
+   "overflows": 0,
+   "shrunk": 0,
+   "icons": 1,
+   "issues": []
+  },
+  {
+   "index": 9,
+   "layout": "timeline",
+   "words": 22,
+   "overflows": 0,
+   "shrunk": 0,
+   "icons": 3,
+   "issues": []
+  },
+  {
+   "index": 10,
+   "layout": "cta",
+   "words": 27,
+   "overflows": 0,
+   "shrunk": 0,
+   "icons": 3,
+   "issues": []
+  }
+ ]
+}

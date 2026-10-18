@@ -1,0 +1,293 @@
+{
+ "harness": "1.1",
+ "brief": "contoso_sales",
+ "template": "microsoft",
+ "lane": "local",
+ "model": "qwen3-coder-30b",
+ "llm_calls": 3,
+ "prompt_tokens": 16149,
+ "completion_tokens": 9976,
+ "decode_tps": 61.4,
+ "ttft_s": 2.283,
+ "generate_s": 179.95,
+ "render_s": 0.17,
+ "total_s": 180.12,
+ "power": {
+  "seconds": 179.94,
+  "samples": 691,
+  "gpu_avg_w": 45.3,
+  "gpu_peak_w": 60.2,
+  "gpu_wh": 2.2666,
+  "platform_wh": 0.4998,
+  "total_wh": 2.7664
+ },
+ "economics": {
+  "lane": "local",
+  "energy_wh": 2.766,
+  "cost_usd": 0.00036,
+  "co2e_g": 1.015,
+  "water_ml": 0.0,
+  "basis": "measured GPU board power (nvidia-smi, 250 ms) + 10 W platform allowance; electricity only"
+ },
+ "grade": {
+  "auto_score": 92.4,
+  "auto_grade": "A-",
+  "scores": {
+   "visual_richness": 23.0,
+   "text_lightness": 14.4,
+   "analogy": 15,
+   "brief_coverage": 15.0,
+   "claim_discipline": 15.0,
+   "structure": 10.0
+  },
+  "detail": {
+   "visual_richness": {
+    "infographic_share": 1.0,
+    "distinct_layouts": 8,
+    "icons_per_slide": 4.2,
+    "canvas_diagrams": 1
+   },
+   "text_lightness": {
+    "avg_words_per_slide": 38.4,
+    "max_words": 52
+   },
+   "analogy": {
+    "analogy_slides": 2,
+    "analogy_cue_slides": 2
+   },
+   "brief_coverage": {
+    "covered": 7.0,
+    "topics": 7,
+    "missing": []
+   },
+   "claim_discipline": {
+    "numbers_on_canvas": 21,
+    "untraceable": [],
+    "guardrail_violations": []
+   },
+   "structure": {
+    "strict_json": true,
+    "slides": 11,
+    "notes_slides": 11,
+    "fallbacks": 0,
+    "overflows": 0,
+    "shrunk_texts": 3
+   }
+  }
+ },
+ "pptx": "runs/v1.1/contoso_sales/contoso_sales-microsoft.pptx",
+ "render_summary": [
+  {
+   "index": 0,
+   "layout": "title",
+   "words": 16,
+   "overflows": 0,
+   "shrunk": 0,
+   "icons": 4,
+   "issues": []
+  },
+  {
+   "index": 1,
+   "layout": "kpis",
+   "words": 36,
+   "overflows": 0,
+   "shrunk": 1,
+   "icons": 4,
+   "issues": []
+  },
+  {
+   "index": 2,
+   "layout": "analogy",
+   "words": 52,
+   "overflows": 0,
+   "shrunk": 0,
+   "icons": 2,
+   "issues": []
+  },
+  {
+   "index": 3,
+   "layout": "compare",
+   "words": 45,
+   "overflows": 0,
+   "shrunk": 0,
+   "icons": 7,
+   "issues": []
+  },
+  {
+   "index": 4,
+   "layout": "canvas",
+   "words": 39,
+   "overflows": 0,
+   "shrunk": 1,
+   "icons": 7,
+   "issues": []
+  },
+  {
+   "index": 5,
+   "layout": "matrix",
+   "words": 49,
+   "overflows": 0,
+   "shrunk": 0,
+   "icons": 4,
+   "issues": []
+  },
+  {
+   "index": 6,
+   "layout": "analogy",
+   "words": 48,
+   "overflows": 0,
+   "shrunk": 0,
+   "icons": 2,
+   "issues": []
+  },
+  {
+   "index": 7,
+   "layout": "stack",
+   "words": 33,
+   "overflows": 0,
+   "shrunk": 0,
+   "icons": 3,
+   "issues": []
+  },
+  {
+   "index": 8,
+   "layout": "flow",
+   "words": 36,
+   "overflows": 0,
+   "shrunk": 1,
+   "icons": 5,
+   "issues": []
+  },
+  {
+   "index": 9,
+   "layout": "timeline",
+   "words": 30,
+   "overflows": 0,
+   "shrunk": 0,
+   "icons": 4,
+   "issues": []
+  },
+  {
+   "index": 10,
+   "layout": "cta",
+   "words": 38,
+   "overflows": 0,
+   "shrunk": 0,
+   "icons": 4,
+   "issues": []
+  }
+ ],
+ "lint_history": [
+  {
+   "pass": "draft",
+   "issues": 17,
+   "codes": [
+    "fit",
+    "guardrail",
+    "notes",
+    "title_long",
+    "words",
+    "woven_analogy"
+   ]
+  },
+  {
+   "pass": "repair1",
+   "issues": 16,
+   "accepted": true,
+   "fixed_slides": 11,
+   "codes": [
+    "fit",
+    "guardrail",
+    "notes",
+    "title_long",
+    "words",
+    "woven_analogy"
+   ]
+  },
+  {
+   "pass": "repair2",
+   "issues": 14,
+   "accepted": true,
+   "fixed_slides": 11,
+   "codes": [
+    "fit",
+    "guardrail",
+    "title_long",
+    "words"
+   ]
+  }
+ ],
+ "lint_remaining": [
+  {
+   "slide": 0,
+   "code": "guardrail",
+   "msg": "remove 'replacing Copilot' (replacement claim) from slide and notes; state the positive version"
+  },
+  {
+   "slide": 1,
+   "code": "words",
+   "msg": "36 visible words; cut to <= 28 (shorter details, fewer items)"
+  },
+  {
+   "slide": 1,
+   "code": "fit",
+   "msg": "some text does not fit its shape; shorten the longest labels/details"
+  },
+  {
+   "slide": 2,
+   "code": "words",
+   "msg": "52 visible words; cut to <= 28 (shorter details, fewer items)"
+  },
+  {
+   "slide": 2,
+   "code": "title_long",
+   "msg": "title has 9 words; <= 7"
+  },
+  {
+   "slide": 3,
+   "code": "words",
+   "msg": "45 visible words; cut to <= 28 (shorter details, fewer items)"
+  },
+  {
+   "slide": 4,
+   "code": "words",
+   "msg": "39 visible words; cut to <= 28 (shorter details, fewer items)"
+  },
+  {
+   "slide": 4,
+   "code": "fit",
+   "msg": "some text does not fit its shape; shorten the longest labels/details"
+  },
+  {
+   "slide": 5,
+   "code": "words",
+   "msg": "49 visible words; cut to <= 28 (shorter details, fewer items)"
+  },
+  {
+   "slide": 6,
+   "code": "words",
+   "msg": "48 visible words; cut to <= 28 (shorter details, fewer items)"
+  },
+  {
+   "slide": 7,
+   "code": "words",
+   "msg": "33 visible words; cut to <= 28 (shorter details, fewer items)"
+  },
+  {
+   "slide": 8,
+   "code": "words",
+   "msg": "36 visible words; cut to <= 28 (shorter details, fewer items)"
+  },
+  {
+   "slide": 8,
+   "code": "fit",
+   "msg": "some text does not fit its shape; shorten the longest labels/details"
+  },
+  {
+   "slide": 10,
+   "code": "words",
+   "msg": "38 visible words; cut to <= 28 (shorter details, fewer items)"
+  }
+ ],
+ "measured_facts": []
+}

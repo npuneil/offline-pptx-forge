@@ -1,0 +1,34 @@
+{
+ "deck-238": {
+  "source": "local-v1.1",
+  "brief": "contoso_sales"
+ },
+ "deck-977": {
+  "source": "local-v1.1",
+  "brief": "zava_technical"
+ },
+ "deck-502": {
+  "source": "local-v1.0",
+  "brief": "contoso_sales"
+ },
+ "deck-748": {
+  "source": "local-v1.0",
+  "brief": "zava_technical"
+ },
+ "deck-900": {
+  "source": "gpt-6-astra-max",
+  "brief": "contoso_sales"
+ },
+ "deck-646": {
+  "source": "gpt-6-astra-max",
+  "brief": "zava_technical"
+ },
+ "deck-277": {
+  "source": "claude-opus-5.5-max",
+  "brief": "contoso_sales"
+ },
+ "deck-315": {
+  "source": "claude-opus-5.5-max",
+  "brief": "zava_technical"
+ }
+}

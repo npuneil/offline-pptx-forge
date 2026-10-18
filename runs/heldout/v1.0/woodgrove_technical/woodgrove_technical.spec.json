@@ -1,0 +1,300 @@
+{
+ "title": "Local AI on Surface Laptop Ultra",
+ "client": "Woodgrove Bank",
+ "slides": [
+  {
+   "layout": "title",
+   "kicker": "Surface Laptop Ultra with NVIDIA RTX Spark",
+   "title": "Running Local AI Analytics",
+   "subtitle": "12 Analysts. 3 Weeks. No Cloud Calls.",
+   "hero_icons": [
+    "laptop",
+    "gpu",
+    "memory",
+    "cloud"
+   ]
+  },
+  {
+   "layout": "stack",
+   "title": "Local AI Stack Architecture",
+   "takeaway": "Analysts work with sensitive data locally",
+   "data": {
+    "side_label": "Local AI Layer",
+    "layers": [
+     {
+      "label": "Document Extraction",
+      "detail": "Loan files to text",
+      "icon": "document"
+     },
+     {
+      "label": "RAG over Policy Docs",
+      "detail": "Credit manuals, local index",
+      "icon": "search"
+     },
+     {
+      "label": "Notebook Code Assistance",
+      "detail": "Qwen3-Coder 30B",
+      "icon": "code"
+     }
+    ]
+   },
+   "notes": "Analysts use the device to extract documents, query policy manuals, and get code help without cloud calls. This ensures sensitive data stays local."
+  },
+  {
+   "layout": "analogy",
+   "title": "Local AI = Personal Assistant",
+   "takeaway": "AI works like a trusted assistant",
+   "data": {
+    "concept": {
+     "label": "Local AI",
+     "icon": "ai"
+    },
+    "analog": {
+     "label": "Personal Assistant",
+     "icon": "person"
+    },
+    "pairs": [
+     {
+      "concept": "Document Extraction",
+      "analog": "Transcribing notes from a loan file"
+     },
+     {
+      "concept": "RAG over Policy Docs",
+      "analog": "Looking up credit rules in a manual"
+     },
+     {
+      "concept": "Code Assistance",
+      "analog": "Writing code with help from a mentor"
+     }
+    ]
+   },
+   "notes": "Local AI works like a personal assistant who knows the rules and can act on sensitive data without sharing it. It's private, fast, and reliable."
+  },
+  {
+   "layout": "canvas",
+   "title": "Device Hardware & Memory Views",
+   "takeaway": "64 GB VRAM, 128 GB RAM, 20 CPU cores",
+   "data": {
+    "elements": [
+     {
+      "type": "box",
+      "x": 2,
+      "y": 1,
+      "w": 3,
+      "h": 2,
+      "label": "NVIDIA RTX Spark N1X",
+      "icon": "gpu",
+      "tone": "primary"
+     },
+     {
+      "type": "box",
+      "x": 6,
+      "y": 1,
+      "w": 3,
+      "h": 2,
+      "label": "20 CPU Cores",
+      "icon": "chip",
+      "tone": "accent1"
+     },
+     {
+      "type": "box",
+      "x": 2,
+      "y": 4,
+      "w": 3,
+      "h": 2,
+      "label": "128 GB RAM",
+      "icon": "memory",
+      "tone": "muted"
+     },
+     {
+      "type": "box",
+      "x": 6,
+      "y": 4,
+      "w": 3,
+      "h": 2,
+      "label": "64 GB VRAM",
+      "icon": "memory",
+      "tone": "accent2"
+     },
+     {
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "label": "Surface Laptop Ultra",
+      "size": "l",
+      "tone": "text"
+     }
+    ]
+   },
+   "notes": "The device has 128 GB RAM, with 64 GB visible to the GPU. VRAM and system RAM are separate views. The device uses 20 CPU cores and the RTX Spark GPU for AI compute."
+  },
+  {
+   "layout": "flow",
+   "title": "Local Runtimes",
+   "takeaway": "llama.cpp and Foundry Local run models natively",
+   "data": {
+    "steps": [
+     {
+      "label": "Model Load",
+      "detail": "llama.cpp ARM64 CUDA",
+      "icon": "download"
+     },
+     {
+      "label": "Inference",
+      "detail": "Foundry Local with CUDA EP",
+      "icon": "bolt"
+     },
+     {
+      "label": "Execution",
+      "detail": "Native ARM64, no cloud",
+      "icon": "server"
+     }
+    ]
+   },
+   "notes": "Models run locally using llama.cpp and Foundry Local. Inference is done with the CUDA execution provider on ARM64. No cloud calls are made during runtime."
+  },
+  {
+   "layout": "bars",
+   "title": "Model Throughput (Tokens/s)",
+   "takeaway": "MoE models decode faster than dense ones",
+   "data": {
+    "unit": "tokens/sec",
+    "highlight": "Qwen3-Coder 30B",
+    "icon": "speed",
+    "caption": "Single-stream decode performance",
+    "bars": [
+     {
+      "label": "Gemma 4 26B",
+      "value": 72
+     },
+     {
+      "label": "Qwen3-Coder 30B (MoE)",
+      "value": 86
+     },
+     {
+      "label": "Dense Qwen3.6 27B",
+      "value": 13
+     }
+    ]
+   },
+   "notes": "MoE models like Qwen3-Coder decode faster than dense models due to expert activation. Gemma 4 and Qwen3-Coder perform better in single-stream decode."
+  },
+  {
+   "layout": "analogy",
+   "title": "MoE vs Dense = Specialized Experts",
+   "takeaway": "MoE uses only active experts per token",
+   "data": {
+    "concept": {
+     "label": "MoE Model",
+     "icon": "puzzle"
+    },
+    "analog": {
+     "label": "Specialized Team",
+     "icon": "team"
+    },
+    "pairs": [
+     {
+      "concept": "Active Experts",
+      "analog": "Experts working on a task"
+     },
+     {
+      "concept": "Dense Model",
+      "analog": "All team members working together"
+     },
+     {
+      "concept": "Performance",
+      "analog": "Faster task completion with MoE"
+     }
+    ]
+   },
+   "notes": "MoE models activate only a few experts per token, making them faster than dense models of similar size. It's like having a team where only specialists work on each task."
+  },
+  {
+   "layout": "hub",
+   "title": "Hybrid Routing",
+   "takeaway": "Local for sensitive data, cloud for research",
+   "data": {
+    "center": {
+     "label": "Analyst Workbench",
+     "icon": "laptop"
+    },
+    "spokes": [
+     {
+      "label": "Loan Files",
+      "icon": "document"
+     },
+     {
+      "label": "Policy Docs",
+      "icon": "library"
+     },
+     {
+      "label": "Code Assistance",
+      "icon": "code"
+     },
+     {
+      "label": "Market Research",
+      "icon": "chart"
+     }
+    ]
+   },
+   "notes": "Hybrid routing sends sensitive data like loan files and policy docs to the local lane. Non-sensitive work, such as market research, can route to cloud models."
+  },
+  {
+   "layout": "statement",
+   "title": "Made on Device",
+   "takeaway": "This deck was generated locally",
+   "data": {
+    "icon": "laptop",
+    "text": "Generated with Qwen3-Coder 30B via llama.cpp",
+    "sub": "No cloud calls used"
+   },
+   "notes": "This presentation itself was created on the device using Qwen3-Coder 30B through llama.cpp. No data left the machine."
+  },
+  {
+   "layout": "timeline",
+   "title": "Pilot Timeline",
+   "takeaway": "12 analysts for 3 weeks",
+   "data": {
+    "milestones": [
+     {
+      "when": "Week 1",
+      "label": "Setup & Training",
+      "icon": "education"
+     },
+     {
+      "when": "Week 2",
+      "label": "Full Pilot Execution",
+      "icon": "timer"
+     },
+     {
+      "when": "Week 3",
+      "label": "Evaluation & Feedback",
+      "icon": "check"
+     }
+    ]
+   },
+   "notes": "The pilot spans 3 weeks with 12 analysts. It measures extraction quality, latency, and analyst experience. Results will guide future local AI adoption."
+  },
+  {
+   "layout": "cta",
+   "title": "Ready to Pilot?",
+   "takeaway": "Join the 12-analyst trial",
+   "data": {
+    "steps": [
+     {
+      "label": "Sign Up",
+      "detail": "Access to local AI stack",
+      "icon": "signup"
+     },
+     {
+      "label": "Run Pilot",
+      "detail": "3-week technical trial",
+      "icon": "timer"
+     }
+    ],
+    "ask": "Start your local AI journey with 12 analysts"
+   },
+   "notes": "Woodgrove Bank invites 12 analysts to join a 3-week pilot. They can test document extraction, RAG, and code assistance locally. This is the first step toward a secure and private AI workflow."
+  }
+ ]
+}

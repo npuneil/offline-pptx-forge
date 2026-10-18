@@ -1,0 +1,1196 @@
+{
+ "rubric": "1.0.1",
+ "rows": [
+  {
+   "config": "local-v1.0",
+   "lane": "local",
+   "brief": "contoso_sales",
+   "auto": 84.9,
+   "scores": {
+    "visual_richness": 21.0,
+    "text_lightness": 20.0,
+    "analogy": 6.0,
+    "brief_coverage": 12.9,
+    "claim_discipline": 15.0,
+    "structure": 10.0
+   },
+   "judge_raw": 21,
+   "judge": 21,
+   "seconds": 54.79,
+   "out_tokens": 2238,
+   "in_tokens": 1752,
+   "calls": 1,
+   "tps": 41.7,
+   "cost": 9.5e-05,
+   "wh": 0.73,
+   "co2": 0.268,
+   "water": 0.0,
+   "slides": 11,
+   "lint": null,
+   "measured_facts": null,
+   "overall": 63.5,
+   "grade": "D"
+  },
+  {
+   "config": "local-v1.0",
+   "lane": "local",
+   "brief": "zava_technical",
+   "auto": 88.1,
+   "scores": {
+    "visual_richness": 18.1,
+    "text_lightness": 20.0,
+    "analogy": 10.0,
+    "brief_coverage": 15.0,
+    "claim_discipline": 15.0,
+    "structure": 10.0
+   },
+   "judge_raw": 18,
+   "judge": 18,
+   "seconds": 72.62,
+   "out_tokens": 2229,
+   "in_tokens": 1920,
+   "calls": 1,
+   "tps": 37.6,
+   "cost": 0.000113,
+   "wh": 0.872,
+   "co2": 0.32,
+   "water": 0.0,
+   "slides": 12,
+   "lint": null,
+   "measured_facts": null,
+   "overall": 62.0,
+   "grade": "D"
+  },
+  {
+   "config": "local-v1.1",
+   "lane": "local",
+   "brief": "contoso_sales",
+   "auto": 92.4,
+   "scores": {
+    "visual_richness": 23.0,
+    "text_lightness": 14.4,
+    "analogy": 15,
+    "brief_coverage": 15.0,
+    "claim_discipline": 15.0,
+    "structure": 10.0
+   },
+   "judge_raw": 37,
+   "judge": 37.0,
+   "seconds": 179.95,
+   "out_tokens": 9976,
+   "in_tokens": 16149,
+   "calls": 3,
+   "tps": 61.4,
+   "cost": 0.00036,
+   "wh": 2.766,
+   "co2": 1.015,
+   "water": 0.0,
+   "slides": 11,
+   "lint": [
+    {
+     "pass": "draft",
+     "issues": 17,
+     "codes": [
+      "fit",
+      "guardrail",
+      "notes",
+      "title_long",
+      "words",
+      "woven_analogy"
+     ]
+    },
+    {
+     "pass": "repair1",
+     "issues": 16,
+     "accepted": true,
+     "fixed_slides": 11,
+     "codes": [
+      "fit",
+      "guardrail",
+      "notes",
+      "title_long",
+      "words",
+      "woven_analogy"
+     ]
+    },
+    {
+     "pass": "repair2",
+     "issues": 14,
+     "accepted": true,
+     "fixed_slides": 11,
+     "codes": [
+      "fit",
+      "guardrail",
+      "title_long",
+      "words"
+     ]
+    }
+   ],
+   "measured_facts": [],
+   "overall": 83.2,
+   "grade": "B"
+  },
+  {
+   "config": "local-v1.1",
+   "lane": "local",
+   "brief": "zava_technical",
+   "auto": 93.8,
+   "scores": {
+    "visual_richness": 22.7,
+    "text_lightness": 16.1,
+    "analogy": 15,
+    "brief_coverage": 15.0,
+    "claim_discipline": 15.0,
+    "structure": 10.0
+   },
+   "judge_raw": 41,
+   "judge": 41.0,
+   "seconds": 302.32,
+   "out_tokens": 9044,
+   "in_tokens": 16022,
+   "calls": 3,
+   "tps": 38.5,
+   "cost": 0.000464,
+   "wh": 3.572,
+   "co2": 1.311,
+   "water": 0.0,
+   "slides": 11,
+   "lint": [
+    {
+     "pass": "draft",
+     "issues": 13,
+     "codes": [
+      "fit",
+      "notes",
+      "title_long",
+      "words"
+     ]
+    },
+    {
+     "pass": "repair1",
+     "issues": 10,
+     "accepted": true,
+     "fixed_slides": 10,
+     "codes": [
+      "fit",
+      "words"
+     ]
+    },
+    {
+     "pass": "repair2",
+     "issues": 10,
+     "accepted": false,
+     "fixed_slides": 9,
+     "codes": [
+      "analogy_pairs",
+      "cta_steps",
+      "fit",
+      "words"
+     ]
+    }
+   ],
+   "measured_facts": [
+    "Measured during this run on this device: 302 s drafting time, 9,044 tokens generated, 3.6 Wh energy, 0 cloud calls."
+   ],
+   "overall": 87.9,
+   "grade": "B+"
+  },
+  {
+   "config": "claude-opus-5.5-low",
+   "lane": "cloud",
+   "brief": "contoso_sales",
+   "auto": 83.9,
+   "scores": {
+    "visual_richness": 22.7,
+    "text_lightness": 15.6,
+    "analogy": 6.0,
+    "brief_coverage": 15.0,
+    "claim_discipline": 14.6,
+    "structure": 10.0
+   },
+   "judge_raw": 35,
+   "judge": 35,
+   "seconds": 27.5,
+   "wall_seconds": 68.7,
+   "out_tokens": 3283,
+   "in_tokens": 1590,
+   "reasoning_tokens": 0,
+   "truncated_calls": 0,
+   "cost": 0.07202,
+   "wh": 3.611,
+   "co2": 1.325,
+   "water": 11.82,
+   "slides": 11,
+   "overall": 77.0,
+   "grade": "C+"
+  },
+  {
+   "config": "claude-opus-5.5-low",
+   "lane": "cloud",
+   "brief": "zava_technical",
+   "auto": 86.6,
+   "scores": {
+    "visual_richness": 20.4,
+    "text_lightness": 16.2,
+    "analogy": 10.0,
+    "brief_coverage": 15.0,
+    "claim_discipline": 15.0,
+    "structure": 10.0
+   },
+   "judge_raw": 37,
+   "judge": 37,
+   "seconds": 28.7,
+   "wall_seconds": 71.1,
+   "out_tokens": 3489,
+   "in_tokens": 1738,
+   "reasoning_tokens": 0,
+   "truncated_calls": 0,
+   "cost": 0.076732,
+   "wh": 3.838,
+   "co2": 1.409,
+   "water": 12.56,
+   "slides": 12,
+   "overall": 80.3,
+   "grade": "B-"
+  },
+  {
+   "config": "claude-opus-5.5-high",
+   "lane": "cloud",
+   "brief": "contoso_sales",
+   "auto": 83.8,
+   "scores": {
+    "visual_richness": 22.1,
+    "text_lightness": 11.7,
+    "analogy": 10.0,
+    "brief_coverage": 15.0,
+    "claim_discipline": 15.0,
+    "structure": 10.0
+   },
+   "judge_raw": 40,
+   "judge": 40,
+   "seconds": 79.0,
+   "wall_seconds": 120.8,
+   "out_tokens": 8562,
+   "in_tokens": 1590,
+   "reasoning_tokens": 4127,
+   "truncated_calls": 0,
+   "cost": 0.1776,
+   "wh": 9.418,
+   "co2": 3.456,
+   "water": 30.82,
+   "slides": 12,
+   "overall": 81.9,
+   "grade": "B-"
+  },
+  {
+   "config": "claude-opus-5.5-high",
+   "lane": "cloud",
+   "brief": "zava_technical",
+   "auto": 83.2,
+   "scores": {
+    "visual_richness": 21.6,
+    "text_lightness": 11.6,
+    "analogy": 10.0,
+    "brief_coverage": 15.0,
+    "claim_discipline": 15.0,
+    "structure": 10.0
+   },
+   "judge_raw": 40,
+   "judge": 40,
+   "seconds": 97.4,
+   "wall_seconds": 140.0,
+   "out_tokens": 11131,
+   "in_tokens": 1738,
+   "reasoning_tokens": 6246,
+   "truncated_calls": 0,
+   "cost": 0.229572,
+   "wh": 12.244,
+   "co2": 4.494,
+   "water": 40.07,
+   "slides": 12,
+   "overall": 81.6,
+   "grade": "B-"
+  },
+  {
+   "config": "claude-opus-5.5-max",
+   "lane": "cloud",
+   "brief": "contoso_sales",
+   "auto": 80.4,
+   "scores": {
+    "visual_richness": 21.1,
+    "text_lightness": 9.3,
+    "analogy": 10.0,
+    "brief_coverage": 15.0,
+    "claim_discipline": 15.0,
+    "structure": 10.0
+   },
+   "judge_raw": 41,
+   "judge": 41,
+   "seconds": 581.9,
+   "wall_seconds": 625.0,
+   "out_tokens": 69334,
+   "in_tokens": 1590,
+   "reasoning_tokens": 64479,
+   "truncated_calls": 2,
+   "cost": 1.39304,
+   "wh": 76.267,
+   "co2": 27.99,
+   "water": 249.6,
+   "slides": 11,
+   "overall": 81.2,
+   "grade": "B-"
+  },
+  {
+   "config": "claude-opus-5.5-max",
+   "lane": "cloud",
+   "brief": "zava_technical",
+   "auto": 78.9,
+   "scores": {
+    "visual_richness": 22.2,
+    "text_lightness": 7.7,
+    "analogy": 10.0,
+    "brief_coverage": 15.0,
+    "claim_discipline": 15.0,
+    "structure": 9.0
+   },
+   "judge_raw": 40,
+   "judge": 40,
+   "seconds": 630.8,
+   "wall_seconds": 673.7,
+   "out_tokens": 73028,
+   "in_tokens": 1738,
+   "reasoning_tokens": 67840,
+   "truncated_calls": 2,
+   "cost": 1.467512,
+   "wh": 80.331,
+   "co2": 29.481,
+   "water": 262.9,
+   "slides": 12,
+   "overall": 79.5,
+   "grade": "C+"
+  },
+  {
+   "config": "gpt-6-astra-low",
+   "lane": "cloud",
+   "brief": "contoso_sales",
+   "auto": 84.0,
+   "scores": {
+    "visual_richness": 23.0,
+    "text_lightness": 11.0,
+    "analogy": 10.0,
+    "brief_coverage": 15.0,
+    "claim_discipline": 15.0,
+    "structure": 10.0
+   },
+   "judge_raw": 39,
+   "judge": 39,
+   "seconds": 51.9,
+   "wall_seconds": 400.7,
+   "out_tokens": 3067,
+   "in_tokens": 1590,
+   "reasoning_tokens": 108,
+   "truncated_calls": 0,
+   "cost": 0.16925,
+   "wh": 3.374,
+   "co2": 1.238,
+   "water": 11.04,
+   "slides": 10,
+   "overall": 81.0,
+   "grade": "B-"
+  },
+  {
+   "config": "gpt-6-astra-low",
+   "lane": "cloud",
+   "brief": "zava_technical",
+   "auto": 86.5,
+   "scores": {
+    "visual_richness": 23.0,
+    "text_lightness": 14.3,
+    "analogy": 10.0,
+    "brief_coverage": 14.2,
+    "claim_discipline": 15.0,
+    "structure": 10.0
+   },
+   "judge_raw": 40,
+   "judge": 40,
+   "seconds": 61.4,
+   "wall_seconds": 104.8,
+   "out_tokens": 3752,
+   "in_tokens": 1738,
+   "reasoning_tokens": 30,
+   "truncated_calls": 0,
+   "cost": 0.20498,
+   "wh": 4.127,
+   "co2": 1.515,
+   "water": 13.51,
+   "slides": 12,
+   "overall": 83.2,
+   "grade": "B"
+  },
+  {
+   "config": "gpt-6-astra-high",
+   "lane": "cloud",
+   "brief": "contoso_sales",
+   "auto": 85.8,
+   "scores": {
+    "visual_richness": 22.6,
+    "text_lightness": 13.2,
+    "analogy": 10.0,
+    "brief_coverage": 15.0,
+    "claim_discipline": 15.0,
+    "structure": 10.0
+   },
+   "judge_raw": 37,
+   "judge": 37,
+   "seconds": 119.6,
+   "wall_seconds": 162.8,
+   "out_tokens": 6494,
+   "in_tokens": 1590,
+   "reasoning_tokens": 2404,
+   "truncated_calls": 0,
+   "cost": 0.3406,
+   "wh": 7.143,
+   "co2": 2.622,
+   "water": 23.38,
+   "slides": 11,
+   "overall": 79.9,
+   "grade": "C+"
+  },
+  {
+   "config": "gpt-6-astra-high",
+   "lane": "cloud",
+   "brief": "zava_technical",
+   "auto": 87.2,
+   "scores": {
+    "visual_richness": 24.5,
+    "text_lightness": 12.7,
+    "analogy": 10.0,
+    "brief_coverage": 15.0,
+    "claim_discipline": 15.0,
+    "structure": 10.0
+   },
+   "judge_raw": 41,
+   "judge": 41,
+   "seconds": 154.1,
+   "wall_seconds": 198.8,
+   "out_tokens": 8534,
+   "in_tokens": 1738,
+   "reasoning_tokens": 3106,
+   "truncated_calls": 0,
+   "cost": 0.44408,
+   "wh": 9.387,
+   "co2": 3.445,
+   "water": 30.72,
+   "slides": 12,
+   "overall": 84.6,
+   "grade": "B"
+  },
+  {
+   "config": "gpt-6-astra-max",
+   "lane": "cloud",
+   "brief": "contoso_sales",
+   "auto": 86.4,
+   "scores": {
+    "visual_richness": 22.8,
+    "text_lightness": 13.6,
+    "analogy": 10.0,
+    "brief_coverage": 15.0,
+    "claim_discipline": 15.0,
+    "structure": 10.0
+   },
+   "judge_raw": 41,
+   "judge": 41,
+   "seconds": 249.7,
+   "wall_seconds": 294.5,
+   "out_tokens": 12892,
+   "in_tokens": 1590,
+   "reasoning_tokens": 8058,
+   "truncated_calls": 0,
+   "cost": 0.6605,
+   "wh": 14.181,
+   "co2": 5.205,
+   "water": 46.41,
+   "slides": 12,
+   "overall": 84.2,
+   "grade": "B"
+  },
+  {
+   "config": "gpt-6-astra-max",
+   "lane": "cloud",
+   "brief": "zava_technical",
+   "auto": 83.7,
+   "scores": {
+    "visual_richness": 21.4,
+    "text_lightness": 12.3,
+    "analogy": 10.0,
+    "brief_coverage": 15.0,
+    "claim_discipline": 15.0,
+    "structure": 10.0
+   },
+   "judge_raw": 40,
+   "judge": 40,
+   "seconds": 285.3,
+   "wall_seconds": 330.3,
+   "out_tokens": 14775,
+   "in_tokens": 1738,
+   "reasoning_tokens": 9293,
+   "truncated_calls": 0,
+   "cost": 0.75613,
+   "wh": 16.253,
+   "co2": 5.965,
+   "water": 53.19,
+   "slides": 12,
+   "overall": 81.8,
+   "grade": "B-"
+  }
+ ],
+ "aggregate": {
+  "local-v1.0": {
+   "auto": 86.5,
+   "judge": 19.5,
+   "overall": 62.75,
+   "seconds": 63.705,
+   "out_tokens": 2233.5,
+   "cost": 0.00010400000000000001,
+   "wh": 0.8009999999999999,
+   "co2": 0.29400000000000004,
+   "water": 0.0,
+   "grade": "D"
+  },
+  "local-v1.1": {
+   "auto": 93.1,
+   "judge": 39.0,
+   "overall": 85.55000000000001,
+   "seconds": 241.135,
+   "out_tokens": 9510.0,
+   "cost": 0.00041200000000000004,
+   "wh": 3.169,
+   "co2": 1.1629999999999998,
+   "water": 0.0,
+   "grade": "B"
+  },
+  "claude-opus-5.5-low": {
+   "auto": 85.25,
+   "judge": 36.0,
+   "overall": 78.65,
+   "seconds": 28.1,
+   "out_tokens": 3386.0,
+   "cost": 0.074376,
+   "wh": 3.7245,
+   "co2": 1.367,
+   "water": 12.190000000000001,
+   "grade": "C+"
+  },
+  "claude-opus-5.5-high": {
+   "auto": 83.5,
+   "judge": 40.0,
+   "overall": 81.75,
+   "seconds": 88.2,
+   "out_tokens": 9846.5,
+   "cost": 0.203586,
+   "wh": 10.831,
+   "co2": 3.9749999999999996,
+   "water": 35.445,
+   "grade": "B-"
+  },
+  "claude-opus-5.5-max": {
+   "auto": 79.65,
+   "judge": 40.5,
+   "overall": 80.35,
+   "seconds": 606.3499999999999,
+   "out_tokens": 71181.0,
+   "cost": 1.430276,
+   "wh": 78.299,
+   "co2": 28.735500000000002,
+   "water": 256.25,
+   "grade": "B-"
+  },
+  "gpt-6-astra-low": {
+   "auto": 85.25,
+   "judge": 39.5,
+   "overall": 82.1,
+   "seconds": 56.65,
+   "out_tokens": 3409.5,
+   "cost": 0.187115,
+   "wh": 3.7504999999999997,
+   "co2": 1.3765,
+   "water": 12.274999999999999,
+   "grade": "B-"
+  },
+  "gpt-6-astra-high": {
+   "auto": 86.5,
+   "judge": 39.0,
+   "overall": 82.25,
+   "seconds": 136.85,
+   "out_tokens": 7514.0,
+   "cost": 0.39234,
+   "wh": 8.265,
+   "co2": 3.0335,
+   "water": 27.049999999999997,
+   "grade": "B-"
+  },
+  "gpt-6-astra-max": {
+   "auto": 85.05000000000001,
+   "judge": 40.5,
+   "overall": 83.0,
+   "seconds": 267.5,
+   "out_tokens": 13833.5,
+   "cost": 0.708315,
+   "wh": 15.216999999999999,
+   "co2": 5.585,
+   "water": 49.8,
+   "grade": "B"
+  }
+ },
+ "cloud_reference": {
+  "seconds": 108.5,
+  "cost": 0.285086,
+  "wh": 9.4025,
+  "co2": 3.4505,
+  "water": 30.77,
+  "out_tokens": 8548.0
+ },
+ "criteria": {
+  "local-v1.0": {
+   "cost_savings": {
+    "score": 100.0,
+    "grade": "A+"
+   },
+   "sustainability": {
+    "score": 95.7,
+    "grade": "A"
+   },
+   "time_to_generate": {
+    "score": 100.0,
+    "grade": "A+"
+   },
+   "deck_quality": {
+    "score": 62.8,
+    "grade": "D"
+   },
+   "composite": {
+    "score": 89.6,
+    "grade": "B+"
+   },
+   "_parts": {
+    "energy_reduction_pct": 91.5,
+    "water_reduction_pct": 100.0
+   }
+  },
+  "local-v1.1": {
+   "cost_savings": {
+    "score": 99.9,
+    "grade": "A+"
+   },
+   "sustainability": {
+    "score": 83.1,
+    "grade": "B"
+   },
+   "time_to_generate": {
+    "score": 45.0,
+    "grade": "F"
+   },
+   "deck_quality": {
+    "score": 85.6,
+    "grade": "B"
+   },
+   "composite": {
+    "score": 78.4,
+    "grade": "C+"
+   },
+   "_parts": {
+    "energy_reduction_pct": 66.3,
+    "water_reduction_pct": 100.0
+   }
+  }
+ },
+ "judge_drift": {
+  "contoso_sales": {
+   "mean": 0.0,
+   "anchors": 3
+  },
+  "zava_technical": {
+   "mean": 0.0,
+   "anchors": 3
+  }
+ },
+ "anchors": [
+  {
+   "source": "claude-opus-5.5-max",
+   "brief": "contoso_sales",
+   "round1": 41,
+   "round2": 41,
+   "delta": 0
+  },
+  {
+   "source": "claude-opus-5.5-max",
+   "brief": "zava_technical",
+   "round1": 40,
+   "round2": 40,
+   "delta": 0
+  },
+  {
+   "source": "gpt-6-astra-max",
+   "brief": "contoso_sales",
+   "round1": 41,
+   "round2": 41,
+   "delta": 0
+  },
+  {
+   "source": "gpt-6-astra-max",
+   "brief": "zava_technical",
+   "round1": 40,
+   "round2": 40,
+   "delta": 0
+  },
+  {
+   "source": "local-v1.0",
+   "brief": "contoso_sales",
+   "round1": 21,
+   "round2": 21,
+   "delta": 0
+  },
+  {
+   "source": "local-v1.0",
+   "brief": "zava_technical",
+   "round1": 18,
+   "round2": 18,
+   "delta": 0
+  }
+ ],
+ "heldout": {
+  "briefs": [
+   "northwind_sales",
+   "woodgrove_technical",
+   "tailspin_sales"
+  ],
+  "rows": [
+   {
+    "config": "local-v1.0",
+    "lane": "local",
+    "brief": "northwind_sales",
+    "auto": 86.6,
+    "scores": {
+     "visual_richness": 20.6,
+     "text_lightness": 20.0,
+     "analogy": 6.0,
+     "brief_coverage": 15.0,
+     "claim_discipline": 15.0,
+     "structure": 10.0
+    },
+    "judge_raw": 18,
+    "judge": 18.67,
+    "seconds": 102.34,
+    "out_tokens": 2151,
+    "in_tokens": 1722,
+    "calls": 1,
+    "tps": 21.8,
+    "cost": 0.000184,
+    "wh": 1.415,
+    "co2": 0.519,
+    "water": 0.0,
+    "slides": 11,
+    "lint": null,
+    "measured_facts": null,
+    "overall": 62.0,
+    "grade": "D",
+    "audit": {
+     "placeholders": [],
+     "analogy_pairs": 3,
+     "bank_pairs_verbatim": 0
+    }
+   },
+   {
+    "config": "local-v1.0",
+    "lane": "local",
+    "brief": "woodgrove_technical",
+    "auto": 90.4,
+    "scores": {
+     "visual_richness": 20.4,
+     "text_lightness": 20.0,
+     "analogy": 10.0,
+     "brief_coverage": 15.0,
+     "claim_discipline": 15.0,
+     "structure": 10.0
+    },
+    "judge_raw": 20,
+    "judge": 20.67,
+    "seconds": 54.78,
+    "out_tokens": 2192,
+    "in_tokens": 1880,
+    "calls": 1,
+    "tps": 46.3,
+    "cost": 0.0001,
+    "wh": 0.77,
+    "co2": 0.282,
+    "water": 0.0,
+    "slides": 11,
+    "lint": null,
+    "measured_facts": null,
+    "overall": 65.9,
+    "grade": "D",
+    "audit": {
+     "placeholders": [],
+     "analogy_pairs": 6,
+     "bank_pairs_verbatim": 0
+    }
+   },
+   {
+    "config": "local-v1.0",
+    "lane": "local",
+    "brief": "tailspin_sales",
+    "auto": 82.4,
+    "scores": {
+     "visual_richness": 17.4,
+     "text_lightness": 20.0,
+     "analogy": 6.0,
+     "brief_coverage": 15.0,
+     "claim_discipline": 15.0,
+     "structure": 9.0
+    },
+    "judge_raw": 19,
+    "judge": 19.67,
+    "seconds": 47.76,
+    "out_tokens": 1710,
+    "in_tokens": 1735,
+    "calls": 1,
+    "tps": 37.1,
+    "cost": 8.6e-05,
+    "wh": 0.66,
+    "co2": 0.242,
+    "water": 0.0,
+    "slides": 10,
+    "lint": null,
+    "measured_facts": null,
+    "overall": 60.9,
+    "grade": "D",
+    "audit": {
+     "placeholders": [],
+     "analogy_pairs": 3,
+     "bank_pairs_verbatim": 0
+    }
+   },
+   {
+    "config": "local-v1.1",
+    "lane": "local",
+    "brief": "northwind_sales",
+    "auto": 90.5,
+    "scores": {
+     "visual_richness": 23.0,
+     "text_lightness": 15.0,
+     "analogy": 12.5,
+     "brief_coverage": 15.0,
+     "claim_discipline": 15.0,
+     "structure": 10.0
+    },
+    "judge_raw": 29,
+    "judge": 29.67,
+    "seconds": 472.77,
+    "out_tokens": 9105,
+    "in_tokens": 16064,
+    "calls": 3,
+    "tps": 26.2,
+    "cost": 0.000802,
+    "wh": 6.169,
+    "co2": 2.264,
+    "water": 0.0,
+    "slides": 11,
+    "lint": [
+     {
+      "pass": "draft",
+      "issues": 16,
+      "codes": [
+       "fit",
+       "notes",
+       "title_label",
+       "title_long",
+       "words",
+       "woven_analogy"
+      ]
+     },
+     {
+      "pass": "repair1",
+      "issues": 14,
+      "accepted": true,
+      "fixed_slides": 11,
+      "codes": [
+       "fit",
+       "title_label",
+       "title_long",
+       "words",
+       "woven_analogy"
+      ]
+     },
+     {
+      "pass": "repair2",
+      "issues": 12,
+      "accepted": true,
+      "fixed_slides": 10,
+      "codes": [
+       "fit",
+       "title_label",
+       "title_long",
+       "words",
+       "woven_analogy"
+      ]
+     }
+    ],
+    "measured_facts": [],
+    "overall": 74.9,
+    "grade": "C",
+    "audit": {
+     "placeholders": [],
+     "analogy_pairs": 8,
+     "bank_pairs_verbatim": 8
+    }
+   },
+   {
+    "config": "local-v1.1",
+    "lane": "local",
+    "brief": "woodgrove_technical",
+    "auto": 91.0,
+    "scores": {
+     "visual_richness": 22.9,
+     "text_lightness": 15.3,
+     "analogy": 15,
+     "brief_coverage": 15.0,
+     "claim_discipline": 12.8,
+     "structure": 10.0
+    },
+    "judge_raw": 27,
+    "judge": 27.67,
+    "seconds": 447.68,
+    "out_tokens": 9400,
+    "in_tokens": 16015,
+    "calls": 3,
+    "tps": 29.4,
+    "cost": 0.000795,
+    "wh": 6.113,
+    "co2": 2.243,
+    "water": 0.0,
+    "slides": 11,
+    "lint": [
+     {
+      "pass": "draft",
+      "issues": 12,
+      "codes": [
+       "fit",
+       "notes",
+       "numbers",
+       "words"
+      ]
+     },
+     {
+      "pass": "repair1",
+      "issues": 11,
+      "accepted": true,
+      "fixed_slides": 10,
+      "codes": [
+       "fit",
+       "numbers",
+       "words"
+      ]
+     },
+     {
+      "pass": "repair2",
+      "issues": 11,
+      "accepted": false,
+      "fixed_slides": 9,
+      "codes": [
+       "fit",
+       "numbers",
+       "words"
+      ]
+     }
+    ],
+    "measured_facts": [
+     "Measured during this run on this device: 448 s drafting time, 9,400 tokens generated, 6.1 Wh energy, 0 cloud calls."
+    ],
+    "overall": 73.2,
+    "grade": "C",
+    "audit": {
+     "placeholders": [
+      "<CLIENT>"
+     ],
+     "analogy_pairs": 8,
+     "bank_pairs_verbatim": 8
+    }
+   },
+   {
+    "config": "local-v1.1",
+    "lane": "local",
+    "brief": "tailspin_sales",
+    "auto": 87.7,
+    "scores": {
+     "visual_richness": 23.0,
+     "text_lightness": 12.2,
+     "analogy": 12.5,
+     "brief_coverage": 15.0,
+     "claim_discipline": 15.0,
+     "structure": 10.0
+    },
+    "judge_raw": 30,
+    "judge": 30.67,
+    "seconds": 390.18,
+    "out_tokens": 9422,
+    "in_tokens": 16294,
+    "calls": 3,
+    "tps": 32.8,
+    "cost": 0.000624,
+    "wh": 4.804,
+    "co2": 1.763,
+    "water": 0.0,
+    "slides": 11,
+    "lint": [
+     {
+      "pass": "draft",
+      "issues": 17,
+      "codes": [
+       "fit",
+       "notes",
+       "takeaway_long",
+       "title_long",
+       "words",
+       "woven_analogy"
+      ]
+     },
+     {
+      "pass": "repair1",
+      "issues": 16,
+      "accepted": true,
+      "fixed_slides": 11,
+      "codes": [
+       "fit",
+       "takeaway_long",
+       "title_long",
+       "words",
+       "woven_analogy"
+      ]
+     },
+     {
+      "pass": "repair2",
+      "issues": 22,
+      "accepted": false,
+      "fixed_slides": 8,
+      "codes": [
+       "analogy_adjacent",
+       "arc_layout",
+       "fit",
+       "last",
+       "takeaway_long",
+       "title_long",
+       "words",
+       "woven_analogy"
+      ]
+     }
+    ],
+    "measured_facts": [],
+    "overall": 74.5,
+    "grade": "C",
+    "audit": {
+     "placeholders": [],
+     "analogy_pairs": 8,
+     "bank_pairs_verbatim": 8
+    }
+   }
+  ],
+  "aggregate": {
+   "local-v1.0": {
+    "auto": 86.46666666666665,
+    "judge": 19.67,
+    "overall": 62.93333333333334,
+    "seconds": 68.29333333333334,
+    "out_tokens": 2017.6666666666667,
+    "cost": 0.00012333333333333334,
+    "wh": 0.9483333333333334,
+    "co2": 0.3476666666666666,
+    "water": 0.0,
+    "grade": "D"
+   },
+   "local-v1.1": {
+    "auto": 89.73333333333333,
+    "judge": 29.33666666666667,
+    "overall": 74.2,
+    "seconds": 436.8766666666667,
+    "out_tokens": 9309.0,
+    "cost": 0.0007403333333333333,
+    "wh": 5.695333333333333,
+    "co2": 2.09,
+    "water": 0.0,
+    "grade": "C"
+   }
+  },
+  "anchors": [
+   {
+    "source": "gpt-6-astra-max",
+    "brief": "contoso_sales",
+    "prior": 41,
+    "round3": 41,
+    "delta": 0
+   },
+   {
+    "source": "gpt-6-astra-max",
+    "brief": "zava_technical",
+    "prior": 40,
+    "round3": 41,
+    "delta": 1
+   },
+   {
+    "source": "local-v1.0",
+    "brief": "contoso_sales",
+    "prior": 21,
+    "round3": 20,
+    "delta": -1
+   },
+   {
+    "source": "local-v1.0",
+    "brief": "zava_technical",
+    "prior": 18,
+    "round3": 19,
+    "delta": 1
+   },
+   {
+    "source": "local-v1.1",
+    "brief": "contoso_sales",
+    "prior": 37,
+    "round3": 34,
+    "delta": -3
+   },
+   {
+    "source": "local-v1.1",
+    "brief": "zava_technical",
+    "prior": 41,
+    "round3": 39,
+    "delta": -2
+   }
+  ],
+  "drift": -0.67,
+  "judge_notes": {
+   "local-v1.1/northwind_sales": "Contoso carryover ('Consultant decides', 'Sensitive client files', client Wi-Fi), an analogy row saying '2-week pilot' that contradicts the 3-week brief, a 2x2 that highlights the cloud quadrant, and no mention of supplier cost sheets or the 1-in-4 Wi-Fi fact.",
+   "local-v1.0/northwind_sales": "Label titles throughout, a misleading letter-by-hand analogy, an invented 64/32/16/16 GB memory split, 'works offline' claims, a near-empty architecture slide and a Time Saved chart mixing managers, reports, minutes and hours.",
+   "local-v1.0/woodgrove_technical": "Calls memory '64 GB VRAM' (a guardrail breach), mostly label titles, generic assistant/team analogies, an all-grey throughput chart whose callout is not highlighted, a decorative routing hub, 'No Cloud Calls' contradicting hybrid routing, and a vague 'Ready to Pilot?' ask.",
+   "local-v1.1/woodgrove_technical": "Unfilled '<CLIENT>' placeholder, a final ask of '10 developers, 14 days' contradicting the 12-analyst / 3-week title, Zava carryover (IDE, developer workflows, sizing bands), unsupported self-proof numbers (448 s, 9,400 tokens, 6.1 Wh) and no loan files, notebooks or 1,800-document library.",
+   "local-v1.0/tailspin_sales": "Label titles, 'Works offline' / 'works disconnected' guardrail breach, an invented 32/64/32 GB memory split, a meaningless single-block 'bar' chart, empty Users/Duration/Goal cards, and a chef's-kitchen analogy that explains nothing about local AI.",
+   "local-v1.1/tailspin_sales": "Invents '40% sites without Wi-Fi', reuses Contoso wording ('Sensitive client files', 'Consultant decides', client Wi-Fi, 'summaries'), mentions embargo only on the cover, and never brings up offsite playtests or conventions."
+  }
+ },
+ "assumptions": {
+  "electricity_usd_per_kwh": 0.13,
+  "grid_kgco2e_per_kwh": 0.367,
+  "platform_overhead_w": 10.0,
+  "cloud_wh_per_1k_tokens": 1.1,
+  "cloud_ml_water_per_1k_tokens": 3.6,
+  "local_ml_water_per_1k_tokens": 0.0,
+  "chars_per_token": 4.0,
+  "pricing_usd_per_mtok": {
+   "claude-opus-5.5": {
+    "in": 4.0,
+    "out": 20.0
+   },
+   "gpt-6-astra": {
+    "in": 10.0,
+    "out": 50.0
+   }
+  }
+ }
+}

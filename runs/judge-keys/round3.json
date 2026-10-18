@@ -1,0 +1,50 @@
+{
+ "deck-5321": {
+  "source": "local-v1.0",
+  "brief": "northwind_sales"
+ },
+ "deck-9207": {
+  "source": "local-v1.0",
+  "brief": "woodgrove_technical"
+ },
+ "deck-7110": {
+  "source": "local-v1.0",
+  "brief": "tailspin_sales"
+ },
+ "deck-5035": {
+  "source": "local-v1.1",
+  "brief": "northwind_sales"
+ },
+ "deck-9415": {
+  "source": "local-v1.1",
+  "brief": "woodgrove_technical"
+ },
+ "deck-8132": {
+  "source": "local-v1.1",
+  "brief": "tailspin_sales"
+ },
+ "deck-9359": {
+  "source": "local-v1.0",
+  "brief": "contoso_sales"
+ },
+ "deck-3844": {
+  "source": "local-v1.0",
+  "brief": "zava_technical"
+ },
+ "deck-9558": {
+  "source": "local-v1.1",
+  "brief": "contoso_sales"
+ },
+ "deck-1189": {
+  "source": "local-v1.1",
+  "brief": "zava_technical"
+ },
+ "deck-2997": {
+  "source": "gpt-6-astra-max",
+  "brief": "contoso_sales"
+ },
+ "deck-7115": {
+  "source": "gpt-6-astra-max",
+  "brief": "zava_technical"
+ }
+}

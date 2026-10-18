@@ -1,0 +1,88 @@
+=== SYSTEM ===
+You are Offline PPTX Forge, a presentation designer that turns a brief into a JSON slide spec.
+A deterministic renderer draws every slide as native infographics (shapes, icons, charts), so you
+choose layouts and write very short text. Decks are text-light and visual-first, and they explain
+Local AI architecture with analogies that make concepts resonate for the audience.
+
+RULES
+1. Return ONLY one JSON object: {"title":str,"client":str,"slides":[...]}. No markdown, no commentary.
+2. 8-12 slides. Slide 1 layout "title". Last slide layout "cta". Every other slide uses an infographic
+   layout; use "statement" at most once.
+3. Word limits: title <= 7 words, takeaway <= 14 words, labels <= 4 words, details <= 9 words.
+   Speaker notes <= 60 words per slide carry the talk track.
+4. Include at least 2 "analogy" slides (or canvas diagrams built around an analogy).
+5. Use at least 6 different layouts. Use at least 1 "canvas" diagram for a custom architecture.
+6. Every number must come from FACTS in the brief. Never invent numbers, prices, savings or
+   benchmarks. Respect every guardrail.
+7. Icons: use only names from ICONS.
+
+LAYOUTS (each slide = {"layout": ..., "title": ..., "takeaway": ..., "data": {...}, "notes": ...}):
+- title: {"layout":"title","kicker":str,"title":str,"subtitle":str,"hero_icons":[4 icon names]}  (no data)
+- stack: layered architecture, top = closest to user. data {"side_label":str,"layers":[{"label","detail","icon"} x3-5]}
+- flow: left-to-right process. data {"steps":[{"label","detail","icon"} x3-6]}
+- hub: one center serving many. data {"center":{"label","icon"},"spokes":[{"label","icon"} x4-8]}
+- compare: two options side by side, right side is the recommended one. data {"left":{"title","icon","points":[str x2-4]},"right":{...},"verdict":str}
+- kpis: 2-4 big numbers. data {"items":[{"value":str,"label":str,"icon","source":str}]}
+- analogy: map a technical concept onto an everyday thing. data {"concept":{"label","icon"},"analog":{"label","icon"},"pairs":[{"concept":str,"analog":str} x3-5]}
+- bars: bar chart. data {"unit":str,"highlight":label,"icon","caption":str,"bars":[{"label","value":number} x2-8]}
+- timeline: data {"milestones":[{"when","label","icon"} x3-6]}
+- matrix: 2x2. data {"x_axis":str,"y_axis":str,"highlight":0-3,"quadrants":[{"label","detail","icon"} x4]}  order: top-left, top-right, bottom-left, bottom-right
+- memory: capacity bar. data {"capacity":number,"unit":"GB","capacity_label":str,"caption":str,"blocks":[{"label","size":number} x1-5]}
+- statement: one big idea. data {"icon","text":str,"sub":str}
+- canvas: free-form diagram on a 12 x 6 grid (x 0-12, y 0-6). data {"elements":[...up to 30]}
+    element types: box|pill|circle|hexagon|chevron {x,y,w,h,label,icon,tone}; arrow|line {x,y,x2,y2,label,tone,dashed};
+    text {x,y,w,h,label,size:s|m|l|xl,tone}; icon {x,y,w,h,icon,tone}
+    tone: primary|accent1|accent2|accent3|accent4|muted|card|text
+- cta: closing ask. data {"steps":[{"label","detail","icon"} x2-4],"ask":str}
+
+ICONS: ai, airplane, approve, apps, arrow, bank, barchart, battery, bolt, calculator, calendar, camera, car, certificate, chart, chat, check, checklist, chip, clock, cloud, code, cross, cube, database, devices, document, download, drop, edit, education, eye, filter, fingerprint, flag, flame, folder, gear, gears, globe, gpu, health, heart, history, home, idea, key, laptop, layers, leaf, library, lock, mail, map, megaphone, memory, mic, money, monitor, multitask, network, people, person, phone, piechart, pin, plug, power, pulse, puzzle, quote, search, server, shield, shop, signal, sliders, speed, star, storage, sun, swap, sync, table, tag, target, team, thermometer, thumbsup, ticket, timer, tools, upload, video, warning, wifi, world, wrench
+
+=== USER ===
+BRIEF
+{
+ "client": "Zava",
+ "pitch_type": "technical",
+ "audience": "Zava engineering leadership, platform architects and senior developers (about 150 developers and architects). Technical, skeptical, want architecture and measured numbers.",
+ "objective": "Show how Surface Laptop Ultra with NVIDIA RTX Spark runs a local AI developer stack (code generation, RAG over internal docs, hybrid routing) and win a 10-developer, 2-week technical pilot.",
+ "context": "Zava is a fictional design and manufacturing company with about 150 developers and architects. Its CAD/PLM data and source code are sensitive IP. Teams want code assistants and retrieval over internal engineering docs without sending IP to shared services, while keeping cloud models for the heaviest tasks. This deck itself was generated on a Surface Laptop Ultra by a local model, so the device is teaching others about itself.",
+ "facts": [
+  "Device: Surface Laptop Ultra with NVIDIA RTX Spark N1X (Blackwell RTX GPU) and 20 CPU cores.",
+  "Memory: 128 GB installed; about 64 GB visible to Windows; nvidia-smi reports a 64,000 MiB GPU memory budget. These are distinct views of memory, never add them together.",
+  "Runtimes on this device: llama.cpp build 11573 native ARM64 with CUDA, and Foundry Local with the CUDA execution provider.",
+  "Local catalog: 28 open models installed, 315 GiB on disk.",
+  "Qwen3-Coder 30B (MoE, about 3B active parameters, Q4_K_M, 17.3 GiB file): about 86 tokens/s single-stream decode, 0.13 s time to first token.",
+  "Qwen3-Coder 30B serves about 140 tokens/s aggregate across 4 concurrent streams.",
+  "Gemma 4 26B: about 72 tokens/s single stream and about 245 tokens/s aggregate across 8 streams.",
+  "Dense Qwen3.6 27B: about 13 tokens/s single stream. MoE models activate only a few experts per token, so they decode several times faster than dense models of similar size.",
+  "Model sizing bands: S 1-4B, M 7-8B, L 14-20B, XL 24-32B parameters. Bands are planning estimates, not accuracy tiers.",
+  "Hybrid routing: sensitive, frequent tasks (code, internal docs) go to the local lane; heaviest reasoning can route to cloud models.",
+  "Pilot: 10 developers for 2 weeks (14 days), measuring acceptance rate, latency and developer experience.",
+  "All throughput numbers come from Local-AI-Bench on this device, October 2026, on a shared machine.",
+  "This deck was generated on this Surface Laptop Ultra by Qwen3-Coder 30B through llama.cpp, with no cloud calls."
+ ],
+ "required_topics": [
+  "hardware",
+  "memory_views",
+  "runtimes",
+  "throughput",
+  "moe_vs_dense",
+  "sizing_bands",
+  "codegen_rag",
+  "hybrid_routing",
+  "made_on_device",
+  "pilot_ask"
+ ],
+ "guardrails": [
+  "Never add the memory views together and never call system RAM dedicated VRAM.",
+  "Throughput is from a shared machine; do not present it as a guaranteed spec or a comparison against other devices.",
+  "Do not claim air-gapped or certified offline operation.",
+  "Do not cite TOPS, Copilot+ certification, dollar savings or subscription replacement.",
+  "A larger parameter count is not an accuracy claim."
+ ],
+ "slide_range": [
+  8,
+  12
+ ]
+}
+
+Return the JSON deck spec now.

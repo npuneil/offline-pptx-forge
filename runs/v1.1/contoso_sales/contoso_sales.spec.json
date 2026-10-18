@@ -1,0 +1,463 @@
+{
+ "title": "Contoso Pilot Proposal",
+ "client": "Contoso",
+ "slides": [
+  {
+   "layout": "title",
+   "kicker": "CONTOSO PILOT PROPOSAL",
+   "title": "Local AI for Traveling Consultants",
+   "subtitle": "Hybrid lane adds sensitive drafting without replacing Copilot",
+   "hero_icons": [
+    "laptop",
+    "cloud",
+    "ai",
+    "document"
+   ],
+   "notes": "Start with the reality: many consultants, repeated reports, unreliable connectivity. This impacts efficiency and quality. The hybrid approach adds local capability for sensitive work while keeping the cloud assistant."
+  },
+  {
+   "layout": "kpis",
+   "title": "Consultant Workload and Connectivity",
+   "takeaway": "Repeated summaries and patchy Wi-Fi slow site visits like a traffic jam.",
+   "data": {
+    "items": [
+     {
+      "value": "1,200",
+      "label": "Traveling consultants",
+      "icon": "people",
+      "source": "F2"
+     },
+     {
+      "value": "6",
+      "label": "Summaries per week",
+      "icon": "document",
+      "source": "F3"
+     },
+     {
+      "value": "25 minutes",
+      "label": "Per summary draft",
+      "icon": "timer",
+      "source": "F4"
+     },
+     {
+      "value": "30%",
+      "label": "Sites without Wi-Fi",
+      "icon": "wifi",
+      "source": "F5"
+     }
+    ]
+   },
+   "notes": "Open with their reality: many people, repeated reports, unreliable connectivity. This impacts efficiency and quality. Like a traffic jam, these delays slow progress."
+  },
+  {
+   "layout": "analogy",
+   "title": "Hybrid AI Lanes Like a Hotel Safe and Concierge",
+   "takeaway": "Local lane for sensitive work, cloud assistant for everything else.",
+   "data": {
+    "concept": {
+     "label": "Hybrid AI lanes",
+     "icon": "layers"
+    },
+    "analog": {
+     "label": "Hotel safe + concierge",
+     "icon": "hotel"
+    },
+    "pairs": [
+     {
+      "concept": "Local lane on laptop",
+      "analog": "Room safe"
+     },
+     {
+      "concept": "Sensitive client files",
+      "analog": "Passport and valuables"
+     },
+     {
+      "concept": "Microsoft 365 Copilot",
+      "analog": "Concierge for everything else"
+     },
+     {
+      "concept": "Consultant decides",
+      "analog": "Guest chooses what goes where"
+     }
+    ]
+   },
+   "notes": "Map the hybrid idea to familiar terms: a safe for sensitive work and a concierge for everything else."
+  },
+  {
+   "layout": "compare",
+   "title": "Current Lane vs Recommended Hybrid",
+   "takeaway": "Keep cloud assistant, add local lane for sensitive drafting.",
+   "data": {
+    "left": {
+     "title": "Current Lane",
+     "icon": "cloud",
+     "points": [
+      "All work in the cloud",
+      "No local option"
+     ]
+    },
+    "right": {
+     "title": "Recommended Hybrid",
+     "icon": "layers",
+     "points": [
+      "Local lane for sensitive files",
+      "Cloud assistant for everything else"
+     ]
+    },
+    "verdict": "Add a local lane to the existing cloud assistant."
+   },
+   "notes": "The right side wins: keep Copilot, add a local lane for sensitive drafting work."
+  },
+  {
+   "layout": "canvas",
+   "title": "Sensitive Work Stays on the Laptop",
+   "takeaway": "Files, prompts and drafts stay inside device boundary.",
+   "data": {
+    "elements": [
+     {
+      "type": "pill",
+      "x": 0.2,
+      "y": 0.0,
+      "w": 7.8,
+      "h": 0.55,
+      "label": "Surface Laptop Ultra",
+      "icon": "laptop",
+      "tone": "primary"
+     },
+     {
+      "type": "line",
+      "x": 0.2,
+      "y": 0.8,
+      "x2": 8.0,
+      "y2": 0.8,
+      "dashed": true,
+      "tone": "accent2"
+     },
+     {
+      "type": "line",
+      "x": 0.2,
+      "y": 5.6,
+      "x2": 8.0,
+      "y2": 5.6,
+      "dashed": true,
+      "tone": "accent2"
+     },
+     {
+      "type": "line",
+      "x": 0.2,
+      "y": 0.8,
+      "x2": 0.2,
+      "y2": 5.6,
+      "dashed": true,
+      "tone": "accent2"
+     },
+     {
+      "type": "line",
+      "x": 8.0,
+      "y": 0.8,
+      "x2": 8.0,
+      "y2": 5.6,
+      "dashed": true,
+      "tone": "accent2"
+     },
+     {
+      "type": "box",
+      "x": 0.5,
+      "y": 1.3,
+      "w": 2.2,
+      "h": 1.0,
+      "label": "Site files",
+      "icon": "document",
+      "tone": "accent2"
+     },
+     {
+      "type": "arrow",
+      "x": 2.7,
+      "y": 1.8,
+      "x2": 3.0,
+      "y2": 1.8,
+      "tone": "primary"
+     },
+     {
+      "type": "box",
+      "x": 3.0,
+      "y": 1.3,
+      "w": 2.2,
+      "h": 1.0,
+      "label": "Local model",
+      "icon": "ai",
+      "tone": "primary"
+     },
+     {
+      "type": "arrow",
+      "x": 5.2,
+      "y": 1.8,
+      "x2": 5.5,
+      "y2": 1.8,
+      "tone": "primary"
+     },
+     {
+      "type": "box",
+      "x": 5.5,
+      "y": 1.3,
+      "w": 2.2,
+      "h": 1.0,
+      "label": "Reviewed draft",
+      "icon": "check",
+      "tone": "accent1"
+     },
+     {
+      "type": "line",
+      "x": 4.1,
+      "y": 2.3,
+      "x2": 4.1,
+      "y2": 3.3,
+      "tone": "muted"
+     },
+     {
+      "type": "box",
+      "x": 3.0,
+      "y": 3.3,
+      "w": 2.2,
+      "h": 0.9,
+      "label": "RTX Spark GPU",
+      "icon": "gpu",
+      "tone": "accent4"
+     },
+     {
+      "type": "text",
+      "x": 0.5,
+      "y": 4.7,
+      "w": 7.2,
+      "h": 0.6,
+      "label": "Inside the boundary: files, prompts, drafts",
+      "size": "s",
+      "tone": "muted"
+     },
+     {
+      "type": "text",
+      "x": 8.6,
+      "y": 0.0,
+      "w": 3.3,
+      "h": 0.55,
+      "label": "Cloud lane",
+      "size": "m"
+     },
+     {
+      "type": "box",
+      "x": 8.6,
+      "y": 1.3,
+      "w": 3.2,
+      "h": 1.0,
+      "label": "Existing cloud assistant",
+      "icon": "cloud",
+      "tone": "accent3"
+     },
+     {
+      "type": "box",
+      "x": 8.6,
+      "y": 3.3,
+      "w": 3.2,
+      "h": 0.9,
+      "label": "Everyday work",
+      "icon": "chat",
+      "tone": "card"
+     },
+     {
+      "type": "arrow",
+      "x": 10.2,
+      "y": 2.3,
+      "x2": 10.2,
+      "y2": 3.3,
+      "tone": "accent3"
+     }
+    ]
+   },
+   "notes": "Boundary = four dashed lines; labeled boxes with icons; arrows show the path; the cloud lane sits outside."
+  },
+  {
+   "layout": "matrix",
+   "title": "Routing Work to the Right Lane",
+   "takeaway": "Sensitive and repetitive work goes to local lane like a specialized team.",
+   "data": {
+    "x_axis": "Repetition",
+    "y_axis": "Sensitivity",
+    "highlight": 0,
+    "quadrants": [
+     {
+      "label": "Low Repetition, Low Sensitivity",
+      "detail": "Use cloud assistant",
+      "icon": "cloud"
+     },
+     {
+      "label": "High Repetition, Low Sensitivity",
+      "detail": "Use cloud assistant",
+      "icon": "cloud"
+     },
+     {
+      "label": "Low Repetition, High Sensitivity",
+      "detail": "Use local lane",
+      "icon": "lock"
+     },
+     {
+      "label": "High Repetition, High Sensitivity",
+      "detail": "Use local lane",
+      "icon": "lock"
+     }
+    ]
+   },
+   "notes": "The high/high quadrant (repetitive and sensitive) is best served by the local lane. Like a specialized team, this approach assigns tasks to the right place."
+  },
+  {
+   "layout": "analogy",
+   "title": "Offline Maps for Restricted Wi-Fi",
+   "takeaway": "Local AI works where client Wi-Fi is restricted.",
+   "data": {
+    "concept": {
+     "label": "Local AI lane",
+     "icon": "wifi"
+    },
+    "analog": {
+     "label": "Offline maps",
+     "icon": "map"
+    },
+    "pairs": [
+     {
+      "concept": "Local model on laptop",
+      "analog": "Maps downloaded to phone"
+     },
+     {
+      "concept": "Restricted client Wi-Fi",
+      "analog": "No signal in the tunnel"
+     },
+     {
+      "concept": "Copilot when connected",
+      "analog": "Live traffic when online"
+     },
+     {
+      "concept": "2-week pilot",
+      "analog": "Test drive before the trip"
+     }
+    ]
+   },
+   "notes": "The pilot validates disconnected use, like testing a map before a journey."
+  },
+  {
+   "layout": "stack",
+   "title": "Device for Local Drafting",
+   "takeaway": "On-device runtime powers local drafting with 128 GB memory.",
+   "data": {
+    "side_label": "Drafting workflow",
+    "layers": [
+     {
+      "label": "Local models",
+      "detail": "28 open models",
+      "icon": "ai"
+     },
+     {
+      "label": "On-device runtime",
+      "detail": "RTX Spark GPU",
+      "icon": "gpu"
+     },
+     {
+      "label": "Laptop silicon",
+      "detail": "20 CPU cores, 128 GB RAM",
+      "icon": "chip"
+     }
+    ]
+   },
+   "notes": "The Surface Laptop Ultra with RTX Spark supports local AI workloads."
+  },
+  {
+   "layout": "flow",
+   "title": "Capacity Chain: Time Saved",
+   "takeaway": "People x summaries x minutes saved x weeks = hours (estimate).",
+   "data": {
+    "steps": [
+     {
+      "label": "1,200 consultants",
+      "detail": "Traveling",
+      "icon": "people"
+     },
+     {
+      "label": "6 summaries/week",
+      "detail": "Each",
+      "icon": "document"
+     },
+     {
+      "label": "5 minutes saved",
+      "detail": "Per summary",
+      "icon": "timer"
+     },
+     {
+      "label": "46 working weeks",
+      "detail": "Per year",
+      "icon": "calendar"
+     },
+     {
+      "label": "27,600 hours",
+      "detail": "Estimate to validate",
+      "icon": "chart"
+     }
+    ]
+   },
+   "notes": "Illustrative capacity: 1,200 consultants x 6 summaries x 5 minutes x 46 weeks = 27,600 hours/year."
+  },
+  {
+   "layout": "timeline",
+   "title": "Pilot Plan and Measurement",
+   "takeaway": "Time-boxed pilot measures task time, draft quality and user experience.",
+   "data": {
+    "milestones": [
+     {
+      "when": "Before launch",
+      "label": "User nomination",
+      "icon": "people"
+     },
+     {
+      "when": "Week 1",
+      "label": "Pilot execution",
+      "icon": "calendar"
+     },
+     {
+      "when": "Week 2",
+      "label": "Data collection",
+      "icon": "chart"
+     },
+     {
+      "when": "Sponsor decision",
+      "label": "Next steps",
+      "icon": "target"
+     }
+    ]
+   },
+   "notes": "The pilot is a small, time-boxed test to measure real-world impact."
+  },
+  {
+   "layout": "cta",
+   "title": "Approve the Measured Start",
+   "takeaway": "A small, time-boxed pilot decides next step.",
+   "data": {
+    "steps": [
+     {
+      "label": "Nominate 10 users",
+      "detail": "Traveling consultants with repeat reports",
+      "icon": "people"
+     },
+     {
+      "label": "Run 2 weeks",
+      "detail": "Alongside current tools",
+      "icon": "calendar"
+     },
+     {
+      "label": "Decide on data",
+      "detail": "Task time and quality readout",
+      "icon": "chart"
+     }
+    ],
+    "ask": "Approve the 10-user, 2-week pilot."
+   },
+   "notes": "Three concrete steps, then one sentence ask with size and duration."
+  }
+ ]
+}

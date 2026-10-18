@@ -1,0 +1,306 @@
+{
+ "title": "Local AI for District Managers",
+ "client": "Northwind Traders",
+ "slides": [
+  {
+   "layout": "title",
+   "kicker": "Pilot Proposal",
+   "title": "Local AI in Stores",
+   "subtitle": "For district managers with weak connectivity",
+   "hero_icons": [
+    "laptop",
+    "wifi",
+    "shield",
+    "chart"
+   ]
+  },
+  {
+   "layout": "analogy",
+   "title": "Report Writing",
+   "takeaway": "Like drafting a letter by hand",
+   "data": {
+    "concept": {
+     "label": "Report Writing",
+     "icon": "document"
+    },
+    "analog": {
+     "label": "Letter Drafting",
+     "icon": "mail"
+    },
+    "pairs": [
+     {
+      "concept": "Time to write a report",
+      "analog": "Time to write a letter by hand"
+     },
+     {
+      "concept": "Confidential data",
+      "analog": "Private thoughts in a letter"
+     },
+     {
+      "concept": "Weak Wi-Fi",
+      "analog": "No pen or paper at hand"
+     }
+    ]
+   },
+   "notes": "District managers spend 30 minutes per report. This is like handwriting letters—time-consuming and requires privacy. Local AI helps in weak Wi-Fi conditions, just like having a pen and paper."
+  },
+  {
+   "layout": "stack",
+   "title": "Manager Workflow",
+   "takeaway": "Local AI adds a second lane",
+   "data": {
+    "side_label": "Store Visit",
+    "layers": [
+     {
+      "label": "Report Drafting",
+      "detail": "With local AI assistant",
+      "icon": "chat"
+     },
+     {
+      "label": "Microsoft 365 Copilot",
+      "detail": "For general tasks",
+      "icon": "apps"
+     },
+     {
+      "label": "Store Walk",
+      "detail": "Planogram, staffing",
+      "icon": "flag"
+     }
+    ]
+   },
+   "notes": "District managers work in stores with limited connectivity. Local AI adds a second lane to their workflow—like having two assistants. Microsoft 365 Copilot stays as the main assistant."
+  },
+  {
+   "layout": "memory",
+   "title": "Device Capacity",
+   "takeaway": "128 GB memory for local AI",
+   "data": {
+    "capacity": 128,
+    "unit": "GB",
+    "capacity_label": "Memory",
+    "caption": "Surface Laptop Ultra with NVIDIA RTX Spark",
+    "blocks": [
+     {
+      "label": "Local AI Model",
+      "size": 64
+     },
+     {
+      "label": "OS & Apps",
+      "size": 32
+     },
+     {
+      "label": "Report Data",
+      "size": 16
+     }
+    ]
+   },
+   "notes": "The Surface Laptop Ultra has 128 GB memory. Local AI uses 64 GB, leaving room for OS and other tasks. This ensures smooth performance in the field."
+  },
+  {
+   "layout": "flow",
+   "title": "Pilot Process",
+   "takeaway": "3 weeks with 8 managers",
+   "data": {
+    "steps": [
+     {
+      "label": "Prep",
+      "detail": "Install local AI",
+      "icon": "download"
+     },
+     {
+      "label": "Use",
+      "detail": "Write reports in store",
+      "icon": "document"
+     },
+     {
+      "label": "Measure",
+      "detail": "Time, quality, UX",
+      "icon": "chart"
+     },
+     {
+      "label": "Review",
+      "detail": "Results & feedback",
+      "icon": "check"
+     }
+    ]
+   },
+   "notes": "The pilot runs for 3 weeks with 8 district managers. We measure report time, quality, and user experience to validate the value of local AI."
+  },
+  {
+   "layout": "compare",
+   "title": "Connectivity Options",
+   "takeaway": "Local AI works when offline",
+   "data": {
+    "left": {
+     "title": "Cloud-Based AI",
+     "icon": "cloud",
+     "points": [
+      "Needs Wi-Fi",
+      "Confidential data in cloud"
+     ]
+    },
+    "right": {
+     "title": "Local AI",
+     "icon": "server",
+     "points": [
+      "Works offline",
+      "Data stays local"
+     ]
+    },
+    "verdict": "Local AI wins for weak connectivity and privacy"
+   },
+   "notes": "Cloud-based AI needs Wi-Fi and sends confidential data to the cloud. Local AI works offline and keeps data on the device—ideal for Northwind's back-office Wi-Fi issues."
+  },
+  {
+   "layout": "canvas",
+   "title": "Local AI Architecture",
+   "takeaway": "Hybrid model with Microsoft 365 Copilot",
+   "data": {
+    "elements": [
+     {
+      "type": "box",
+      "x": 0,
+      "y": 0,
+      "w": 4,
+      "h": 2,
+      "label": "Surface Laptop Ultra",
+      "icon": "laptop",
+      "tone": "primary"
+     },
+     {
+      "type": "box",
+      "x": 5,
+      "y": 0,
+      "w": 3,
+      "h": 2,
+      "label": "Local AI Assistant",
+      "icon": "ai",
+      "tone": "accent1"
+     },
+     {
+      "type": "box",
+      "x": 9,
+      "y": 0,
+      "w": 3,
+      "h": 2,
+      "label": "Microsoft 365 Copilot",
+      "icon": "apps",
+      "tone": "accent2"
+     },
+     {
+      "type": "line",
+      "x": 4,
+      "y": 1,
+      "x2": 5,
+      "y2": 1,
+      "label": "Data Flow",
+      "tone": "muted"
+     },
+     {
+      "type": "line",
+      "x": 8,
+      "y": 1,
+      "x2": 9,
+      "y2": 1,
+      "label": "Data Flow",
+      "tone": "muted"
+     }
+    ]
+   },
+   "notes": "This canvas shows the hybrid model: Surface Laptop Ultra with local AI assistant and Microsoft 365 Copilot. Both work together, not as replacements."
+  },
+  {
+   "layout": "statement",
+   "title": "Data Stays Local",
+   "takeaway": "Confidential supplier data protected",
+   "data": {
+    "icon": "shield",
+    "text": "Supplier cost sheets and promotions stay on device",
+    "sub": "No cloud upload needed"
+   },
+   "notes": "Local AI ensures confidential supplier data never leaves the device. This is critical for Northwind’s privacy policies."
+  },
+  {
+   "layout": "timeline",
+   "title": "Pilot Timeline",
+   "takeaway": "3 weeks, 8 managers",
+   "data": {
+    "milestones": [
+     {
+      "when": "Week 1",
+      "label": "Device Setup",
+      "icon": "gear"
+     },
+     {
+      "when": "Week 2",
+      "label": "Report Writing",
+      "icon": "document"
+     },
+     {
+      "when": "Week 3",
+      "label": "Feedback & Review",
+      "icon": "chat"
+     }
+    ]
+   },
+   "notes": "The pilot runs over 3 weeks. In Week 1, we set up devices. In Week 2, managers write reports. In Week 3, we collect feedback and review results."
+  },
+  {
+   "layout": "bars",
+   "title": "Time Saved",
+   "takeaway": "Estimate shows 5,760 hours saved annually",
+   "data": {
+    "unit": "hours",
+    "highlight": "Estimated Annual Time Saved",
+    "icon": "timer",
+    "caption": "Illustrative estimate based on 10 mins/report",
+    "bars": [
+     {
+      "label": "60 Managers",
+      "value": 5760
+     },
+     {
+      "label": "12 Reports/Week",
+      "value": 48
+     },
+     {
+      "label": "10 Minutes Saved",
+      "value": 10
+     }
+    ]
+   },
+   "notes": "If local AI saves 10 minutes per report, the total time saved is estimated at 5,760 hours annually. This is illustrative and will be validated in the pilot."
+  },
+  {
+   "layout": "cta",
+   "title": "Next Steps",
+   "takeaway": "Approve the 3-week pilot",
+   "data": {
+    "steps": [
+     {
+      "label": "Approval",
+      "detail": "Green light for pilot",
+      "icon": "approve"
+     },
+     {
+      "label": "Device Prep",
+      "detail": "8 Surface Laptops with local AI",
+      "icon": "laptop"
+     },
+     {
+      "label": "Manager Onboarding",
+      "detail": "Training and setup",
+      "icon": "education"
+     },
+     {
+      "label": "Measure Results",
+      "detail": "Report time, quality, UX",
+      "icon": "chart"
+     }
+    ],
+    "ask": "Support the 3-week pilot to validate local AI for district managers"
+   },
+   "notes": "We ask for approval to begin the pilot. We'll prepare devices, onboard managers, and measure results over 3 weeks."
+  }
+ ]
+}

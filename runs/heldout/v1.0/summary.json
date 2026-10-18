@@ -1,0 +1,544 @@
+{
+ "server": {
+  "reused": true,
+  "load_s": 0.0,
+  "model": "qwen3-coder-30b",
+  "port": 8090
+ },
+ "results": {
+  "northwind_sales": {
+   "harness": "1.0",
+   "brief": "northwind_sales",
+   "template": "surface",
+   "lane": "local",
+   "model": "qwen3-coder-30b",
+   "llm_calls": 1,
+   "prompt_tokens": 1722,
+   "completion_tokens": 2151,
+   "decode_tps": 21.8,
+   "ttft_s": 3.625,
+   "generate_s": 102.34,
+   "render_s": 0.22,
+   "total_s": 102.56,
+   "power": {
+    "seconds": 102.33,
+    "samples": 394,
+    "gpu_avg_w": 39.8,
+    "gpu_peak_w": 48.3,
+    "gpu_wh": 1.1311,
+    "platform_wh": 0.2843,
+    "total_wh": 1.4154
+   },
+   "economics": {
+    "lane": "local",
+    "energy_wh": 1.415,
+    "cost_usd": 0.000184,
+    "co2e_g": 0.519,
+    "water_ml": 0.0,
+    "basis": "measured GPU board power (nvidia-smi, 250 ms) + 10 W platform allowance; electricity only"
+   },
+   "grade": {
+    "auto_score": 86.6,
+    "auto_grade": "B",
+    "scores": {
+     "visual_richness": 20.6,
+     "text_lightness": 20.0,
+     "analogy": 6.0,
+     "brief_coverage": 15.0,
+     "claim_discipline": 15.0,
+     "structure": 10.0
+    },
+    "detail": {
+     "visual_richness": {
+      "infographic_share": 0.89,
+      "distinct_layouts": 8,
+      "icons_per_slide": 2.8,
+      "canvas_diagrams": 1
+     },
+     "text_lightness": {
+      "avg_words_per_slide": 26.6,
+      "max_words": 41
+     },
+     "analogy": {
+      "analogy_slides": 1,
+      "analogy_cue_slides": 0
+     },
+     "brief_coverage": {
+      "covered": 7.0,
+      "topics": 7,
+      "missing": []
+     },
+     "claim_discipline": {
+      "numbers_on_canvas": 23,
+      "untraceable": [],
+      "guardrail_violations": []
+     },
+     "structure": {
+      "strict_json": true,
+      "slides": 11,
+      "notes_slides": 10,
+      "fallbacks": 0,
+      "overflows": 0,
+      "shrunk_texts": 0
+     }
+    }
+   },
+   "pptx": "runs/heldout/v1.0/northwind_sales/northwind_sales-surface.pptx",
+   "render_summary": [
+    {
+     "index": 0,
+     "layout": "title",
+     "words": 12,
+     "overflows": 0,
+     "shrunk": 0,
+     "icons": 5,
+     "issues": []
+    },
+    {
+     "index": 1,
+     "layout": "analogy",
+     "words": 39,
+     "overflows": 0,
+     "shrunk": 0,
+     "icons": 2,
+     "issues": []
+    },
+    {
+     "index": 2,
+     "layout": "stack",
+     "words": 26,
+     "overflows": 0,
+     "shrunk": 0,
+     "icons": 3,
+     "issues": []
+    },
+    {
+     "index": 3,
+     "layout": "memory",
+     "words": 35,
+     "overflows": 0,
+     "shrunk": 0,
+     "icons": 1,
+     "issues": []
+    },
+    {
+     "index": 4,
+     "layout": "flow",
+     "words": 24,
+     "overflows": 0,
+     "shrunk": 0,
+     "icons": 4,
+     "issues": []
+    },
+    {
+     "index": 5,
+     "layout": "compare",
+     "words": 30,
+     "overflows": 0,
+     "shrunk": 0,
+     "icons": 7,
+     "issues": []
+    },
+    {
+     "index": 6,
+     "layout": "canvas",
+     "words": 22,
+     "overflows": 0,
+     "shrunk": 0,
+     "icons": 3,
+     "issues": []
+    },
+    {
+     "index": 7,
+     "layout": "statement",
+     "words": 19,
+     "overflows": 0,
+     "shrunk": 0,
+     "icons": 1,
+     "issues": []
+    },
+    {
+     "index": 8,
+     "layout": "timeline",
+     "words": 19,
+     "overflows": 0,
+     "shrunk": 0,
+     "icons": 3,
+     "issues": []
+    },
+    {
+     "index": 9,
+     "layout": "bars",
+     "words": 26,
+     "overflows": 0,
+     "shrunk": 0,
+     "icons": 1,
+     "issues": []
+    },
+    {
+     "index": 10,
+     "layout": "cta",
+     "words": 41,
+     "overflows": 0,
+     "shrunk": 0,
+     "icons": 5,
+     "issues": []
+    }
+   ],
+   "preview_s": 6.4
+  },
+  "woodgrove_technical": {
+   "harness": "1.0",
+   "brief": "woodgrove_technical",
+   "template": "microsoft",
+   "lane": "local",
+   "model": "qwen3-coder-30b",
+   "llm_calls": 1,
+   "prompt_tokens": 1880,
+   "completion_tokens": 2192,
+   "decode_tps": 46.3,
+   "ttft_s": 7.384,
+   "generate_s": 54.78,
+   "render_s": 0.15,
+   "total_s": 54.93,
+   "power": {
+    "seconds": 54.77,
+    "samples": 210,
+    "gpu_avg_w": 40.6,
+    "gpu_peak_w": 44.8,
+    "gpu_wh": 0.6175,
+    "platform_wh": 0.1521,
+    "total_wh": 0.7697
+   },
+   "economics": {
+    "lane": "local",
+    "energy_wh": 0.77,
+    "cost_usd": 0.0001,
+    "co2e_g": 0.282,
+    "water_ml": 0.0,
+    "basis": "measured GPU board power (nvidia-smi, 250 ms) + 10 W platform allowance; electricity only"
+   },
+   "grade": {
+    "auto_score": 90.4,
+    "auto_grade": "A-",
+    "scores": {
+     "visual_richness": 20.4,
+     "text_lightness": 20.0,
+     "analogy": 10.0,
+     "brief_coverage": 15.0,
+     "claim_discipline": 15.0,
+     "structure": 10.0
+    },
+    "detail": {
+     "visual_richness": {
+      "infographic_share": 0.89,
+      "distinct_layouts": 7,
+      "icons_per_slide": 2.7,
+      "canvas_diagrams": 1
+     },
+     "text_lightness": {
+      "avg_words_per_slide": 27.2,
+      "max_words": 43
+     },
+     "analogy": {
+      "analogy_slides": 2,
+      "analogy_cue_slides": 0
+     },
+     "brief_coverage": {
+      "covered": 10.0,
+      "topics": 10,
+      "missing": []
+     },
+     "claim_discipline": {
+      "numbers_on_canvas": 25,
+      "untraceable": [],
+      "guardrail_violations": []
+     },
+     "structure": {
+      "strict_json": true,
+      "slides": 11,
+      "notes_slides": 10,
+      "fallbacks": 0,
+      "overflows": 0,
+      "shrunk_texts": 1
+     }
+    }
+   },
+   "pptx": "runs/heldout/v1.0/woodgrove_technical/woodgrove_technical-microsoft.pptx",
+   "render_summary": [
+    {
+     "index": 0,
+     "layout": "title",
+     "words": 18,
+     "overflows": 0,
+     "shrunk": 0,
+     "icons": 4,
+     "issues": []
+    },
+    {
+     "index": 1,
+     "layout": "stack",
+     "words": 32,
+     "overflows": 0,
+     "shrunk": 0,
+     "icons": 3,
+     "issues": []
+    },
+    {
+     "index": 2,
+     "layout": "analogy",
+     "words": 43,
+     "overflows": 0,
+     "shrunk": 0,
+     "icons": 2,
+     "issues": []
+    },
+    {
+     "index": 3,
+     "layout": "canvas",
+     "words": 30,
+     "overflows": 0,
+     "shrunk": 1,
+     "icons": 4,
+     "issues": []
+    },
+    {
+     "index": 4,
+     "layout": "flow",
+     "words": 25,
+     "overflows": 0,
+     "shrunk": 0,
+     "icons": 3,
+     "issues": []
+    },
+    {
+     "index": 5,
+     "layout": "bars",
+     "words": 28,
+     "overflows": 0,
+     "shrunk": 0,
+     "icons": 1,
+     "issues": []
+    },
+    {
+     "index": 6,
+     "layout": "analogy",
+     "words": 37,
+     "overflows": 0,
+     "shrunk": 0,
+     "icons": 2,
+     "issues": []
+    },
+    {
+     "index": 7,
+     "layout": "hub",
+     "words": 19,
+     "overflows": 0,
+     "shrunk": 0,
+     "icons": 5,
+     "issues": []
+    },
+    {
+     "index": 8,
+     "layout": "statement",
+     "words": 18,
+     "overflows": 0,
+     "shrunk": 0,
+     "icons": 1,
+     "issues": []
+    },
+    {
+     "index": 9,
+     "layout": "timeline",
+     "words": 22,
+     "overflows": 0,
+     "shrunk": 0,
+     "icons": 3,
+     "issues": []
+    },
+    {
+     "index": 10,
+     "layout": "cta",
+     "words": 27,
+     "overflows": 0,
+     "shrunk": 0,
+     "icons": 3,
+     "issues": []
+    }
+   ],
+   "preview_s": 3.2
+  },
+  "tailspin_sales": {
+   "harness": "1.0",
+   "brief": "tailspin_sales",
+   "template": "surface_ultra",
+   "lane": "local",
+   "model": "qwen3-coder-30b",
+   "llm_calls": 1,
+   "prompt_tokens": 1735,
+   "completion_tokens": 1710,
+   "decode_tps": 37.1,
+   "ttft_s": 1.729,
+   "generate_s": 47.76,
+   "render_s": 0.13,
+   "total_s": 47.89,
+   "power": {
+    "seconds": 47.75,
+    "samples": 183,
+    "gpu_avg_w": 39.8,
+    "gpu_peak_w": 50.7,
+    "gpu_wh": 0.5277,
+    "platform_wh": 0.1326,
+    "total_wh": 0.6603
+   },
+   "economics": {
+    "lane": "local",
+    "energy_wh": 0.66,
+    "cost_usd": 8.6e-05,
+    "co2e_g": 0.242,
+    "water_ml": 0.0,
+    "basis": "measured GPU board power (nvidia-smi, 250 ms) + 10 W platform allowance; electricity only"
+   },
+   "grade": {
+    "auto_score": 82.4,
+    "auto_grade": "B-",
+    "scores": {
+     "visual_richness": 17.4,
+     "text_lightness": 20.0,
+     "analogy": 6.0,
+     "brief_coverage": 15.0,
+     "claim_discipline": 15.0,
+     "structure": 9.0
+    },
+    "detail": {
+     "visual_richness": {
+      "infographic_share": 0.89,
+      "distinct_layouts": 8,
+      "icons_per_slide": 2.7,
+      "canvas_diagrams": 0
+     },
+     "text_lightness": {
+      "avg_words_per_slide": 20.4,
+      "max_words": 31
+     },
+     "analogy": {
+      "analogy_slides": 1,
+      "analogy_cue_slides": 0
+     },
+     "brief_coverage": {
+      "covered": 7.0,
+      "topics": 7,
+      "missing": []
+     },
+     "claim_discipline": {
+      "numbers_on_canvas": 15,
+      "untraceable": [],
+      "guardrail_violations": []
+     },
+     "structure": {
+      "strict_json": true,
+      "slides": 10,
+      "notes_slides": 9,
+      "fallbacks": 0,
+      "overflows": 0,
+      "shrunk_texts": 0
+     }
+    }
+   },
+   "pptx": "runs/heldout/v1.0/tailspin_sales/tailspin_sales-surface_ultra.pptx",
+   "render_summary": [
+    {
+     "index": 0,
+     "layout": "title",
+     "words": 12,
+     "overflows": 0,
+     "shrunk": 0,
+     "icons": 5,
+     "issues": []
+    },
+    {
+     "index": 1,
+     "layout": "analogy",
+     "words": 21,
+     "overflows": 0,
+     "shrunk": 0,
+     "icons": 2,
+     "issues": []
+    },
+    {
+     "index": 2,
+     "layout": "stack",
+     "words": 18,
+     "overflows": 0,
+     "shrunk": 0,
+     "icons": 2,
+     "issues": []
+    },
+    {
+     "index": 3,
+     "layout": "flow",
+     "words": 20,
+     "overflows": 0,
+     "shrunk": 0,
+     "icons": 3,
+     "issues": []
+    },
+    {
+     "index": 4,
+     "layout": "memory",
+     "words": 31,
+     "overflows": 0,
+     "shrunk": 0,
+     "icons": 1,
+     "issues": []
+    },
+    {
+     "index": 5,
+     "layout": "compare",
+     "words": 27,
+     "overflows": 0,
+     "shrunk": 0,
+     "icons": 7,
+     "issues": []
+    },
+    {
+     "index": 6,
+     "layout": "matrix",
+     "words": 30,
+     "overflows": 0,
+     "shrunk": 0,
+     "icons": 4,
+     "issues": []
+    },
+    {
+     "index": 7,
+     "layout": "bars",
+     "words": 19,
+     "overflows": 0,
+     "shrunk": 0,
+     "icons": 1,
+     "issues": []
+    },
+    {
+     "index": 8,
+     "layout": "canvas",
+     "words": 9,
+     "overflows": 0,
+     "shrunk": 0,
+     "icons": 3,
+     "issues": []
+    },
+    {
+     "index": 9,
+     "layout": "statement",
+     "words": 17,
+     "overflows": 0,
+     "shrunk": 0,
+     "icons": 1,
+     "issues": []
+    }
+   ],
+   "preview_s": 2.9
+  }
+ }
+}

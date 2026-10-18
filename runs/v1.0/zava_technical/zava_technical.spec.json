@@ -1,0 +1,316 @@
+{
+ "title": "Local AI on Surface Laptop Ultra",
+ "client": "Zava",
+ "slides": [
+  {
+   "layout": "title",
+   "kicker": "Technical Deep Dive",
+   "title": "Surface Laptop Ultra",
+   "subtitle": "Running Local AI at Scale",
+   "hero_icons": [
+    "laptop",
+    "gpu",
+    "chip",
+    "memory"
+   ]
+  },
+  {
+   "layout": "stack",
+   "title": "Hardware Stack",
+   "takeaway": "NVIDIA RTX Spark N1X with 20 cores",
+   "data": {
+    "side_label": "Closest to User",
+    "layers": [
+     {
+      "label": "Surface Laptop Ultra",
+      "detail": "RTX Spark N1X + 20 CPU cores",
+      "icon": "laptop"
+     },
+     {
+      "label": "GPU Memory",
+      "detail": "64,000 MiB visible to CUDA",
+      "icon": "gpu"
+     },
+     {
+      "label": "System RAM",
+      "detail": "128 GB installed, 64 GB visible",
+      "icon": "memory"
+     }
+    ]
+   },
+   "notes": "The device uses NVIDIA RTX Spark N1X with 20 CPU cores. GPU memory is distinct from system RAM. Never add them together."
+  },
+  {
+   "layout": "analogy",
+   "title": "Memory Views",
+   "takeaway": "VRAM and RAM are separate",
+   "data": {
+    "concept": {
+     "label": "GPU Memory",
+     "icon": "gpu"
+    },
+    "analog": {
+     "label": "Car Storage",
+     "icon": "car"
+    },
+    "pairs": [
+     {
+      "concept": "GPU memory is like a car's trunk",
+      "analog": "Only holds what the GPU needs"
+     },
+     {
+      "concept": "System RAM is like the car's cabin",
+      "analog": "Holds everything else"
+     },
+     {
+      "concept": "You can't mix them",
+      "analog": "Trunk and cabin are separate spaces"
+     }
+    ]
+   },
+   "notes": "GPU memory (64,000 MiB) is distinct from system RAM (128 GB). Never combine these views. This is a critical distinction for local AI performance."
+  },
+  {
+   "layout": "flow",
+   "title": "Local Runtimes",
+   "takeaway": "llama.cpp and Foundry Local support CUDA",
+   "data": {
+    "steps": [
+     {
+      "label": "llama.cpp build 11573",
+      "detail": "Native ARM64 with CUDA",
+      "icon": "code"
+     },
+     {
+      "label": "Foundry Local",
+      "detail": "CUDA execution provider",
+      "icon": "server"
+     }
+    ]
+   },
+   "notes": "Both runtimes support CUDA on this device. This allows for efficient local model inference using the GPU."
+  },
+  {
+   "layout": "bars",
+   "title": "Model Catalog",
+   "takeaway": "28 open models, 315 GiB total",
+   "data": {
+    "unit": "GiB",
+    "highlight": "Total Size",
+    "icon": "database",
+    "caption": "Local model disk usage",
+    "bars": [
+     {
+      "label": "Models",
+      "value": 28
+     },
+     {
+      "label": "Disk Space",
+      "value": 315
+     }
+    ]
+   },
+   "notes": "The device hosts 28 open models, totaling 315 GiB on disk. These are all local and accessible without cloud calls."
+  },
+  {
+   "layout": "analogy",
+   "title": "Throughput",
+   "takeaway": "Tokens per second like a typing speed",
+   "data": {
+    "concept": {
+     "label": "Token Throughput",
+     "icon": "speed"
+    },
+    "analog": {
+     "label": "Typing Speed",
+     "icon": "keyboard"
+    },
+    "pairs": [
+     {
+      "concept": "140 tokens/s across 4 streams",
+      "analog": "Like typing 140 words per second with 4 fingers"
+     },
+     {
+      "concept": "72 tokens/s single stream",
+      "analog": "Like typing 72 words per second with one finger"
+     },
+     {
+      "concept": "MoE models decode faster",
+      "analog": "Like using shortcuts to type faster"
+     }
+    ]
+   },
+   "notes": "Throughput numbers are from Local-AI-Bench on a shared machine. Qwen3-Coder 30B achieves 140 tokens/s across 4 streams, and 72/s single stream."
+  },
+  {
+   "layout": "compare",
+   "title": "MoE vs Dense Models",
+   "takeaway": "MoE models activate fewer experts per token",
+   "data": {
+    "left": {
+     "title": "Dense Models",
+     "icon": "cube",
+     "points": [
+      "All parameters active",
+      "Slower decode"
+     ]
+    },
+    "right": {
+     "title": "MoE Models",
+     "icon": "puzzle",
+     "points": [
+      "Only few experts per token",
+      "Faster decode"
+     ]
+    },
+    "verdict": "MoE models are faster for decoding"
+   },
+   "notes": "MoE models activate only a few experts per token, making them decode several times faster than dense models of similar size."
+  },
+  {
+   "layout": "matrix",
+   "title": "Model Sizing Bands",
+   "takeaway": "Bands help estimate model size",
+   "data": {
+    "x_axis": "Small to Large",
+    "y_axis": "Performance",
+    "highlight": 1,
+    "quadrants": [
+     {
+      "label": "S (1-4B)",
+      "detail": "Lightweight, fast",
+      "icon": "chip"
+     },
+     {
+      "label": "M (7-8B)",
+      "detail": "Balanced",
+      "icon": "gears"
+     },
+     {
+      "label": "L (14-20B)",
+      "detail": "Powerful",
+      "icon": "bolt"
+     },
+     {
+      "label": "XL (24-32B)",
+      "detail": "Heavy tasks",
+      "icon": "power"
+     }
+    ]
+   },
+   "notes": "Model sizing bands are planning estimates. S-band models are lightweight, XL-band are for heavy tasks."
+  },
+  {
+   "layout": "statement",
+   "title": "Code Generation & RAG",
+   "takeaway": "Local code gen and internal docs",
+   "data": {
+    "icon": "code",
+    "text": "Local AI handles code generation",
+    "sub": "And retrieval over internal docs"
+   },
+   "notes": "The system runs code generation and retrieval over internal engineering documents locally, without cloud calls."
+  },
+  {
+   "layout": "hub",
+   "title": "Hybrid Routing",
+   "takeaway": "Sensitive tasks stay local",
+   "data": {
+    "center": {
+     "label": "Local Lane",
+     "icon": "layers"
+    },
+    "spokes": [
+     {
+      "label": "Code Gen",
+      "icon": "code"
+     },
+     {
+      "label": "Internal Docs",
+      "icon": "document"
+     },
+     {
+      "label": "Frequent Tasks",
+      "icon": "timer"
+     },
+     {
+      "label": "Sensitive Data",
+      "icon": "lock"
+     }
+    ]
+   },
+   "notes": "Sensitive and frequent tasks (code, internal docs) route to the local lane. Heavier reasoning can go to cloud models."
+  },
+  {
+   "layout": "canvas",
+   "title": "Made on Device",
+   "takeaway": "This deck was generated locally",
+   "data": {
+    "elements": [
+     {
+      "type": "box",
+      "x": 0,
+      "y": 0,
+      "w": 6,
+      "h": 3,
+      "label": "Surface Laptop Ultra",
+      "icon": "laptop",
+      "tone": "primary"
+     },
+     {
+      "type": "box",
+      "x": 6,
+      "y": 0,
+      "w": 6,
+      "h": 3,
+      "label": "Qwen3-Coder 30B",
+      "icon": "chip",
+      "tone": "accent1"
+     },
+     {
+      "type": "box",
+      "x": 0,
+      "y": 3,
+      "w": 6,
+      "h": 3,
+      "label": "llama.cpp",
+      "icon": "code",
+      "tone": "accent2"
+     },
+     {
+      "type": "box",
+      "x": 6,
+      "y": 3,
+      "w": 6,
+      "h": 3,
+      "label": "Generated Deck",
+      "icon": "document",
+      "tone": "accent3"
+     }
+    ]
+   },
+   "notes": "This deck was generated on the Surface Laptop Ultra using Qwen3-Coder 30B through llama.cpp, with no cloud calls."
+  },
+  {
+   "layout": "cta",
+   "title": "Pilot Ask",
+   "takeaway": "10 developers for 2 weeks",
+   "data": {
+    "steps": [
+     {
+      "label": "Join Pilot",
+      "detail": "10 developers, 2 weeks",
+      "icon": "team"
+     },
+     {
+      "label": "Measure Impact",
+      "detail": "Latency & experience",
+      "icon": "chart"
+     }
+    ],
+    "ask": "Ready to test local AI?"
+   },
+   "notes": "Zava invites 10 developers for a 2-week pilot to measure acceptance rate, latency, and developer experience."
+  }
+ ]
+}

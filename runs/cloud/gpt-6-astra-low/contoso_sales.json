@@ -1,0 +1,155 @@
+{
+  "title": "A Local AI Lane for Contoso",
+  "client": "Contoso",
+  "slides": [
+    {
+      "layout": "title",
+      "kicker": "CONTOSO • CONSULTING",
+      "title": "Keep Client Drafting Moving",
+      "subtitle": "Pilot Surface Laptop Ultra with NVIDIA RTX Spark alongside Microsoft 365 Copilot.",
+      "hero_icons": ["laptop", "ai", "shield", "airplane"],
+      "notes": "Approve a focused pilot of an additional local AI lane for traveling consultants. Contoso keeps Microsoft 365 Copilot. The opportunity is sensitive, repeated drafting on the device, with disconnected use validated rather than assumed."
+    },
+    {
+      "layout": "kpis",
+      "title": "Drafting Meets Travel Friction",
+      "takeaway": "Repeated summaries and restricted guest Wi-Fi create a clear pilot use case.",
+      "data": {
+        "items": [
+          {"value": "1,200", "label": "Traveling consultants", "icon": "airplane", "source": "Contoso brief: traveling consultant population."},
+          {"value": "6", "label": "Summaries weekly", "icon": "document", "source": "Contoso brief: approximate summaries per consultant per week."},
+          {"value": "25 minutes", "label": "Drafting today", "icon": "clock", "source": "Contoso brief: approximate drafting time per summary."},
+          {"value": "30%", "label": "Guest Wi-Fi restricted", "icon": "wifi", "source": "Contoso brief: approximate share of client sites."}
+        ]
+      },
+      "notes": "Contoso has 4,000 employees, including 1,200 traveling consultants. Each writes about 6 summaries weekly, taking about 25 minutes per draft. About 30% of client sites restrict guest Wi-Fi. These facts establish the workflow to test; they do not establish that local AI will save time."
+    },
+    {
+      "layout": "analogy",
+      "title": "Bring the Drafting Desk Along",
+      "takeaway": "A local assistant is a portable workbench, not a dependency on guest Wi-Fi.",
+      "data": {
+        "concept": {"label": "Local AI", "icon": "ai"},
+        "analog": {"label": "Portable workbench", "icon": "tools"},
+        "pairs": [
+          {"concept": "Local model", "analog": "Packed tools"},
+          {"concept": "Approved client files", "analog": "Materials at hand"},
+          {"concept": "Draft generation", "analog": "Workbench assembly"},
+          {"concept": "Consultant review", "analog": "Craftsperson inspection"}
+        ]
+      },
+      "notes": "The workbench analogy explains the proposed local drafting path: bring the tools and approved materials onto the device, then inspect the result. We will validate disconnected use in the pilot, including model readiness and file availability. This is not an air-gap or offline certification claim."
+    },
+    {
+      "layout": "compare",
+      "title": "Add a Lane, Keep Copilot",
+      "takeaway": "The recommended hybrid approach retains Microsoft 365 Copilot and adds local drafting.",
+      "data": {
+        "left": {
+          "title": "Existing lane",
+          "icon": "cloud",
+          "points": ["Microsoft 365 Copilot", "Keep established workflows", "No replacement proposed"]
+        },
+        "right": {
+          "title": "Hybrid approach",
+          "icon": "swap",
+          "points": ["Microsoft 365 Copilot retained", "Local sensitive drafting", "Disconnected use: validate"]
+        },
+        "verdict": "Add capability; retain existing subscriptions."
+      },
+      "notes": "The decision is not local AI versus Copilot. Keep Microsoft 365 Copilot and its established workflows. Add a device-local path for approved sensitive material and repeated drafts. Define routing rules with IT so users understand which lane to choose and when moving content requires approval."
+    },
+    {
+      "layout": "canvas",
+      "title": "The Proposed Local Drafting Boundary",
+      "takeaway": "Keep source documents and inference on-device; review drafts before any sharing.",
+      "data": {
+        "elements": [
+          {"type": "box", "x": 0.3, "y": 0.4, "w": 8.3, "h": 5.1, "label": "", "tone": "card"},
+          {"type": "text", "x": 0.6, "y": 0.7, "w": 7.5, "h": 0.5, "label": "On-device drafting boundary", "size": "m", "tone": "primary"},
+          {"type": "box", "x": 0.7, "y": 1.8, "w": 2, "h": 1.2, "label": "Approved local files", "icon": "folder", "tone": "accent1"},
+          {"type": "arrow", "x": 2.8, "y": 2.4, "x2": 3.5, "y2": 2.4, "tone": "primary"},
+          {"type": "box", "x": 3.6, "y": 1.8, "w": 2, "h": 1.2, "label": "Local model", "icon": "ai", "tone": "primary"},
+          {"type": "arrow", "x": 5.7, "y": 2.4, "x2": 6.3, "y2": 2.4, "tone": "primary"},
+          {"type": "box", "x": 6.4, "y": 1.8, "w": 1.9, "h": 1.2, "label": "Review draft", "icon": "eye", "tone": "accent2"},
+          {"type": "pill", "x": 2.3, "y": 3.7, "w": 4.6, "h": 0.8, "label": "NVIDIA RTX Spark", "icon": "gpu", "tone": "accent3"},
+          {"type": "text", "x": 0.7, "y": 4.8, "w": 7.4, "h": 0.4, "label": "Validate disconnected use", "size": "s", "tone": "text"},
+          {"type": "box", "x": 9, "y": 1.7, "w": 2.7, "h": 1.5, "label": "Microsoft 365 Copilot", "icon": "cloud", "tone": "accent4"},
+          {"type": "text", "x": 9, "y": 3.6, "w": 2.7, "h": 0.9, "label": "Separate existing lane", "size": "s", "tone": "text"}
+        ]
+      },
+      "notes": "This is the proposed architecture, not a security certification. Approved local files feed on-device inference and a locally reviewed draft. Copilot remains a separate lane; no automatic transfer is shown. IT should validate actual data flows, storage, synchronization settings and disconnected behavior before sensitive client material enters the pilot."
+    },
+    {
+      "layout": "stack",
+      "title": "Surface Laptop Ultra Powers Local Drafting",
+      "takeaway": "NVIDIA RTX Spark provides the device foundation; the pilot tests workflow suitability.",
+      "data": {
+        "side_label": "Device foundation",
+        "layers": [
+          {"label": "Consultant workspace", "detail": "Approved documents, local drafts, human review", "icon": "person"},
+          {"label": "Local model catalog", "detail": "28 open models installed", "icon": "library"},
+          {"label": "NVIDIA RTX Spark", "detail": "Blackwell RTX GPU", "icon": "gpu"},
+          {"label": "Compute and memory", "detail": "20 CPU cores; 128 GB installed memory", "icon": "chip"}
+        ]
+      },
+      "notes": "The device is Surface Laptop Ultra with NVIDIA RTX Spark. Local-AI-Bench, October 2026, reports single-stream decoding of about 72 tokens per second for Gemma 4 26B and 86 for Qwen3-Coder 30B. These are model benchmarks, not evidence of draft quality or consultant time savings. The pilot must establish workflow results."
+    },
+    {
+      "layout": "kpis",
+      "title": "Illustrative Capacity, Not Proven Savings",
+      "takeaway": "The annual capacity estimate is unvalidated; the pilot measures actual task-time change.",
+      "data": {
+        "items": [
+          {"value": "5 minutes", "label": "Assumed time saved", "icon": "timer", "source": "Brief: illustrative assumption per summary, not measured."},
+          {"value": "27,600 hours/year", "label": "Estimate to validate", "icon": "clock", "source": "Brief: unvalidated illustrative annual capacity estimate."}
+        ]
+      },
+      "notes": "The illustration multiplies 1,200 consultants by 6 summaries weekly, 5 assumed minutes saved and 46 working weeks, then converts minutes to hours: 27,600 hours annually. This is an estimate to validate, not a forecast, financial saving or guaranteed outcome. A short pilot measures task time and quality before considering broader applicability."
+    },
+    {
+      "layout": "analogy",
+      "title": "A Junior Drafter, Not the Signatory",
+      "takeaway": "The assistant prepares material; the consultant remains responsible for the client-ready summary.",
+      "data": {
+        "concept": {"label": "AI drafting workflow", "icon": "ai"},
+        "analog": {"label": "Consulting review team", "icon": "team"},
+        "pairs": [
+          {"concept": "Approved source documents", "analog": "Interview evidence"},
+          {"concept": "Generated first draft", "analog": "Junior colleague's draft"},
+          {"concept": "Source verification", "analog": "Manager's fact check"},
+          {"concept": "Consultant approval", "analog": "Engagement sign-off"}
+        ]
+      },
+      "notes": "Local processing does not make generated text automatically correct. Treat the model like a junior drafter: useful for preparation, dependent on good evidence, and subject to review. Measure total task time including fact checking and corrections. A faster first draft is not a win if it creates more review work."
+    },
+    {
+      "layout": "flow",
+      "title": "Measure the Workflow Before Scaling",
+      "takeaway": "Test task time, draft quality and user experience, including disconnected use.",
+      "data": {
+        "steps": [
+          {"label": "Prepare", "detail": "Approve files, tasks and local configuration", "icon": "checklist"},
+          {"label": "Establish baseline", "detail": "Record current task time and draft quality", "icon": "clock"},
+          {"label": "Run local tasks", "detail": "Validate disconnected use and capture user experience", "icon": "laptop"},
+          {"label": "Review evidence", "detail": "Compare outcomes, corrections and practical constraints", "icon": "chart"}
+        ]
+      },
+      "notes": "Proposed pilot method: use comparable summary tasks and capture completion time through review, draft quality and user experience. Include restricted-connectivity scenarios, validating disconnected behavior explicitly. The Consulting lead defines acceptable output; IT validates the local configuration. Sponsors review evidence before deciding whether to expand, adjust or stop."
+    },
+    {
+      "layout": "cta",
+      "title": "Approve the Contoso Local AI Pilot",
+      "takeaway": "Authorize 10 users for 2 weeks while keeping Microsoft 365 Copilot in place.",
+      "data": {
+        "steps": [
+          {"label": "COO sponsorship", "detail": "Approve scope and evidence-based review", "icon": "flag"},
+          {"label": "CIO readiness", "detail": "Validate local configuration and data handling", "icon": "shield"},
+          {"label": "Consulting ownership", "detail": "Select 10 users and representative drafting tasks", "icon": "team"}
+        ],
+        "ask": "Approve the 2-week pilot; review evidence before expansion."
+      },
+      "notes": "The ask is a 10-user, 2-week pilot, not an enterprise rollout. Test Surface Laptop Ultra with NVIDIA RTX Spark alongside Microsoft 365 Copilot. Measure task time, draft quality and user experience, and validate disconnected use. Return to sponsors with observed outcomes and a recommendation; do not treat illustrative capacity as proven savings."
+    }
+  ]
+}

@@ -1,0 +1,398 @@
+{
+ "title": "Offline PPTX Forge Benchmark",
+ "client": "Internal",
+ "slides": [
+  {
+   "layout": "title",
+   "kicker": "OFFLINE PPTX FORGE BENCHMARK",
+   "title": "Laptop Ultra vs Frontier Cloud",
+   "subtitle": "2 briefs, 16 decks, 1 round of frontier distillation",
+   "hero_icons": [
+    "laptop",
+    "cloud",
+    "chart",
+    "leaf"
+   ]
+  },
+  {
+   "layout": "kpis",
+   "title": "One Round Lifted Quality +23 Points",
+   "takeaway": "Local deck grade went D to B with weights unchanged.",
+   "data": {
+    "items": [
+     {
+      "value": "63 to 86",
+      "label": "Overall score",
+      "icon": "chart",
+      "source": "rubric + blind judge"
+     },
+     {
+      "value": "+2.6",
+      "label": "Gap to Astra max",
+      "icon": "target",
+      "source": "mean of 2 briefs"
+     },
+     {
+      "value": "$0.0004",
+      "label": "Cost per deck",
+      "icon": "money",
+      "source": "measured Wh"
+     },
+     {
+      "value": "0 mL",
+      "label": "Water per deck",
+      "icon": "water",
+      "source": "no data center"
+     }
+    ]
+   },
+   "notes": "v1.0 overall 62.8, v1.1 85.6. Best cloud Astra max 83.0. Gap moved from -20.2 to +2.6."
+  },
+  {
+   "layout": "bars",
+   "title": "Local v1.1 Now Competes on Quality",
+   "takeaway": "Top mean overall; auto rubric gives most of the lead.",
+   "data": {
+    "unit": "pts",
+    "highlight": "Local v1.1",
+    "icon": "chart",
+    "caption": "0.5 x auto rubric + 0.5 x blind judge",
+    "bars": [
+     {
+      "label": "Local v1.0",
+      "value": 62.8
+     },
+     {
+      "label": "Local v1.1",
+      "value": 85.6
+     },
+     {
+      "label": "Opus low",
+      "value": 78.7
+     },
+     {
+      "label": "Opus high",
+      "value": 81.8
+     },
+     {
+      "label": "Opus max",
+      "value": 80.3
+     },
+     {
+      "label": "Astra low",
+      "value": 82.1
+     },
+     {
+      "label": "Astra high",
+      "value": 82.2
+     },
+     {
+      "label": "Astra max",
+      "value": 83.0
+     }
+    ]
+   },
+   "notes": "Overall blends the automated rubric with a blind visual judge. v1.1 lint targets some rubric checks, so read the next slide (judge only) as the fairer quality signal."
+  },
+  {
+   "layout": "bars",
+   "title": "Blind Judge Says Parity, Not a Win",
+   "takeaway": "v1.1 judge 39.0/50 vs best cloud 40.5.",
+   "data": {
+    "unit": "/50",
+    "highlight": "Local v1.1",
+    "icon": "people",
+    "caption": "Anonymized contact sheets, same judge, 0 anchor drift",
+    "bars": [
+     {
+      "label": "Local v1.0",
+      "value": 19.5
+     },
+     {
+      "label": "Local v1.1",
+      "value": 39.0
+     },
+     {
+      "label": "Opus low",
+      "value": 36.0
+     },
+     {
+      "label": "Opus high",
+      "value": 40.0
+     },
+     {
+      "label": "Opus max",
+      "value": 40.5
+     },
+     {
+      "label": "Astra low",
+      "value": 39.5
+     },
+     {
+      "label": "Astra high",
+      "value": 39.0
+     },
+     {
+      "label": "Astra max",
+      "value": 40.5
+     }
+    ]
+   },
+   "notes": "Six round-1 decks were re-scored blind under new IDs in round 2 and matched exactly."
+  },
+  {
+   "layout": "bars",
+   "title": "Quality Cost Local Drafting Time",
+   "takeaway": "Repair passes made local 3.8x slower; still beats Astra max at 268 s.",
+   "data": {
+    "unit": "s",
+    "highlight": "Local v1.1",
+    "icon": "timer",
+    "caption": "Local: wall-clock generation. Cloud: API generation seconds.",
+    "bars": [
+     {
+      "label": "Local v1.0",
+      "value": 64
+     },
+     {
+      "label": "Local v1.1",
+      "value": 241
+     },
+     {
+      "label": "Opus low",
+      "value": 28
+     },
+     {
+      "label": "Opus high",
+      "value": 88
+     },
+     {
+      "label": "Opus max",
+      "value": 606
+     },
+     {
+      "label": "Astra low",
+      "value": 57
+     },
+     {
+      "label": "Astra high",
+      "value": 137
+     },
+     {
+      "label": "Astra max",
+      "value": 268
+     }
+    ]
+   },
+   "notes": "Cloud median 108 s. Local ran on a shared server slot under contention."
+  },
+  {
+   "layout": "bars",
+   "title": "Cloud Cost Scales With Reasoning",
+   "takeaway": "Marginal cost per 1,000 decks; local is electricity only.",
+   "data": {
+    "unit": "USD",
+    "highlight": "Local v1.1",
+    "icon": "money",
+    "caption": "List price x exact tokens vs measured kWh x $0.13",
+    "bars": [
+     {
+      "label": "Local v1.0",
+      "value": 0.1
+     },
+     {
+      "label": "Local v1.1",
+      "value": 0.41
+     },
+     {
+      "label": "Opus low",
+      "value": 74.38
+     },
+     {
+      "label": "Opus high",
+      "value": 203.59
+     },
+     {
+      "label": "Opus max",
+      "value": 1430.28
+     },
+     {
+      "label": "Astra low",
+      "value": 187.12
+     },
+     {
+      "label": "Astra high",
+      "value": 392.34
+     },
+     {
+      "label": "Astra max",
+      "value": 708.32
+     }
+    ]
+   },
+   "notes": "Local v1.1 saves 99.9% vs the cloud median per deck."
+  },
+  {
+   "layout": "kpis",
+   "title": "Sustainability per 1,000 Decks",
+   "takeaway": "Measured local energy vs published cloud per-token estimates.",
+   "data": {
+    "items": [
+     {
+      "value": "3.2 kWh",
+      "label": "Local v1.1 energy",
+      "icon": "bolt",
+      "source": "nvidia-smi"
+     },
+     {
+      "value": "9.4 kWh",
+      "label": "Cloud median energy",
+      "icon": "cloud",
+      "source": "1.1 Wh/1k tok"
+     },
+     {
+      "value": "31 L",
+      "label": "Cloud water avoided",
+      "icon": "water",
+      "source": "3.6 mL/1k tok"
+     },
+     {
+      "value": "2.3 kg",
+      "label": "CO2e avoided",
+      "icon": "leaf",
+      "source": "0.367 kg/kWh"
+     }
+    ]
+   },
+   "notes": "Values per deck x 1,000. Local GPU power includes other tenants, so local energy is overstated."
+  },
+  {
+   "layout": "flow",
+   "title": "What v1.1 Learned From Frontier",
+   "takeaway": "Distilled arc, analogies and checks; the model stayed the same.",
+   "data": {
+    "steps": [
+     {
+      "label": "Deck arc",
+      "detail": "Slot-by-slot story",
+      "icon": "map"
+     },
+     {
+      "label": "Analogy bank",
+      "detail": "Caveat-mapped analogies",
+      "icon": "lightbulb"
+     },
+     {
+      "label": "JSON draft",
+      "detail": "Local model, JSON mode",
+      "icon": "code"
+     },
+     {
+      "label": "Render + lint",
+      "detail": "Deterministic checks",
+      "icon": "checklist"
+     },
+     {
+      "label": "Targeted repair",
+      "detail": "Keep only improvements",
+      "icon": "wrench"
+     }
+    ]
+   },
+   "notes": "Lint issues fell from 30 to 24 across both decks before grading."
+  },
+  {
+   "layout": "analogy",
+   "title": "Distillation Is Like an Apprenticeship",
+   "takeaway": "Same apprentice, better playbook.",
+   "data": {
+    "concept": {
+     "label": "Harness v1.1",
+     "icon": "ai"
+    },
+    "analog": {
+     "label": "Apprentice",
+     "icon": "people"
+    },
+    "pairs": [
+     {
+      "concept": "Frontier decks",
+      "analog": "Master's portfolio"
+     },
+     {
+      "concept": "Blind judge notes",
+      "analog": "Studio critique"
+     },
+     {
+      "concept": "Lint rules",
+      "analog": "Pre-flight checklist"
+     },
+     {
+      "concept": "Repair pass",
+      "analog": "Rework before review"
+     },
+     {
+      "concept": "Weights unchanged",
+      "analog": "Same apprentice"
+     }
+    ]
+   },
+   "notes": "No fine-tuning: the gains came from program and prompt design."
+  },
+  {
+   "layout": "compare",
+   "title": "Self-Grade: v1.0 vs v1.1",
+   "takeaway": "Quality up, speed down, cost and water still near zero.",
+   "data": {
+    "left": {
+     "title": "v1.0 composite B+",
+     "icon": "laptop",
+     "points": [
+      "Deck D",
+      "Time A+",
+      "Cost A+",
+      "Sustain A"
+     ]
+    },
+    "right": {
+     "title": "v1.1 composite C+",
+     "icon": "laptop",
+     "points": [
+      "Deck B",
+      "Time F",
+      "Cost A+",
+      "Sustain B"
+     ]
+    },
+    "verdict": "Ship v1.1 for quality; v1.2 targets speed."
+   },
+   "notes": "Grades come from formulas versus the cloud median; see BENCHMARK.md."
+  },
+  {
+   "layout": "cta",
+   "title": "Next: Harness v1.2",
+   "takeaway": "Keep the quality, win back the time.",
+   "data": {
+    "steps": [
+     {
+      "label": "Dedicated GPU slot",
+      "detail": "No shared-server contention",
+      "icon": "chip"
+     },
+     {
+      "label": "Early-stop repair",
+      "detail": "Skip passes that cannot win",
+      "icon": "timer"
+     },
+     {
+      "label": "Held-out briefs",
+      "detail": "Prove it generalizes",
+      "icon": "checklist"
+     }
+    ],
+    "ask": "Run round 2 distillation on new briefs."
+   },
+   "notes": "Each step is measurable with this benchmark harness."
+  }
+ ]
+}

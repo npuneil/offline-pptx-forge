@@ -1,0 +1,1298 @@
+{
+  "title": "Woodgrove Bank Technical Briefing for Engineering",
+  "client": "Woodgrove Bank",
+  "slides": [
+    {
+      "layout": "title",
+      "kicker": "TECHNICAL BRIEFING FOR <CLIENT> ENGINEERING",
+      "title": "Local AI Proven on Surface Laptop Ultra",
+      "subtitle": "12 analysts, 3 weeks, sensitive data handled locally",
+      "hero_icons": ["laptop", "ai", "document", "chart"]
+    },
+    {
+      "layout": "compare",
+      "title": "Local Lane for Sensitive Work",
+      "takeaway": "Like a hotel safe + concierge: local for files, cloud for research.",
+      "data": {
+        "left": {
+          "title": "Shared Services Only",
+          "icon": "cloud",
+          "points": [
+            "All data to shared AI",
+            "No local control"
+          ]
+        },
+        "right": {
+          "title": "Local Lane + Cloud",
+          "icon": "devices",
+          "points": [
+            "Sensitive files stay local",
+            "Cloud for non-sensitive work"
+          ]
+        },
+        "verdict": "Hybrid routing wins"
+      },
+      "notes": "Local lane protects sensitive data, cloud handles research. Hybrid approach offers best of both worlds."
+    },
+    {
+      "layout": "stack",
+      "title": "Stack: From Silicon to Workflows",
+      "takeaway": "Silicon → runtimes → models → workflows, each with a fact.",
+      "data": {
+        "side_label": "Woodgrove Stack",
+        "layers": [
+          {
+            "label": "Silicon",
+            "detail": "NVIDIA RTX Spark N1X",
+            "icon": "gpu"
+          },
+          {
+            "label": "Runtimes",
+            "detail": "llama.cpp 11573, Foundry Local",
+            "icon": "code"
+          },
+          {
+            "label": "Model Catalog",
+            "detail": "28 open models, 315 GiB",
+            "icon": "library"
+          },
+          {
+            "label": "Developer Workflows",
+            "detail": "Code + RAG over policy docs",
+            "icon": "chat"
+          }
+        ]
+      },
+      "notes": "Hardware is Surface Laptop Ultra with RTX Spark. Software stack includes llama.cpp and Foundry Local. Catalog has 28 models, 315 GiB on disk."
+    },
+    {
+      "layout": "kpis",
+      "title": "Three Memory Views Never Summed",
+      "takeaway": "Like zoom levels on one map: never add them.",
+      "data": {
+        "items": [
+          {
+            "value": "128 GB",
+            "label": "Installed",
+            "icon": "memory",
+            "source": "Device spec"
+          },
+          {
+            "value": "64 GB",
+            "label": "Visible to Windows",
+            "icon": "memory",
+            "source": "Windows memory view"
+          },
+          {
+            "value": "64,000 MiB",
+            "label": "GPU Budget",
+            "icon": "gpu",
+            "source": "nvidia-smi"
+          }
+        ]
+      },
+      "notes": "Memory views are distinct. Installed = whole system; visible = Windows view; GPU = CUDA view. Never add them."
+    },
+    {
+      "layout": "bars",
+      "title": "MoE vs Dense Decode Speed",
+      "takeaway": "Mixture of Experts decode faster than dense models.",
+      "data": {
+        "unit": "tokens/s",
+        "highlight": "Qwen3-Coder 30B, 1 stream",
+        "icon": "speed",
+        "caption": "Local-AI-Bench, shared machine, Oct 2026",
+        "bars": [
+          {
+            "label": "Gemma 4 26B, 1 stream",
+            "value": 72
+          },
+          {
+            "label": "Qwen3-Coder 30B, 1 stream",
+            "value": 86
+          },
+          {
+            "label": "Qwen3.6 27B, 1 stream",
+            "value": 13
+          }
+        ]
+      },
+      "notes": "MoE models decode faster due to selective expert use. Qwen3-Coder 30B is fastest single-stream decoder."
+    },
+    {
+      "layout": "analogy",
+      "title": "Why MoE Is Fast",
+      "takeaway": "Like a specialist team: few experts per task, not everyone in every meeting.",
+      "data": {
+        "concept": {
+          "label": "Mixture of Experts",
+          "icon": "team"
+        },
+        "analog": {
+          "label": "Specialist Team",
+          "icon": "team"
+        },
+        "pairs": [
+          {
+            "concept": "30B total parameters",
+            "analog": "Whole team on the roster"
+          },
+          {
+            "concept": "About 3B active per token",
+            "analog": "Few specialists per task"
+          },
+          {
+            "concept": "Gate picks experts",
+            "analog": "Lead assigns specialists"
+          },
+          {
+            "concept": "Dense: every weight fires",
+            "analog": "Everyone in every meeting"
+          }
+        ]
+      },
+      "notes": "MoE models activate only a few experts per token, unlike dense models where all weights fire."
+    },
+    {
+      "layout": "flow",
+      "title": "Code + RAG Workflow",
+      "takeaway": "Like an open-book exam: textbook (docs) and answer with book open.",
+      "data": {
+        "steps": [
+          {
+            "label": "IDE Prompt",
+            "detail": "Developer writes query",
+            "icon": "edit"
+          },
+          {
+            "label": "RAG Retrieve",
+            "detail": "Policy docs indexed",
+            "icon": "search"
+          },
+          {
+            "label": "Local Model Gen",
+            "detail": "Draft with citations",
+            "icon": "ai"
+          },
+          {
+            "label": "Developer Review",
+            "detail": "Edit or approve",
+            "icon": "check"
+          },
+          {
+            "label": "Decision",
+            "detail": "Code or query",
+            "icon": "approve"
+          }
+        ]
+      },
+      "notes": "Workflow uses local RAG over policy docs, then local model for code gen. Developer reviews and decides."
+    },
+    {
+      "layout": "analogy",
+      "title": "Model Sizing Bands",
+      "takeaway": "Shop machines: benchtop to gantry mill.",
+      "data": {
+        "concept": {
+          "label": "Model Sizing Bands",
+          "icon": "tools"
+        },
+        "analog": {
+          "label": "Shop Machine Sizes",
+          "icon": "tools"
+        },
+        "pairs": [
+          {
+            "concept": "S: 1-4B",
+            "analog": "Benchtop mill"
+          },
+          {
+            "concept": "M: 7-8B",
+            "analog": "Standard CNC mill"
+          },
+          {
+            "concept": "L: 14-20B",
+            "analog": "Machining center"
+          },
+          {
+            "concept": "XL: 24-32B",
+            "analog": "Gantry mill"
+          }
+        ]
+      },
+      "notes": "Model sizes are job sizes, not accuracy tiers. S = small jobs, XL = large jobs."
+    },
+    {
+      "layout": "canvas",
+      "title": "Hybrid Routing: Local Lane Inside",
+      "takeaway": "Like make-or-buy: code and docs local; reasoning cloud.",
+      "data": {
+        "elements": [
+          {
+            "type": "pill",
+            "x": 0.2,
+            "y": 0.0,
+            "w": 7.8,
+            "h": 0.55,
+            "label": "Surface Laptop Ultra",
+            "icon": "laptop",
+            "tone": "primary"
+          },
+          {
+            "type": "line",
+            "x": 0.2,
+            "y": 0.8,
+            "x2": 8.0,
+            "y2": 0.8,
+            "dashed": true,
+            "tone": "accent2"
+          },
+          {
+            "type": "line",
+            "x": 0.2,
+            "y": 5.6,
+            "x2": 8.0,
+            "y2": 5.6,
+            "dashed": true,
+            "tone": "accent2"
+          },
+          {
+            "type": "line",
+            "x": 0.2,
+            "y": 0.8,
+            "x2": 0.2,
+            "y2": 5.6,
+            "dashed": true,
+            "tone": "accent2"
+          },
+          {
+            "type": "line",
+            "x": 8.0,
+            "y": 0.8,
+            "x2": 8.0,
+            "y2": 5.6,
+            "dashed": true,
+            "tone": "accent2"
+          },
+          {
+            "type": "box",
+            "x": 0.5,
+            "y": 1.3,
+            "w": 2.2,
+            "h": 1.0,
+            "label": "Code & Docs",
+            "icon": "code",
+            "tone": "accent2"
+          },
+          {
+            "type": "arrow",
+            "x": 2.7,
+            "y": 1.8,
+            "x2": 3.0,
+            "y2": 1.8,
+            "tone": "primary"
+          },
+          {
+            "type": "box",
+            "x": 3.0,
+            "y": 1.3,
+            "w": 2.2,
+            "h": 1.0,
+            "label": "Local Lane",
+            "icon": "devices",
+            "tone": "primary"
+          },
+          {
+            "type": "arrow",
+            "x": 5.2,
+            "y": 1.8,
+            "x2": 5.5,
+            "y2": 1.8,
+            "tone": "primary"
+          },
+          {
+            "type": "box",
+            "x": 5.5,
+            "y": 1.3,
+            "w": 2.2,
+            "h": 1.0,
+            "label": "Developer Decision",
+            "icon": "approve",
+            "tone": "accent1"
+          },
+          {
+            "type": "line",
+            "x": 4.1,
+            "y": 2.3,
+            "x2": 4.1,
+            "y2": 3.3,
+            "tone": "muted"
+          },
+          {
+            "type": "box",
+            "x": 3.0,
+            "y": 3.3,
+            "w": 2.2,
+            "h": 0.9,
+            "label": "RTX Spark GPU",
+            "icon": "gpu",
+            "tone": "accent4"
+          },
+          {
+            "type": "text",
+            "x": 0.5,
+            "y": 4.7,
+            "w": 7.2,
+            "h": 0.6,
+            "label": "Inside device boundary: files, prompts, drafts",
+            "size": "s",
+            "tone": "muted"
+          },
+          {
+            "type": "text",
+            "x": 8.6,
+            "y": 0.0,
+            "w": 3.3,
+            "h": 0.55,
+            "label": "Cloud Lane",
+            "size": "m"
+          },
+          {
+            "type": "box",
+            "x": 8.6,
+            "y": 1.3,
+            "w": 3.2,
+            "h": 1.0,
+            "label": "Cloud Reasoning",
+            "icon": "cloud",
+            "tone": "accent3"
+          },
+          {
+            "type": "box",
+            "x": 8.6,
+            "y": 3.3,
+            "w": 3.2,
+            "h": 0.9,
+            "label": "Market Research",
+            "icon": "chart",
+            "tone": "card"
+          },
+          {
+            "type": "arrow",
+            "x": 10.2,
+            "y": 2.3,
+            "x2": 10.2,
+            "y2": 3.3,
+            "tone": "accent3"
+          }
+        ]
+      },
+      "notes": "Local lane handles code and docs inside device boundary; cloud handles reasoning outside. Routing policy decides which path."
+    },
+    {
+      "layout": "cta",
+      "title": "Pilot Ask: 10 Developers, 14 Days",
+      "takeaway": "A small, time-boxed pilot decides next steps.",
+      "data": {
+        "steps": [
+          {
+            "label": "Nominate 10 users",
+            "detail": "Analysts and quant devs",
+            "icon": "people"
+          },
+          {
+            "label": "Run 14 days",
+            "detail": "With local stack",
+            "icon": "calendar"
+          },
+          {
+            "label": "Measure quality",
+            "detail": "Task time, latency",
+            "icon": "chart"
+          }
+        ],
+        "ask": "Approve the 10-user, 14-day pilot."
+      },
+      "notes": "Pilot will test 10 developers for 14 days. Measures task time and quality, not accuracy or model performance."
+    }
+  ]
+}
+
+=====
+
+{
+  "fixes": [
+    {
+      "index": 0,
+      "slide": {
+        "layout": "title",
+        "kicker": "TECHNICAL BRIEFING FOR <CLIENT> ENGINEERING",
+        "title": "Local AI Proven on Surface Laptop Ultra",
+        "subtitle": "12 analysts, 3 weeks, sensitive data handled locally",
+        "hero_icons": ["laptop", "ai", "document", "chart"],
+        "notes": "This briefing shows Local AI working on Surface Laptop Ultra. 12 analysts used it for 3 weeks with sensitive data. Results validate local handling."
+      }
+    },
+    {
+      "index": 1,
+      "slide": {
+        "layout": "compare",
+        "title": "Local Lane for Sensitive Work",
+        "takeaway": "Like a hotel safe + concierge: local for files, cloud for research.",
+        "data": {
+          "left": {
+            "title": "Shared Services Only",
+            "icon": "cloud",
+            "points": ["All data to shared AI", "No local control"]
+          },
+          "right": {
+            "title": "Local Lane + Cloud",
+            "icon": "devices",
+            "points": ["Sensitive files stay local", "Cloud for non-sensitive work"]
+          },
+          "verdict": "Hybrid routing wins"
+        },
+        "notes": "Local lane protects sensitive data, cloud handles research. Hybrid approach offers best of both worlds."
+      }
+    },
+    {
+      "index": 2,
+      "slide": {
+        "layout": "stack",
+        "title": "Stack: From Silicon to Workflows",
+        "takeaway": "Silicon → runtimes → models → workflows, each with a fact.",
+        "data": {
+          "side_label": "Woodgrove Stack",
+          "layers": [
+            {
+              "label": "Silicon",
+              "detail": "NVIDIA RTX Spark N1X",
+              "icon": "gpu"
+            },
+            {
+              "label": "Runtimes",
+              "detail": "llama.cpp 11573, Foundry Local",
+              "icon": "code"
+            },
+            {
+              "label": "Model Catalog",
+              "detail": "28 open models, 315 GiB",
+              "icon": "library"
+            },
+            {
+              "label": "Developer Workflows",
+              "detail": "Code + RAG over policy docs",
+              "icon": "chat"
+            }
+          ]
+        },
+        "notes": "Hardware is Surface Laptop Ultra with RTX Spark. Software stack includes llama.cpp and Foundry Local. Catalog has 28 models, 315 GiB on disk."
+      }
+    },
+    {
+      "index": 3,
+      "slide": {
+        "layout": "kpis",
+        "title": "Three Memory Views Never Summed",
+        "takeaway": "Like zoom levels on one map: never add them.",
+        "data": {
+          "items": [
+            {
+              "value": "128 GB",
+              "label": "Installed",
+              "icon": "memory",
+              "source": "Device spec"
+            },
+            {
+              "value": "64 GB",
+              "label": "Visible to Windows",
+              "icon": "memory",
+              "source": "Windows memory view"
+            },
+            {
+              "value": "64,000 MiB",
+              "label": "GPU Budget",
+              "icon": "gpu",
+              "source": "nvidia-smi"
+            }
+          ]
+        },
+        "notes": "Memory views are distinct. Installed = whole system; visible = Windows view; GPU = CUDA view. Never add them."
+      }
+    },
+    {
+      "index": 4,
+      "slide": {
+        "layout": "bars",
+        "title": "MoE vs Dense Decode Speed",
+        "takeaway": "Mixture of Experts decode faster than dense models.",
+        "data": {
+          "unit": "tokens/s",
+          "highlight": "Qwen3-Coder 30B, 1 stream",
+          "icon": "speed",
+          "caption": "Local-AI-Bench, shared machine, Oct 2026",
+          "bars": [
+            {
+              "label": "Gemma 4 26B, 1 stream",
+              "value": 72
+            },
+            {
+              "label": "Qwen3-Coder 30B, 1 stream",
+              "value": 86
+            },
+            {
+              "label": "Qwen3.6 27B, 1 stream",
+              "value": 13
+            }
+          ]
+        },
+        "notes": "MoE models decode faster due to selective expert use. Qwen3-Coder 30B is fastest single-stream decoder."
+      }
+    },
+    {
+      "index": 5,
+      "slide": {
+        "layout": "analogy",
+        "title": "Why MoE Is Fast",
+        "takeaway": "Like a specialist team: few experts per task, not everyone in every meeting.",
+        "data": {
+          "concept": {
+            "label": "Mixture of Experts",
+            "icon": "team"
+          },
+          "analog": {
+            "label": "Specialist Team",
+            "icon": "team"
+          },
+          "pairs": [
+            {
+              "concept": "30B total parameters",
+              "analog": "Whole team on the roster"
+            },
+            {
+              "concept": "About 3B active per token",
+              "analog": "Few specialists per task"
+            },
+            {
+              "concept": "Gate picks experts",
+              "analog": "Lead assigns specialists"
+            },
+            {
+              "concept": "Dense: every weight fires",
+              "analog": "Everyone in every meeting"
+            }
+          ]
+        },
+        "notes": "MoE models activate only a few experts per token, unlike dense models where all weights fire."
+      }
+    },
+    {
+      "index": 6,
+      "slide": {
+        "layout": "flow",
+        "title": "Code + RAG Workflow",
+        "takeaway": "Like an open-book exam: textbook (docs) and answer with book open.",
+        "data": {
+          "steps": [
+            {
+              "label": "IDE Prompt",
+              "detail": "Developer writes query",
+              "icon": "edit"
+            },
+            {
+              "label": "RAG Retrieve",
+              "detail": "Policy docs indexed",
+              "icon": "search"
+            },
+            {
+              "label": "Local Model Gen",
+              "detail": "Draft with citations",
+              "icon": "ai"
+            },
+            {
+              "label": "Developer Review",
+              "detail": "Edit or approve",
+              "icon": "check"
+            },
+            {
+              "label": "Decision",
+              "detail": "Code or query",
+              "icon": "approve"
+            }
+          ]
+        },
+        "notes": "Workflow uses local RAG over policy docs, then local model for code gen. Developer reviews and decides."
+      }
+    },
+    {
+      "index": 7,
+      "slide": {
+        "layout": "analogy",
+        "title": "Model Sizing Bands",
+        "takeaway": "Shop machines: benchtop to gantry mill.",
+        "data": {
+          "concept": {
+            "label": "Model Sizing Bands",
+            "icon": "tools"
+          },
+          "analog": {
+            "label": "Shop Machine Sizes",
+            "icon": "tools"
+          },
+          "pairs": [
+            {
+              "concept": "S: 1-4B",
+              "analog": "Benchtop mill"
+            },
+            {
+              "concept": "M: 7-8B",
+              "analog": "Standard CNC mill"
+            },
+            {
+              "concept": "L: 14-20B",
+              "analog": "Machining center"
+            },
+            {
+              "concept": "XL: 24-32B",
+              "analog": "Gantry mill"
+            }
+          ]
+        },
+        "notes": "Model sizes are job sizes, not accuracy tiers. S = small jobs, XL = large jobs."
+      }
+    },
+    {
+      "index": 8,
+      "slide": {
+        "layout": "canvas",
+        "title": "Hybrid Routing: Local Lane Inside",
+        "takeaway": "Like make-or-buy: code and docs local; reasoning cloud.",
+        "data": {
+          "elements": [
+            {
+              "type": "pill",
+              "x": 0.2,
+              "y": 0.0,
+              "w": 7.8,
+              "h": 0.55,
+              "label": "Surface Laptop Ultra",
+              "icon": "laptop",
+              "tone": "primary"
+            },
+            {
+              "type": "line",
+              "x": 0.2,
+              "y": 0.8,
+              "x2": 8.0,
+              "y2": 0.8,
+              "dashed": true,
+              "tone": "accent2"
+            },
+            {
+              "type": "line",
+              "x": 0.2,
+              "y": 5.6,
+              "x2": 8.0,
+              "y2": 5.6,
+              "dashed": true,
+              "tone": "accent2"
+            },
+            {
+              "type": "line",
+              "x": 0.2,
+              "y": 0.8,
+              "x2": 0.2,
+              "y2": 5.6,
+              "dashed": true,
+              "tone": "accent2"
+            },
+            {
+              "type": "line",
+              "x": 8.0,
+              "y": 0.8,
+              "x2": 8.0,
+              "y2": 5.6,
+              "dashed": true,
+              "tone": "accent2"
+            },
+            {
+              "type": "box",
+              "x": 0.5,
+              "y": 1.3,
+              "w": 2.2,
+              "h": 1.0,
+              "label": "Code & Docs",
+              "icon": "code",
+              "tone": "accent2"
+            },
+            {
+              "type": "arrow",
+              "x": 2.7,
+              "y": 1.8,
+              "x2": 3.0,
+              "y2": 1.8,
+              "tone": "primary"
+            },
+            {
+              "type": "box",
+              "x": 3.0,
+              "y": 1.3,
+              "w": 2.2,
+              "h": 1.0,
+              "label": "Local Lane",
+              "icon": "devices",
+              "tone": "primary"
+            },
+            {
+              "type": "arrow",
+              "x": 5.2,
+              "y": 1.8,
+              "x2": 5.5,
+              "y2": 1.8,
+              "tone": "primary"
+            },
+            {
+              "type": "box",
+              "x": 5.5,
+              "y": 1.3,
+              "w": 2.2,
+              "h": 1.0,
+              "label": "Developer Decision",
+              "icon": "approve",
+              "tone": "accent1"
+            },
+            {
+              "type": "line",
+              "x": 4.1,
+              "y": 2.3,
+              "x2": 4.1,
+              "y2": 3.3,
+              "tone": "muted"
+            },
+            {
+              "type": "box",
+              "x": 3.0,
+              "y": 3.3,
+              "w": 2.2,
+              "h": 0.9,
+              "label": "RTX Spark GPU",
+              "icon": "gpu",
+              "tone": "accent4"
+            },
+            {
+              "type": "text",
+              "x": 0.5,
+              "y": 4.7,
+              "w": 7.2,
+              "h": 0.6,
+              "label": "Inside device boundary: files, prompts, drafts",
+              "size": "s",
+              "tone": "muted"
+            },
+            {
+              "type": "text",
+              "x": 8.6,
+              "y": 0.0,
+              "w": 3.3,
+              "h": 0.55,
+              "label": "Cloud Lane",
+              "size": "m"
+            },
+            {
+              "type": "box",
+              "x": 8.6,
+              "y": 1.3,
+              "w": 3.2,
+              "h": 1.0,
+              "label": "Cloud Reasoning",
+              "icon": "cloud",
+              "tone": "accent3"
+            },
+            {
+              "type": "box",
+              "x": 8.6,
+              "y": 3.3,
+              "w": 3.2,
+              "h": 0.9,
+              "label": "Market Research",
+              "icon": "chart",
+              "tone": "card"
+            },
+            {
+              "type": "arrow",
+              "x": 10.2,
+              "y": 2.3,
+              "x2": 10.2,
+              "y2": 3.3,
+              "tone": "accent3"
+            }
+          ]
+        },
+        "notes": "Local lane handles code and docs inside device boundary; cloud handles reasoning outside. Routing policy decides which path."
+      }
+    },
+    {
+      "index": 9,
+      "slide": {
+        "layout": "cta",
+        "title": "Pilot Ask: 10 Developers, 14 Days",
+        "takeaway": "A small, time-boxed pilot decides next steps.",
+        "data": {
+          "steps": [
+            {
+              "label": "Nominate 10 users",
+              "detail": "Analysts and quant devs",
+              "icon": "people"
+            },
+            {
+              "label": "Run 14 days",
+              "detail": "With local stack",
+              "icon": "calendar"
+            },
+            {
+              "label": "Measure quality",
+              "detail": "Task time, latency",
+              "icon": "chart"
+            }
+          ],
+          "ask": "Approve the 10-user, 14-day pilot."
+        },
+        "notes": "Pilot will test 10 developers for 14 days. Measures task time and quality, not accuracy or model performance."
+      }
+    }
+  ]
+}
+
+=====
+
+{
+  "fixes": [
+    {
+      "index": 1,
+      "slide": {
+        "layout": "compare",
+        "title": "Local Lane for Sensitive Work",
+        "takeaway": "Like a hotel safe + concierge: local for files, cloud for research.",
+        "data": {
+          "left": {
+            "title": "Shared Services Only",
+            "icon": "cloud",
+            "points": ["All data to shared AI", "No local control"]
+          },
+          "right": {
+            "title": "Local Lane + Cloud",
+            "icon": "devices",
+            "points": ["Sensitive files stay local", "Cloud for non-sensitive work"]
+          },
+          "verdict": "Hybrid routing wins"
+        },
+        "notes": "Local lane protects sensitive data, cloud handles research. Hybrid approach offers best of both worlds."
+      }
+    },
+    {
+      "index": 2,
+      "slide": {
+        "layout": "stack",
+        "title": "Stack: From Silicon to Workflows",
+        "takeaway": "Silicon → runtimes → models → workflows, each with a fact.",
+        "data": {
+          "side_label": "Woodgrove Stack",
+          "layers": [
+            {
+              "label": "Silicon",
+              "detail": "NVIDIA RTX Spark N1X",
+              "icon": "gpu"
+            },
+            {
+              "label": "Runtimes",
+              "detail": "llama.cpp 11573, Foundry Local",
+              "icon": "code"
+            },
+            {
+              "label": "Model Catalog",
+              "detail": "28 open models, 315 GiB",
+              "icon": "library"
+            },
+            {
+              "label": "Developer Workflows",
+              "detail": "Code + RAG over policy docs",
+              "icon": "chat"
+            }
+          ]
+        },
+        "notes": "Hardware is Surface Laptop Ultra with RTX Spark. Software stack includes llama.cpp and Foundry Local. Catalog has 28 models, 315 GiB on disk."
+      }
+    },
+    {
+      "index": 3,
+      "slide": {
+        "layout": "kpis",
+        "title": "Three Memory Views Never Summed",
+        "takeaway": "Like zoom levels on one map: never add them.",
+        "data": {
+          "items": [
+            {
+              "value": "128 GB",
+              "label": "Installed",
+              "icon": "memory",
+              "source": "Device spec"
+            },
+            {
+              "value": "64 GB",
+              "label": "Visible to Windows",
+              "icon": "memory",
+              "source": "Windows memory view"
+            },
+            {
+              "value": "64,000 MiB",
+              "label": "GPU Budget",
+              "icon": "gpu",
+              "source": "nvidia-smi"
+            }
+          ]
+        },
+        "notes": "Memory views are distinct. Installed = whole system; visible = Windows view; GPU = CUDA view. Never add them."
+      }
+    },
+    {
+      "index": 4,
+      "slide": {
+        "layout": "bars",
+        "title": "MoE vs Dense Decode Speed",
+        "takeaway": "Mixture of Experts decode faster than dense models.",
+        "data": {
+          "unit": "tokens/s",
+          "highlight": "Qwen3-Coder 30B, 1 stream",
+          "icon": "speed",
+          "caption": "Local-AI-Bench, shared machine, Oct 2026",
+          "bars": [
+            {
+              "label": "Gemma 4 26B, 1 stream",
+              "value": 72
+            },
+            {
+              "label": "Qwen3-Coder 30B, 1 stream",
+              "value": 86
+            },
+            {
+              "label": "Qwen3.6 27B, 1 stream",
+              "value": 13
+            }
+          ]
+        },
+        "notes": "MoE models decode faster due to selective expert use. Qwen3-Coder 30B is fastest single-stream decoder."
+      }
+    },
+    {
+      "index": 5,
+      "slide": {
+        "layout": "analogy",
+        "title": "Why MoE Is Fast",
+        "takeaway": "Like a specialist team: few experts per task, not everyone in every meeting.",
+        "data": {
+          "concept": {
+            "label": "Mixture of Experts",
+            "icon": "team"
+          },
+          "analog": {
+            "label": "Specialist Team",
+            "icon": "team"
+          },
+          "pairs": [
+            {
+              "concept": "30B total parameters",
+              "analog": "Whole team on the roster"
+            },
+            {
+              "concept": "About 3B active per token",
+              "analog": "Few specialists per task"
+            },
+            {
+              "concept": "Gate picks experts",
+              "analog": "Lead assigns specialists"
+            },
+            {
+              "concept": "Dense: every weight fires",
+              "analog": "Everyone in every meeting"
+            }
+          ]
+        },
+        "notes": "MoE models activate only a few experts per token, unlike dense models where all weights fire."
+      }
+    },
+    {
+      "index": 6,
+      "slide": {
+        "layout": "flow",
+        "title": "Code + RAG Workflow",
+        "takeaway": "Like an open-book exam: textbook (docs) and answer with book open.",
+        "data": {
+          "steps": [
+            {
+              "label": "IDE Prompt",
+              "detail": "Developer writes query",
+              "icon": "edit"
+            },
+            {
+              "label": "RAG Retrieve",
+              "detail": "Policy docs indexed",
+              "icon": "search"
+            },
+            {
+              "label": "Local Model Gen",
+              "detail": "Draft with citations",
+              "icon": "ai"
+            },
+            {
+              "label": "Developer Review",
+              "detail": "Edit or approve",
+              "icon": "check"
+            },
+            {
+              "label": "Decision",
+              "detail": "Code or query",
+              "icon": "approve"
+            }
+          ]
+        },
+        "notes": "Workflow uses local RAG over policy docs, then local model for code gen. Developer reviews and decides."
+      }
+    },
+    {
+      "index": 7,
+      "slide": {
+        "layout": "analogy",
+        "title": "Model Sizing Bands",
+        "takeaway": "Shop machines: benchtop to gantry mill.",
+        "data": {
+          "concept": {
+            "label": "Model Sizing Bands",
+            "icon": "tools"
+          },
+          "analog": {
+            "label": "Shop Machine Sizes",
+            "icon": "tools"
+          },
+          "pairs": [
+            {
+              "concept": "S: 1-4B",
+              "analog": "Benchtop mill"
+            },
+            {
+              "concept": "M: 7-8B",
+              "analog": "Standard CNC mill"
+            },
+            {
+              "concept": "L: 14-20B",
+              "analog": "Machining center"
+            },
+            {
+              "concept": "XL: 24-32B",
+              "analog": "Gantry mill"
+            }
+          ]
+        },
+        "notes": "Model sizes are job sizes, not accuracy tiers. S = small jobs, XL = large jobs."
+      }
+    },
+    {
+      "index": 8,
+      "slide": {
+        "layout": "canvas",
+        "title": "Hybrid Routing: Local Lane Inside",
+        "takeaway": "Like make-or-buy: code and docs local; reasoning cloud.",
+        "data": {
+          "elements": [
+            {
+              "type": "pill",
+              "x": 0.2,
+              "y": 0.0,
+              "w": 7.8,
+              "h": 0.55,
+              "label": "Surface Laptop Ultra",
+              "icon": "laptop",
+              "tone": "primary"
+            },
+            {
+              "type": "line",
+              "x": 0.2,
+              "y": 0.8,
+              "x2": 8.0,
+              "y2": 0.8,
+              "dashed": true,
+              "tone": "accent2"
+            },
+            {
+              "type": "line",
+              "x": 0.2,
+              "y": 5.6,
+              "x2": 8.0,
+              "y2": 5.6,
+              "dashed": true,
+              "tone": "accent2"
+            },
+            {
+              "type": "line",
+              "x": 0.2,
+              "y": 0.8,
+              "x2": 0.2,
+              "y2": 5.6,
+              "dashed": true,
+              "tone": "accent2"
+            },
+            {
+              "type": "line",
+              "x": 8.0,
+              "y": 0.8,
+              "x2": 8.0,
+              "y2": 5.6,
+              "dashed": true,
+              "tone": "accent2"
+            },
+            {
+              "type": "box",
+              "x": 0.5,
+              "y": 1.3,
+              "w": 2.2,
+              "h": 1.0,
+              "label": "Code & Docs",
+              "icon": "code",
+              "tone": "accent2"
+            },
+            {
+              "type": "arrow",
+              "x": 2.7,
+              "y": 1.8,
+              "x2": 3.0,
+              "y2": 1.8,
+              "tone": "primary"
+            },
+            {
+              "type": "box",
+              "x": 3.0,
+              "y": 1.3,
+              "w": 2.2,
+              "h": 1.0,
+              "label": "Local Lane",
+              "icon": "devices",
+              "tone": "primary"
+            },
+            {
+              "type": "arrow",
+              "x": 5.2,
+              "y": 1.8,
+              "x2": 5.5,
+              "y2": 1.8,
+              "tone": "primary"
+            },
+            {
+              "type": "box",
+              "x": 5.5,
+              "y": 1.3,
+              "w": 2.2,
+              "h": 1.0,
+              "label": "Developer Decision",
+              "icon": "approve",
+              "tone": "accent1"
+            },
+            {
+              "type": "line",
+              "x": 4.1,
+              "y": 2.3,
+              "x2": 4.1,
+              "y2": 3.3,
+              "tone": "muted"
+            },
+            {
+              "type": "box",
+              "x": 3.0,
+              "y": 3.3,
+              "w": 2.2,
+              "h": 0.9,
+              "label": "RTX Spark GPU",
+              "icon": "gpu",
+              "tone": "accent4"
+            },
+            {
+              "type": "text",
+              "x": 0.5,
+              "y": 4.7,
+              "w": 7.2,
+              "h": 0.6,
+              "label": "Inside device boundary: files, prompts, drafts",
+              "size": "s",
+              "tone": "muted"
+            },
+            {
+              "type": "text",
+              "x": 8.6,
+              "y": 0.0,
+              "w": 3.3,
+              "h": 0.55,
+              "label": "Cloud Lane",
+              "size": "m"
+            },
+            {
+              "type": "box",
+              "x": 8.6,
+              "y": 1.3,
+              "w": 3.2,
+              "h": 1.0,
+              "label": "Cloud Reasoning",
+              "icon": "cloud",
+              "tone": "accent3"
+            },
+            {
+              "type": "box",
+              "x": 8.6,
+              "y": 3.3,
+              "w": 3.2,
+              "h": 0.9,
+              "label": "Market Research",
+              "icon": "chart",
+              "tone": "card"
+            },
+            {
+              "type": "arrow",
+              "x": 10.2,
+              "y": 2.3,
+              "x2": 10.2,
+              "y2": 3.3,
+              "tone": "accent3"
+            }
+          ]
+        },
+        "notes": "Local lane handles code and docs inside device boundary; cloud handles reasoning outside. Routing policy decides which path."
+      }
+    },
+    {
+      "index": 9,
+      "slide": {
+        "layout": "cta",
+        "title": "Pilot Ask: 10 Developers, 14 Days",
+        "takeaway": "A small, time-boxed pilot decides next steps.",
+        "data": {
+          "steps": [
+            {
+              "label": "Nominate 10 users",
+              "detail": "Analysts and quant devs",
+              "icon": "people"
+            },
+            {
+              "label": "Run 14 days",
+              "detail": "With local stack",
+              "icon": "calendar"
+            },
+            {
+              "label": "Measure quality",
+              "detail": "Task time, latency",
+              "icon": "chart"
+            }
+          ],
+          "ask": "Approve the 10-user, 14-day pilot."
+        },
+        "notes": "Pilot will test 10 developers for 14 days. Measures task time and quality, not accuracy or model performance."
+      }
+    }
+  ]
+}

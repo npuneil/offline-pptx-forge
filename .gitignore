@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.venv/
+decks/
+runs/*.log
+~$*.pptx

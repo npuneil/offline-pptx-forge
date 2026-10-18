@@ -1,0 +1,58 @@
+{
+ "deck-73": {
+  "source": "local-v1.0",
+  "brief": "contoso_sales"
+ },
+ "deck-64": {
+  "source": "local-v1.0",
+  "brief": "zava_technical"
+ },
+ "deck-19": {
+  "source": "claude-opus-5.5-high",
+  "brief": "contoso_sales"
+ },
+ "deck-20": {
+  "source": "claude-opus-5.5-high",
+  "brief": "zava_technical"
+ },
+ "deck-41": {
+  "source": "claude-opus-5.5-low",
+  "brief": "contoso_sales"
+ },
+ "deck-85": {
+  "source": "claude-opus-5.5-low",
+  "brief": "zava_technical"
+ },
+ "deck-96": {
+  "source": "claude-opus-5.5-max",
+  "brief": "contoso_sales"
+ },
+ "deck-47": {
+  "source": "claude-opus-5.5-max",
+  "brief": "zava_technical"
+ },
+ "deck-39": {
+  "source": "gpt-6-astra-high",
+  "brief": "contoso_sales"
+ },
+ "deck-98": {
+  "source": "gpt-6-astra-high",
+  "brief": "zava_technical"
+ },
+ "deck-11": {
+  "source": "gpt-6-astra-low",
+  "brief": "contoso_sales"
+ },
+ "deck-45": {
+  "source": "gpt-6-astra-low",
+  "brief": "zava_technical"
+ },
+ "deck-82": {
+  "source": "gpt-6-astra-max",
+  "brief": "contoso_sales"
+ },
+ "deck-18": {
+  "source": "gpt-6-astra-max",
+  "brief": "zava_technical"
+ }
+}

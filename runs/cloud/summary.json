@@ -1,0 +1,2257 @@
+{
+ "claude-opus-5.5-high/contoso_sales": {
+  "model": "claude-opus-5.5",
+  "level": "high",
+  "brief": "contoso_sales",
+  "template": "microsoft",
+  "seconds": 79.0,
+  "wall_seconds": 120.8,
+  "input_tokens": 1590,
+  "output_tokens": 8562,
+  "reasoning_tokens": 4127,
+  "truncated_calls": 0,
+  "token_source": "session-store exact usage",
+  "usage": {
+   "agent_id": "663088fb-13e8-406a-a2cf-f15416721e78",
+   "output_tokens": 8562,
+   "reasoning_tokens": 4127,
+   "api_seconds": 79.0,
+   "truncated_calls": 0,
+   "agent_calls": 3,
+   "agent_input_tokens": 85699,
+   "agent_cache_read_tokens": 73558,
+   "agent_output_tokens": 8788,
+   "agent_model_seconds": 83.6
+  },
+  "economics": {
+   "lane": "cloud",
+   "energy_wh": 9.418,
+   "cost_usd": 0.1776,
+   "co2e_g": 3.456,
+   "water_ml": 30.82,
+   "basis": "API list price x tokens; energy/water = published per-1k-output-token estimate"
+  },
+  "grade": {
+   "auto_score": 83.8,
+   "auto_grade": "B",
+   "scores": {
+    "visual_richness": 22.1,
+    "text_lightness": 11.7,
+    "analogy": 10.0,
+    "brief_coverage": 15.0,
+    "claim_discipline": 15.0,
+    "structure": 10.0
+   },
+   "detail": {
+    "visual_richness": {
+     "infographic_share": 0.9,
+     "distinct_layouts": 8,
+     "icons_per_slide": 3.9,
+     "canvas_diagrams": 1
+    },
+    "text_lightness": {
+     "avg_words_per_slide": 42.5,
+     "max_words": 61
+    },
+    "analogy": {
+     "analogy_slides": 2,
+     "analogy_cue_slides": 0
+    },
+    "brief_coverage": {
+     "covered": 7.0,
+     "topics": 7,
+     "missing": []
+    },
+    "claim_discipline": {
+     "numbers_on_canvas": 42,
+     "untraceable": [],
+     "guardrail_violations": []
+    },
+    "structure": {
+     "strict_json": true,
+     "slides": 12,
+     "notes_slides": 12,
+     "fallbacks": 0,
+     "overflows": 0,
+     "shrunk_texts": 1
+    }
+   }
+  },
+  "pptx": "runs/cloud/claude-opus-5.5-high/render/contoso_sales-microsoft.pptx",
+  "render_summary": [
+   {
+    "index": 0,
+    "layout": "title",
+    "words": 20,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 4,
+    "issues": []
+   },
+   {
+    "index": 1,
+    "layout": "kpis",
+    "words": 40,
+    "overflows": 0,
+    "shrunk": 1,
+    "icons": 4,
+    "issues": []
+   },
+   {
+    "index": 2,
+    "layout": "analogy",
+    "words": 55,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 2,
+    "issues": []
+   },
+   {
+    "index": 3,
+    "layout": "canvas",
+    "words": 43,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 7,
+    "issues": []
+   },
+   {
+    "index": 4,
+    "layout": "compare",
+    "words": 61,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 9,
+    "issues": []
+   },
+   {
+    "index": 5,
+    "layout": "analogy",
+    "words": 47,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 2,
+    "issues": []
+   },
+   {
+    "index": 6,
+    "layout": "stack",
+    "words": 53,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 4,
+    "issues": []
+   },
+   {
+    "index": 7,
+    "layout": "bars",
+    "words": 33,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 1,
+    "issues": []
+   },
+   {
+    "index": 8,
+    "layout": "flow",
+    "words": 51,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 5,
+    "issues": []
+   },
+   {
+    "index": 9,
+    "layout": "timeline",
+    "words": 37,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 4,
+    "issues": []
+   },
+   {
+    "index": 10,
+    "layout": "statement",
+    "words": 35,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 1,
+    "issues": []
+   },
+   {
+    "index": 11,
+    "layout": "cta",
+    "words": 35,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 3,
+    "issues": []
+   }
+  ],
+  "slides": 12
+ },
+ "claude-opus-5.5-high/zava_technical": {
+  "model": "claude-opus-5.5",
+  "level": "high",
+  "brief": "zava_technical",
+  "template": "surface_ultra",
+  "seconds": 97.4,
+  "wall_seconds": 140.0,
+  "input_tokens": 1738,
+  "output_tokens": 11131,
+  "reasoning_tokens": 6246,
+  "truncated_calls": 0,
+  "token_source": "session-store exact usage",
+  "usage": {
+   "agent_id": "fa02f13b-e230-4ba6-91e6-67af36483802",
+   "output_tokens": 11131,
+   "reasoning_tokens": 6246,
+   "api_seconds": 97.4,
+   "truncated_calls": 0,
+   "agent_calls": 3,
+   "agent_input_tokens": 88763,
+   "agent_cache_read_tokens": 68170,
+   "agent_output_tokens": 11224,
+   "agent_model_seconds": 101.0
+  },
+  "economics": {
+   "lane": "cloud",
+   "energy_wh": 12.244,
+   "cost_usd": 0.229572,
+   "co2e_g": 4.494,
+   "water_ml": 40.07,
+   "basis": "API list price x tokens; energy/water = published per-1k-output-token estimate"
+  },
+  "grade": {
+   "auto_score": 83.2,
+   "auto_grade": "B",
+   "scores": {
+    "visual_richness": 21.6,
+    "text_lightness": 11.6,
+    "analogy": 10.0,
+    "brief_coverage": 15.0,
+    "claim_discipline": 15.0,
+    "structure": 10.0
+   },
+   "detail": {
+    "visual_richness": {
+     "infographic_share": 0.9,
+     "distinct_layouts": 7,
+     "icons_per_slide": 3.5,
+     "canvas_diagrams": 1
+    },
+    "text_lightness": {
+     "avg_words_per_slide": 42.6,
+     "max_words": 62
+    },
+    "analogy": {
+     "analogy_slides": 2,
+     "analogy_cue_slides": 0
+    },
+    "brief_coverage": {
+     "covered": 10.0,
+     "topics": 10,
+     "missing": []
+    },
+    "claim_discipline": {
+     "numbers_on_canvas": 54,
+     "untraceable": [],
+     "guardrail_violations": []
+    },
+    "structure": {
+     "strict_json": true,
+     "slides": 12,
+     "notes_slides": 12,
+     "fallbacks": 0,
+     "overflows": 0,
+     "shrunk_texts": 3
+    }
+   }
+  },
+  "pptx": "runs/cloud/claude-opus-5.5-high/render/zava_technical-surface_ultra.pptx",
+  "render_summary": [
+   {
+    "index": 0,
+    "layout": "title",
+    "words": 15,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 5,
+    "issues": []
+   },
+   {
+    "index": 1,
+    "layout": "stack",
+    "words": 62,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 5,
+    "issues": []
+   },
+   {
+    "index": 2,
+    "layout": "kpis",
+    "words": 32,
+    "overflows": 0,
+    "shrunk": 1,
+    "icons": 3,
+    "issues": []
+   },
+   {
+    "index": 3,
+    "layout": "hub",
+    "words": 36,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 7,
+    "issues": []
+   },
+   {
+    "index": 4,
+    "layout": "bars",
+    "words": 37,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 1,
+    "issues": []
+   },
+   {
+    "index": 5,
+    "layout": "kpis",
+    "words": 43,
+    "overflows": 0,
+    "shrunk": 2,
+    "icons": 3,
+    "issues": []
+   },
+   {
+    "index": 6,
+    "layout": "analogy",
+    "words": 56,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 2,
+    "issues": []
+   },
+   {
+    "index": 7,
+    "layout": "matrix",
+    "words": 49,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 4,
+    "issues": []
+   },
+   {
+    "index": 8,
+    "layout": "canvas",
+    "words": 50,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 7,
+    "issues": []
+   },
+   {
+    "index": 9,
+    "layout": "analogy",
+    "words": 47,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 2,
+    "issues": []
+   },
+   {
+    "index": 10,
+    "layout": "statement",
+    "words": 30,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 1,
+    "issues": []
+   },
+   {
+    "index": 11,
+    "layout": "cta",
+    "words": 54,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 5,
+    "issues": []
+   }
+  ],
+  "slides": 12
+ },
+ "claude-opus-5.5-low/contoso_sales": {
+  "model": "claude-opus-5.5",
+  "level": "low",
+  "brief": "contoso_sales",
+  "template": "microsoft",
+  "seconds": 27.5,
+  "wall_seconds": 68.7,
+  "input_tokens": 1590,
+  "output_tokens": 3283,
+  "reasoning_tokens": 0,
+  "truncated_calls": 0,
+  "token_source": "session-store exact usage",
+  "usage": {
+   "agent_id": "44aea0f2-fd11-4a6d-b4c8-1d36b5ba8ec4",
+   "output_tokens": 3283,
+   "reasoning_tokens": 0,
+   "api_seconds": 27.5,
+   "truncated_calls": 0,
+   "agent_calls": 3,
+   "agent_input_tokens": 80420,
+   "agent_cache_read_tokens": 67923,
+   "agent_output_tokens": 3377,
+   "agent_model_seconds": 29.8
+  },
+  "economics": {
+   "lane": "cloud",
+   "energy_wh": 3.611,
+   "cost_usd": 0.07202,
+   "co2e_g": 1.325,
+   "water_ml": 11.82,
+   "basis": "API list price x tokens; energy/water = published per-1k-output-token estimate"
+  },
+  "grade": {
+   "auto_score": 83.9,
+   "auto_grade": "B",
+   "scores": {
+    "visual_richness": 22.7,
+    "text_lightness": 15.6,
+    "analogy": 6.0,
+    "brief_coverage": 15.0,
+    "claim_discipline": 14.6,
+    "structure": 10.0
+   },
+   "detail": {
+    "visual_richness": {
+     "infographic_share": 1.0,
+     "distinct_layouts": 8,
+     "icons_per_slide": 3.8,
+     "canvas_diagrams": 1
+    },
+    "text_lightness": {
+     "avg_words_per_slide": 36.6,
+     "max_words": 51
+    },
+    "analogy": {
+     "analogy_slides": 1,
+     "analogy_cue_slides": 0
+    },
+    "brief_coverage": {
+     "covered": 7.0,
+     "topics": 7,
+     "missing": []
+    },
+    "claim_discipline": {
+     "numbers_on_canvas": 35,
+     "untraceable": [
+      {
+       "slide": 10,
+       "value": 13.0,
+       "text": "Days 8-13"
+      }
+     ],
+     "guardrail_violations": []
+    },
+    "structure": {
+     "strict_json": true,
+     "slides": 11,
+     "notes_slides": 11,
+     "fallbacks": 0,
+     "overflows": 0,
+     "shrunk_texts": 1
+    }
+   }
+  },
+  "pptx": "runs/cloud/claude-opus-5.5-low/render/contoso_sales-microsoft.pptx",
+  "render_summary": [
+   {
+    "index": 0,
+    "layout": "title",
+    "words": 16,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 4,
+    "issues": []
+   },
+   {
+    "index": 1,
+    "layout": "kpis",
+    "words": 33,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 3,
+    "issues": []
+   },
+   {
+    "index": 2,
+    "layout": "flow",
+    "words": 41,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 4,
+    "issues": []
+   },
+   {
+    "index": 3,
+    "layout": "analogy",
+    "words": 49,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 2,
+    "issues": []
+   },
+   {
+    "index": 4,
+    "layout": "canvas",
+    "words": 34,
+    "overflows": 0,
+    "shrunk": 1,
+    "icons": 5,
+    "issues": []
+   },
+   {
+    "index": 5,
+    "layout": "compare",
+    "words": 51,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 9,
+    "issues": []
+   },
+   {
+    "index": 6,
+    "layout": "stack",
+    "words": 46,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 4,
+    "issues": []
+   },
+   {
+    "index": 7,
+    "layout": "bars",
+    "words": 29,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 1,
+    "issues": []
+   },
+   {
+    "index": 8,
+    "layout": "kpis",
+    "words": 34,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 2,
+    "issues": []
+   },
+   {
+    "index": 9,
+    "layout": "timeline",
+    "words": 34,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 4,
+    "issues": []
+   },
+   {
+    "index": 10,
+    "layout": "cta",
+    "words": 36,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 4,
+    "issues": []
+   }
+  ],
+  "slides": 11
+ },
+ "claude-opus-5.5-low/zava_technical": {
+  "model": "claude-opus-5.5",
+  "level": "low",
+  "brief": "zava_technical",
+  "template": "surface_ultra",
+  "seconds": 28.7,
+  "wall_seconds": 71.1,
+  "input_tokens": 1738,
+  "output_tokens": 3489,
+  "reasoning_tokens": 0,
+  "truncated_calls": 0,
+  "token_source": "session-store exact usage",
+  "usage": {
+   "agent_id": "96c4084c-436f-4c56-9cc9-b79f63cb5067",
+   "output_tokens": 3489,
+   "reasoning_tokens": 0,
+   "api_seconds": 28.7,
+   "truncated_calls": 0,
+   "agent_calls": 3,
+   "agent_input_tokens": 81121,
+   "agent_cache_read_tokens": 68170,
+   "agent_output_tokens": 3582,
+   "agent_model_seconds": 32.0
+  },
+  "economics": {
+   "lane": "cloud",
+   "energy_wh": 3.838,
+   "cost_usd": 0.076732,
+   "co2e_g": 1.409,
+   "water_ml": 12.56,
+   "basis": "API list price x tokens; energy/water = published per-1k-output-token estimate"
+  },
+  "grade": {
+   "auto_score": 86.6,
+   "auto_grade": "B",
+   "scores": {
+    "visual_richness": 20.4,
+    "text_lightness": 16.2,
+    "analogy": 10.0,
+    "brief_coverage": 15.0,
+    "claim_discipline": 15.0,
+    "structure": 10.0
+   },
+   "detail": {
+    "visual_richness": {
+     "infographic_share": 0.9,
+     "distinct_layouts": 8,
+     "icons_per_slide": 2.6,
+     "canvas_diagrams": 1
+    },
+    "text_lightness": {
+     "avg_words_per_slide": 35.7,
+     "max_words": 49
+    },
+    "analogy": {
+     "analogy_slides": 2,
+     "analogy_cue_slides": 0
+    },
+    "brief_coverage": {
+     "covered": 10.0,
+     "topics": 10,
+     "missing": []
+    },
+    "claim_discipline": {
+     "numbers_on_canvas": 44,
+     "untraceable": [],
+     "guardrail_violations": []
+    },
+    "structure": {
+     "strict_json": true,
+     "slides": 12,
+     "notes_slides": 12,
+     "fallbacks": 0,
+     "overflows": 0,
+     "shrunk_texts": 2
+    }
+   }
+  },
+  "pptx": "runs/cloud/claude-opus-5.5-low/render/zava_technical-surface_ultra.pptx",
+  "render_summary": [
+   {
+    "index": 0,
+    "layout": "title",
+    "words": 15,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 5,
+    "issues": []
+   },
+   {
+    "index": 1,
+    "layout": "stack",
+    "words": 49,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 4,
+    "issues": []
+   },
+   {
+    "index": 2,
+    "layout": "memory",
+    "words": 34,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 1,
+    "issues": []
+   },
+   {
+    "index": 3,
+    "layout": "analogy",
+    "words": 45,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 2,
+    "issues": []
+   },
+   {
+    "index": 4,
+    "layout": "bars",
+    "words": 32,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 1,
+    "issues": []
+   },
+   {
+    "index": 5,
+    "layout": "kpis",
+    "words": 36,
+    "overflows": 0,
+    "shrunk": 2,
+    "icons": 3,
+    "issues": []
+   },
+   {
+    "index": 6,
+    "layout": "analogy",
+    "words": 44,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 2,
+    "issues": []
+   },
+   {
+    "index": 7,
+    "layout": "matrix",
+    "words": 38,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 4,
+    "issues": []
+   },
+   {
+    "index": 8,
+    "layout": "canvas",
+    "words": 35,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 4,
+    "issues": []
+   },
+   {
+    "index": 9,
+    "layout": "flow",
+    "words": 37,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 4,
+    "issues": []
+   },
+   {
+    "index": 10,
+    "layout": "statement",
+    "words": 23,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 1,
+    "issues": []
+   },
+   {
+    "index": 11,
+    "layout": "cta",
+    "words": 40,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 4,
+    "issues": []
+   }
+  ],
+  "slides": 12
+ },
+ "claude-opus-5.5-max/contoso_sales": {
+  "model": "claude-opus-5.5",
+  "level": "max",
+  "brief": "contoso_sales",
+  "template": "microsoft",
+  "seconds": 581.9,
+  "wall_seconds": 625.0,
+  "input_tokens": 1590,
+  "output_tokens": 69334,
+  "reasoning_tokens": 64479,
+  "truncated_calls": 2,
+  "token_source": "session-store exact usage",
+  "usage": {
+   "agent_id": "453f9570-973b-46ee-8af5-5a06378297b4",
+   "output_tokens": 69334,
+   "reasoning_tokens": 64479,
+   "api_seconds": 581.9,
+   "truncated_calls": 2,
+   "agent_calls": 5,
+   "agent_input_tokens": 295996,
+   "agent_cache_read_tokens": 222991,
+   "agent_output_tokens": 69478,
+   "agent_model_seconds": 586.0
+  },
+  "economics": {
+   "lane": "cloud",
+   "energy_wh": 76.267,
+   "cost_usd": 1.39304,
+   "co2e_g": 27.99,
+   "water_ml": 249.6,
+   "basis": "API list price x tokens; energy/water = published per-1k-output-token estimate"
+  },
+  "grade": {
+   "auto_score": 80.4,
+   "auto_grade": "B-",
+   "scores": {
+    "visual_richness": 21.1,
+    "text_lightness": 9.3,
+    "analogy": 10.0,
+    "brief_coverage": 15.0,
+    "claim_discipline": 15.0,
+    "structure": 10.0
+   },
+   "detail": {
+    "visual_richness": {
+     "infographic_share": 0.89,
+     "distinct_layouts": 7,
+     "icons_per_slide": 3.2,
+     "canvas_diagrams": 1
+    },
+    "text_lightness": {
+     "avg_words_per_slide": 46.0,
+     "max_words": 67
+    },
+    "analogy": {
+     "analogy_slides": 2,
+     "analogy_cue_slides": 0
+    },
+    "brief_coverage": {
+     "covered": 7.0,
+     "topics": 7,
+     "missing": []
+    },
+    "claim_discipline": {
+     "numbers_on_canvas": 41,
+     "untraceable": [],
+     "guardrail_violations": []
+    },
+    "structure": {
+     "strict_json": true,
+     "slides": 11,
+     "notes_slides": 11,
+     "fallbacks": 0,
+     "overflows": 0,
+     "shrunk_texts": 1
+    }
+   }
+  },
+  "pptx": "runs/cloud/claude-opus-5.5-max/render/contoso_sales-microsoft.pptx",
+  "render_summary": [
+   {
+    "index": 0,
+    "layout": "title",
+    "words": 22,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 4,
+    "issues": []
+   },
+   {
+    "index": 1,
+    "layout": "kpis",
+    "words": 41,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 3,
+    "issues": []
+   },
+   {
+    "index": 2,
+    "layout": "statement",
+    "words": 33,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 1,
+    "issues": []
+   },
+   {
+    "index": 3,
+    "layout": "analogy",
+    "words": 52,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 2,
+    "issues": []
+   },
+   {
+    "index": 4,
+    "layout": "analogy",
+    "words": 55,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 2,
+    "issues": []
+   },
+   {
+    "index": 5,
+    "layout": "canvas",
+    "words": 45,
+    "overflows": 0,
+    "shrunk": 1,
+    "icons": 7,
+    "issues": []
+   },
+   {
+    "index": 6,
+    "layout": "stack",
+    "words": 59,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 4,
+    "issues": []
+   },
+   {
+    "index": 7,
+    "layout": "bars",
+    "words": 33,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 1,
+    "issues": []
+   },
+   {
+    "index": 8,
+    "layout": "flow",
+    "words": 61,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 5,
+    "issues": []
+   },
+   {
+    "index": 9,
+    "layout": "timeline",
+    "words": 38,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 4,
+    "issues": []
+   },
+   {
+    "index": 10,
+    "layout": "cta",
+    "words": 67,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 5,
+    "issues": []
+   }
+  ],
+  "slides": 11
+ },
+ "claude-opus-5.5-max/zava_technical": {
+  "model": "claude-opus-5.5",
+  "level": "max",
+  "brief": "zava_technical",
+  "template": "surface_ultra",
+  "seconds": 630.8,
+  "wall_seconds": 673.7,
+  "input_tokens": 1738,
+  "output_tokens": 73028,
+  "reasoning_tokens": 67840,
+  "truncated_calls": 2,
+  "token_source": "session-store exact usage",
+  "usage": {
+   "agent_id": "1d73e015-d5d2-46bf-88b0-033e6e3c3e9b",
+   "output_tokens": 73028,
+   "reasoning_tokens": 67840,
+   "api_seconds": 630.8,
+   "truncated_calls": 2,
+   "agent_calls": 5,
+   "agent_input_tokens": 300685,
+   "agent_cache_read_tokens": 223737,
+   "agent_output_tokens": 73171,
+   "agent_model_seconds": 634.7
+  },
+  "economics": {
+   "lane": "cloud",
+   "energy_wh": 80.331,
+   "cost_usd": 1.467512,
+   "co2e_g": 29.481,
+   "water_ml": 262.9,
+   "basis": "API list price x tokens; energy/water = published per-1k-output-token estimate"
+  },
+  "grade": {
+   "auto_score": 78.9,
+   "auto_grade": "C+",
+   "scores": {
+    "visual_richness": 22.2,
+    "text_lightness": 7.7,
+    "analogy": 10.0,
+    "brief_coverage": 15.0,
+    "claim_discipline": 15.0,
+    "structure": 9.0
+   },
+   "detail": {
+    "visual_richness": {
+     "infographic_share": 0.9,
+     "distinct_layouts": 8,
+     "icons_per_slide": 4.1,
+     "canvas_diagrams": 1
+    },
+    "text_lightness": {
+     "avg_words_per_slide": 48.5,
+     "max_words": 65
+    },
+    "analogy": {
+     "analogy_slides": 2,
+     "analogy_cue_slides": 0
+    },
+    "brief_coverage": {
+     "covered": 10.0,
+     "topics": 10,
+     "missing": []
+    },
+    "claim_discipline": {
+     "numbers_on_canvas": 51,
+     "untraceable": [],
+     "guardrail_violations": []
+    },
+    "structure": {
+     "strict_json": true,
+     "slides": 12,
+     "notes_slides": 12,
+     "fallbacks": 0,
+     "overflows": 1,
+     "shrunk_texts": 6
+    }
+   }
+  },
+  "pptx": "runs/cloud/claude-opus-5.5-max/render/zava_technical-surface_ultra.pptx",
+  "render_summary": [
+   {
+    "index": 0,
+    "layout": "title",
+    "words": 24,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 5,
+    "issues": []
+   },
+   {
+    "index": 1,
+    "layout": "statement",
+    "words": 31,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 1,
+    "issues": []
+   },
+   {
+    "index": 2,
+    "layout": "stack",
+    "words": 59,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 4,
+    "issues": []
+   },
+   {
+    "index": 3,
+    "layout": "kpis",
+    "words": 37,
+    "overflows": 0,
+    "shrunk": 1,
+    "icons": 3,
+    "issues": []
+   },
+   {
+    "index": 4,
+    "layout": "bars",
+    "words": 43,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 1,
+    "issues": []
+   },
+   {
+    "index": 5,
+    "layout": "compare",
+    "words": 63,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 9,
+    "issues": []
+   },
+   {
+    "index": 6,
+    "layout": "analogy",
+    "words": 52,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 2,
+    "issues": []
+   },
+   {
+    "index": 7,
+    "layout": "analogy",
+    "words": 45,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 2,
+    "issues": []
+   },
+   {
+    "index": 8,
+    "layout": "flow",
+    "words": 64,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 5,
+    "issues": []
+   },
+   {
+    "index": 9,
+    "layout": "canvas",
+    "words": 59,
+    "overflows": 1,
+    "shrunk": 5,
+    "icons": 10,
+    "issues": []
+   },
+   {
+    "index": 10,
+    "layout": "timeline",
+    "words": 40,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 4,
+    "issues": []
+   },
+   {
+    "index": 11,
+    "layout": "cta",
+    "words": 65,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 5,
+    "issues": []
+   }
+  ],
+  "slides": 12
+ },
+ "gpt-6-astra-high/contoso_sales": {
+  "model": "gpt-6-astra",
+  "level": "high",
+  "brief": "contoso_sales",
+  "template": "microsoft",
+  "seconds": 119.6,
+  "wall_seconds": 162.8,
+  "input_tokens": 1590,
+  "output_tokens": 6494,
+  "reasoning_tokens": 2404,
+  "truncated_calls": 0,
+  "token_source": "session-store exact usage",
+  "usage": {
+   "agent_id": "6902428d-8a75-487e-8ac6-468717ddcb77",
+   "output_tokens": 6494,
+   "reasoning_tokens": 2404,
+   "api_seconds": 119.6,
+   "truncated_calls": 0,
+   "agent_calls": 3,
+   "agent_input_tokens": 49909,
+   "agent_cache_read_tokens": 28315,
+   "agent_output_tokens": 6542,
+   "agent_model_seconds": 125.7
+  },
+  "economics": {
+   "lane": "cloud",
+   "energy_wh": 7.143,
+   "cost_usd": 0.3406,
+   "co2e_g": 2.622,
+   "water_ml": 23.38,
+   "basis": "API list price x tokens; energy/water = published per-1k-output-token estimate"
+  },
+  "grade": {
+   "auto_score": 85.8,
+   "auto_grade": "B",
+   "scores": {
+    "visual_richness": 22.6,
+    "text_lightness": 13.2,
+    "analogy": 10.0,
+    "brief_coverage": 15.0,
+    "claim_discipline": 15.0,
+    "structure": 10.0
+   },
+   "detail": {
+    "visual_richness": {
+     "infographic_share": 1.0,
+     "distinct_layouts": 6,
+     "icons_per_slide": 3.7,
+     "canvas_diagrams": 1
+    },
+    "text_lightness": {
+     "avg_words_per_slide": 40.2,
+     "max_words": 52
+    },
+    "analogy": {
+     "analogy_slides": 2,
+     "analogy_cue_slides": 0
+    },
+    "brief_coverage": {
+     "covered": 7.0,
+     "topics": 7,
+     "missing": []
+    },
+    "claim_discipline": {
+     "numbers_on_canvas": 26,
+     "untraceable": [],
+     "guardrail_violations": []
+    },
+    "structure": {
+     "strict_json": true,
+     "slides": 11,
+     "notes_slides": 11,
+     "fallbacks": 0,
+     "overflows": 0,
+     "shrunk_texts": 1
+    }
+   }
+  },
+  "pptx": "runs/cloud/gpt-6-astra-high/render/contoso_sales-microsoft.pptx",
+  "render_summary": [
+   {
+    "index": 0,
+    "layout": "title",
+    "words": 17,
+    "overflows": 0,
+    "shrunk": 1,
+    "icons": 4,
+    "issues": []
+   },
+   {
+    "index": 1,
+    "layout": "flow",
+    "words": 45,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 3,
+    "issues": []
+   },
+   {
+    "index": 2,
+    "layout": "analogy",
+    "words": 34,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 2,
+    "issues": []
+   },
+   {
+    "index": 3,
+    "layout": "compare",
+    "words": 46,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 9,
+    "issues": []
+   },
+   {
+    "index": 4,
+    "layout": "canvas",
+    "words": 47,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 5,
+    "issues": []
+   },
+   {
+    "index": 5,
+    "layout": "analogy",
+    "words": 33,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 2,
+    "issues": []
+   },
+   {
+    "index": 6,
+    "layout": "stack",
+    "words": 49,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 4,
+    "issues": []
+   },
+   {
+    "index": 7,
+    "layout": "kpis",
+    "words": 37,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 2,
+    "issues": []
+   },
+   {
+    "index": 8,
+    "layout": "kpis",
+    "words": 37,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 2,
+    "issues": []
+   },
+   {
+    "index": 9,
+    "layout": "flow",
+    "words": 45,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 4,
+    "issues": []
+   },
+   {
+    "index": 10,
+    "layout": "cta",
+    "words": 52,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 4,
+    "issues": []
+   }
+  ],
+  "slides": 11
+ },
+ "gpt-6-astra-high/zava_technical": {
+  "model": "gpt-6-astra",
+  "level": "high",
+  "brief": "zava_technical",
+  "template": "surface_ultra",
+  "seconds": 154.1,
+  "wall_seconds": 198.8,
+  "input_tokens": 1738,
+  "output_tokens": 8534,
+  "reasoning_tokens": 3106,
+  "truncated_calls": 0,
+  "token_source": "session-store exact usage",
+  "usage": {
+   "agent_id": "e424b262-92aa-4b28-9b7b-7debc33040df",
+   "output_tokens": 8534,
+   "reasoning_tokens": 3106,
+   "api_seconds": 154.1,
+   "truncated_calls": 0,
+   "agent_calls": 3,
+   "agent_input_tokens": 52290,
+   "agent_cache_read_tokens": 41332,
+   "agent_output_tokens": 8583,
+   "agent_model_seconds": 160.4
+  },
+  "economics": {
+   "lane": "cloud",
+   "energy_wh": 9.387,
+   "cost_usd": 0.44408,
+   "co2e_g": 3.445,
+   "water_ml": 30.72,
+   "basis": "API list price x tokens; energy/water = published per-1k-output-token estimate"
+  },
+  "grade": {
+   "auto_score": 87.2,
+   "auto_grade": "B+",
+   "scores": {
+    "visual_richness": 24.5,
+    "text_lightness": 12.7,
+    "analogy": 10.0,
+    "brief_coverage": 15.0,
+    "claim_discipline": 15.0,
+    "structure": 10.0
+   },
+   "detail": {
+    "visual_richness": {
+     "infographic_share": 1.0,
+     "distinct_layouts": 7,
+     "icons_per_slide": 3.6,
+     "canvas_diagrams": 2
+    },
+    "text_lightness": {
+     "avg_words_per_slide": 40.9,
+     "max_words": 59
+    },
+    "analogy": {
+     "analogy_slides": 2,
+     "analogy_cue_slides": 0
+    },
+    "brief_coverage": {
+     "covered": 10.0,
+     "topics": 10,
+     "missing": []
+    },
+    "claim_discipline": {
+     "numbers_on_canvas": 36,
+     "untraceable": [],
+     "guardrail_violations": []
+    },
+    "structure": {
+     "strict_json": true,
+     "slides": 12,
+     "notes_slides": 12,
+     "fallbacks": 0,
+     "overflows": 0,
+     "shrunk_texts": 7
+    }
+   }
+  },
+  "pptx": "runs/cloud/gpt-6-astra-high/render/zava_technical-surface_ultra.pptx",
+  "render_summary": [
+   {
+    "index": 0,
+    "layout": "title",
+    "words": 15,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 5,
+    "issues": []
+   },
+   {
+    "index": 1,
+    "layout": "stack",
+    "words": 59,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 4,
+    "issues": []
+   },
+   {
+    "index": 2,
+    "layout": "kpis",
+    "words": 39,
+    "overflows": 0,
+    "shrunk": 2,
+    "icons": 3,
+    "issues": []
+   },
+   {
+    "index": 3,
+    "layout": "analogy",
+    "words": 41,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 2,
+    "issues": []
+   },
+   {
+    "index": 4,
+    "layout": "bars",
+    "words": 38,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 1,
+    "issues": []
+   },
+   {
+    "index": 5,
+    "layout": "kpis",
+    "words": 42,
+    "overflows": 0,
+    "shrunk": 2,
+    "icons": 2,
+    "issues": []
+   },
+   {
+    "index": 6,
+    "layout": "hub",
+    "words": 28,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 5,
+    "issues": []
+   },
+   {
+    "index": 7,
+    "layout": "analogy",
+    "words": 41,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 2,
+    "issues": []
+   },
+   {
+    "index": 8,
+    "layout": "canvas",
+    "words": 50,
+    "overflows": 0,
+    "shrunk": 3,
+    "icons": 9,
+    "issues": []
+   },
+   {
+    "index": 9,
+    "layout": "canvas",
+    "words": 44,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 5,
+    "issues": []
+   },
+   {
+    "index": 10,
+    "layout": "flow",
+    "words": 43,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 3,
+    "issues": []
+   },
+   {
+    "index": 11,
+    "layout": "cta",
+    "words": 51,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 4,
+    "issues": []
+   }
+  ],
+  "slides": 12
+ },
+ "gpt-6-astra-low/contoso_sales": {
+  "model": "gpt-6-astra",
+  "level": "low",
+  "brief": "contoso_sales",
+  "template": "microsoft",
+  "seconds": 51.9,
+  "wall_seconds": 400.7,
+  "input_tokens": 1590,
+  "output_tokens": 3067,
+  "reasoning_tokens": 108,
+  "truncated_calls": 0,
+  "token_source": "session-store exact usage",
+  "usage": {
+   "agent_id": "7fc59c57-5b54-4474-b578-21fbd1023a70",
+   "output_tokens": 3067,
+   "reasoning_tokens": 108,
+   "api_seconds": 51.9,
+   "truncated_calls": 0,
+   "agent_calls": 3,
+   "agent_input_tokens": 46482,
+   "agent_cache_read_tokens": 41588,
+   "agent_output_tokens": 3115,
+   "agent_model_seconds": 57.2
+  },
+  "economics": {
+   "lane": "cloud",
+   "energy_wh": 3.374,
+   "cost_usd": 0.16925,
+   "co2e_g": 1.238,
+   "water_ml": 11.04,
+   "basis": "API list price x tokens; energy/water = published per-1k-output-token estimate"
+  },
+  "grade": {
+   "auto_score": 84.0,
+   "auto_grade": "B",
+   "scores": {
+    "visual_richness": 23.0,
+    "text_lightness": 11.0,
+    "analogy": 10.0,
+    "brief_coverage": 15.0,
+    "claim_discipline": 15.0,
+    "structure": 10.0
+   },
+   "detail": {
+    "visual_richness": {
+     "infographic_share": 1.0,
+     "distinct_layouts": 6,
+     "icons_per_slide": 4.0,
+     "canvas_diagrams": 1
+    },
+    "text_lightness": {
+     "avg_words_per_slide": 43.5,
+     "max_words": 57
+    },
+    "analogy": {
+     "analogy_slides": 2,
+     "analogy_cue_slides": 0
+    },
+    "brief_coverage": {
+     "covered": 7.0,
+     "topics": 7,
+     "missing": []
+    },
+    "claim_discipline": {
+     "numbers_on_canvas": 19,
+     "untraceable": [],
+     "guardrail_violations": []
+    },
+    "structure": {
+     "strict_json": true,
+     "slides": 10,
+     "notes_slides": 10,
+     "fallbacks": 0,
+     "overflows": 0,
+     "shrunk_texts": 2
+    }
+   }
+  },
+  "pptx": "runs/cloud/gpt-6-astra-low/render/contoso_sales-microsoft.pptx",
+  "render_summary": [
+   {
+    "index": 0,
+    "layout": "title",
+    "words": 19,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 4,
+    "issues": []
+   },
+   {
+    "index": 1,
+    "layout": "kpis",
+    "words": 57,
+    "overflows": 0,
+    "shrunk": 1,
+    "icons": 4,
+    "issues": []
+   },
+   {
+    "index": 2,
+    "layout": "analogy",
+    "words": 40,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 2,
+    "issues": []
+   },
+   {
+    "index": 3,
+    "layout": "compare",
+    "words": 45,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 9,
+    "issues": []
+   },
+   {
+    "index": 4,
+    "layout": "canvas",
+    "words": 38,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 5,
+    "issues": []
+   },
+   {
+    "index": 5,
+    "layout": "stack",
+    "words": 51,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 4,
+    "issues": []
+   },
+   {
+    "index": 6,
+    "layout": "kpis",
+    "words": 40,
+    "overflows": 0,
+    "shrunk": 1,
+    "icons": 2,
+    "issues": []
+   },
+   {
+    "index": 7,
+    "layout": "analogy",
+    "words": 44,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 2,
+    "issues": []
+   },
+   {
+    "index": 8,
+    "layout": "flow",
+    "words": 50,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 4,
+    "issues": []
+   },
+   {
+    "index": 9,
+    "layout": "cta",
+    "words": 51,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 4,
+    "issues": []
+   }
+  ],
+  "slides": 10
+ },
+ "gpt-6-astra-low/zava_technical": {
+  "model": "gpt-6-astra",
+  "level": "low",
+  "brief": "zava_technical",
+  "template": "surface_ultra",
+  "seconds": 61.4,
+  "wall_seconds": 104.8,
+  "input_tokens": 1738,
+  "output_tokens": 3752,
+  "reasoning_tokens": 30,
+  "truncated_calls": 0,
+  "token_source": "session-store exact usage",
+  "usage": {
+   "agent_id": "6fa8dd49-6d78-486c-8775-88e4324207f5",
+   "output_tokens": 3752,
+   "reasoning_tokens": 30,
+   "api_seconds": 61.4,
+   "truncated_calls": 0,
+   "agent_calls": 3,
+   "agent_input_tokens": 47508,
+   "agent_cache_read_tokens": 41332,
+   "agent_output_tokens": 3801,
+   "agent_model_seconds": 66.7
+  },
+  "economics": {
+   "lane": "cloud",
+   "energy_wh": 4.127,
+   "cost_usd": 0.20498,
+   "co2e_g": 1.515,
+   "water_ml": 13.51,
+   "basis": "API list price x tokens; energy/water = published per-1k-output-token estimate"
+  },
+  "grade": {
+   "auto_score": 86.5,
+   "auto_grade": "B",
+   "scores": {
+    "visual_richness": 23.0,
+    "text_lightness": 14.3,
+    "analogy": 10.0,
+    "brief_coverage": 14.2,
+    "claim_discipline": 15.0,
+    "structure": 10.0
+   },
+   "detail": {
+    "visual_richness": {
+     "infographic_share": 1.0,
+     "distinct_layouts": 9,
+     "icons_per_slide": 4.1,
+     "canvas_diagrams": 1
+    },
+    "text_lightness": {
+     "avg_words_per_slide": 38.5,
+     "max_words": 54
+    },
+    "analogy": {
+     "analogy_slides": 2,
+     "analogy_cue_slides": 0
+    },
+    "brief_coverage": {
+     "covered": 9.5,
+     "topics": 10,
+     "missing": [
+      "made_on_device (notes only)"
+     ]
+    },
+    "claim_discipline": {
+     "numbers_on_canvas": 35,
+     "untraceable": [],
+     "guardrail_violations": []
+    },
+    "structure": {
+     "strict_json": true,
+     "slides": 12,
+     "notes_slides": 12,
+     "fallbacks": 0,
+     "overflows": 0,
+     "shrunk_texts": 1
+    }
+   }
+  },
+  "pptx": "runs/cloud/gpt-6-astra-low/render/zava_technical-surface_ultra.pptx",
+  "render_summary": [
+   {
+    "index": 0,
+    "layout": "title",
+    "words": 17,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 5,
+    "issues": []
+   },
+   {
+    "index": 1,
+    "layout": "stack",
+    "words": 54,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 4,
+    "issues": []
+   },
+   {
+    "index": 2,
+    "layout": "kpis",
+    "words": 34,
+    "overflows": 0,
+    "shrunk": 1,
+    "icons": 3,
+    "issues": []
+   },
+   {
+    "index": 3,
+    "layout": "analogy",
+    "words": 37,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 2,
+    "issues": []
+   },
+   {
+    "index": 4,
+    "layout": "bars",
+    "words": 35,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 1,
+    "issues": []
+   },
+   {
+    "index": 5,
+    "layout": "compare",
+    "words": 49,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 10,
+    "issues": []
+   },
+   {
+    "index": 6,
+    "layout": "hub",
+    "words": 25,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 5,
+    "issues": []
+   },
+   {
+    "index": 7,
+    "layout": "analogy",
+    "words": 35,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 2,
+    "issues": []
+   },
+   {
+    "index": 8,
+    "layout": "canvas",
+    "words": 45,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 7,
+    "issues": []
+   },
+   {
+    "index": 9,
+    "layout": "flow",
+    "words": 49,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 4,
+    "issues": []
+   },
+   {
+    "index": 10,
+    "layout": "timeline",
+    "words": 33,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 3,
+    "issues": []
+   },
+   {
+    "index": 11,
+    "layout": "cta",
+    "words": 49,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 4,
+    "issues": []
+   }
+  ],
+  "slides": 12
+ },
+ "gpt-6-astra-max/contoso_sales": {
+  "model": "gpt-6-astra",
+  "level": "max",
+  "brief": "contoso_sales",
+  "template": "microsoft",
+  "seconds": 249.7,
+  "wall_seconds": 294.5,
+  "input_tokens": 1590,
+  "output_tokens": 12892,
+  "reasoning_tokens": 8058,
+  "truncated_calls": 0,
+  "token_source": "session-store exact usage",
+  "usage": {
+   "agent_id": "d7a6d00b-fa75-465d-9ef0-bbc2bf6011f0",
+   "output_tokens": 12892,
+   "reasoning_tokens": 8058,
+   "api_seconds": 249.7,
+   "truncated_calls": 0,
+   "agent_calls": 3,
+   "agent_input_tokens": 56307,
+   "agent_cache_read_tokens": 28315,
+   "agent_output_tokens": 12985,
+   "agent_model_seconds": 261.6
+  },
+  "economics": {
+   "lane": "cloud",
+   "energy_wh": 14.181,
+   "cost_usd": 0.6605,
+   "co2e_g": 5.205,
+   "water_ml": 46.41,
+   "basis": "API list price x tokens; energy/water = published per-1k-output-token estimate"
+  },
+  "grade": {
+   "auto_score": 86.4,
+   "auto_grade": "B",
+   "scores": {
+    "visual_richness": 22.8,
+    "text_lightness": 13.6,
+    "analogy": 10.0,
+    "brief_coverage": 15.0,
+    "claim_discipline": 15.0,
+    "structure": 10.0
+   },
+   "detail": {
+    "visual_richness": {
+     "infographic_share": 1.0,
+     "distinct_layouts": 8,
+     "icons_per_slide": 3.8,
+     "canvas_diagrams": 1
+    },
+    "text_lightness": {
+     "avg_words_per_slide": 39.6,
+     "max_words": 56
+    },
+    "analogy": {
+     "analogy_slides": 2,
+     "analogy_cue_slides": 0
+    },
+    "brief_coverage": {
+     "covered": 7.0,
+     "topics": 7,
+     "missing": []
+    },
+    "claim_discipline": {
+     "numbers_on_canvas": 31,
+     "untraceable": [],
+     "guardrail_violations": []
+    },
+    "structure": {
+     "strict_json": true,
+     "slides": 12,
+     "notes_slides": 12,
+     "fallbacks": 0,
+     "overflows": 0,
+     "shrunk_texts": 0
+    }
+   }
+  },
+  "pptx": "runs/cloud/gpt-6-astra-max/render/contoso_sales-microsoft.pptx",
+  "render_summary": [
+   {
+    "index": 0,
+    "layout": "title",
+    "words": 15,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 4,
+    "issues": []
+   },
+   {
+    "index": 1,
+    "layout": "kpis",
+    "words": 44,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 4,
+    "issues": []
+   },
+   {
+    "index": 2,
+    "layout": "analogy",
+    "words": 41,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 2,
+    "issues": []
+   },
+   {
+    "index": 3,
+    "layout": "compare",
+    "words": 41,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 8,
+    "issues": []
+   },
+   {
+    "index": 4,
+    "layout": "canvas",
+    "words": 56,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 8,
+    "issues": []
+   },
+   {
+    "index": 5,
+    "layout": "stack",
+    "words": 50,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 4,
+    "issues": []
+   },
+   {
+    "index": 6,
+    "layout": "bars",
+    "words": 37,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 1,
+    "issues": []
+   },
+   {
+    "index": 7,
+    "layout": "analogy",
+    "words": 37,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 2,
+    "issues": []
+   },
+   {
+    "index": 8,
+    "layout": "kpis",
+    "words": 35,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 2,
+    "issues": []
+   },
+   {
+    "index": 9,
+    "layout": "flow",
+    "words": 44,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 4,
+    "issues": []
+   },
+   {
+    "index": 10,
+    "layout": "timeline",
+    "words": 31,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 3,
+    "issues": []
+   },
+   {
+    "index": 11,
+    "layout": "cta",
+    "words": 44,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 4,
+    "issues": []
+   }
+  ],
+  "slides": 12
+ },
+ "gpt-6-astra-max/zava_technical": {
+  "model": "gpt-6-astra",
+  "level": "max",
+  "brief": "zava_technical",
+  "template": "surface_ultra",
+  "seconds": 285.3,
+  "wall_seconds": 330.3,
+  "input_tokens": 1738,
+  "output_tokens": 14775,
+  "reasoning_tokens": 9293,
+  "truncated_calls": 0,
+  "token_source": "session-store exact usage",
+  "usage": {
+   "agent_id": "4d48b598-d608-4ddf-b9bb-8d40ff91a2f9",
+   "output_tokens": 14775,
+   "reasoning_tokens": 9293,
+   "api_seconds": 285.3,
+   "truncated_calls": 0,
+   "agent_calls": 3,
+   "agent_input_tokens": 58531,
+   "agent_cache_read_tokens": 41332,
+   "agent_output_tokens": 14864,
+   "agent_model_seconds": 293.2
+  },
+  "economics": {
+   "lane": "cloud",
+   "energy_wh": 16.253,
+   "cost_usd": 0.75613,
+   "co2e_g": 5.965,
+   "water_ml": 53.19,
+   "basis": "API list price x tokens; energy/water = published per-1k-output-token estimate"
+  },
+  "grade": {
+   "auto_score": 83.7,
+   "auto_grade": "B",
+   "scores": {
+    "visual_richness": 21.4,
+    "text_lightness": 12.3,
+    "analogy": 10.0,
+    "brief_coverage": 15.0,
+    "claim_discipline": 15.0,
+    "structure": 10.0
+   },
+   "detail": {
+    "visual_richness": {
+     "infographic_share": 0.9,
+     "distinct_layouts": 7,
+     "icons_per_slide": 3.4,
+     "canvas_diagrams": 1
+    },
+    "text_lightness": {
+     "avg_words_per_slide": 41.5,
+     "max_words": 59
+    },
+    "analogy": {
+     "analogy_slides": 2,
+     "analogy_cue_slides": 0
+    },
+    "brief_coverage": {
+     "covered": 10.0,
+     "topics": 10,
+     "missing": []
+    },
+    "claim_discipline": {
+     "numbers_on_canvas": 41,
+     "untraceable": [],
+     "guardrail_violations": []
+    },
+    "structure": {
+     "strict_json": true,
+     "slides": 12,
+     "notes_slides": 12,
+     "fallbacks": 0,
+     "overflows": 0,
+     "shrunk_texts": 9
+    }
+   }
+  },
+  "pptx": "runs/cloud/gpt-6-astra-max/render/zava_technical-surface_ultra.pptx",
+  "render_summary": [
+   {
+    "index": 0,
+    "layout": "title",
+    "words": 15,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 5,
+    "issues": []
+   },
+   {
+    "index": 1,
+    "layout": "stack",
+    "words": 59,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 4,
+    "issues": []
+   },
+   {
+    "index": 2,
+    "layout": "kpis",
+    "words": 36,
+    "overflows": 0,
+    "shrunk": 1,
+    "icons": 3,
+    "issues": []
+   },
+   {
+    "index": 3,
+    "layout": "bars",
+    "words": 33,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 1,
+    "issues": []
+   },
+   {
+    "index": 4,
+    "layout": "kpis",
+    "words": 52,
+    "overflows": 0,
+    "shrunk": 2,
+    "icons": 3,
+    "issues": []
+   },
+   {
+    "index": 5,
+    "layout": "analogy",
+    "words": 39,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 2,
+    "issues": []
+   },
+   {
+    "index": 6,
+    "layout": "hub",
+    "words": 28,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 5,
+    "issues": []
+   },
+   {
+    "index": 7,
+    "layout": "analogy",
+    "words": 40,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 2,
+    "issues": []
+   },
+   {
+    "index": 8,
+    "layout": "canvas",
+    "words": 59,
+    "overflows": 0,
+    "shrunk": 6,
+    "icons": 8,
+    "issues": []
+   },
+   {
+    "index": 9,
+    "layout": "flow",
+    "words": 58,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 5,
+    "issues": []
+   },
+   {
+    "index": 10,
+    "layout": "statement",
+    "words": 27,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 1,
+    "issues": []
+   },
+   {
+    "index": 11,
+    "layout": "cta",
+    "words": 52,
+    "overflows": 0,
+    "shrunk": 0,
+    "icons": 4,
+    "issues": []
+   }
+  ],
+  "slides": 12
+ }
+}

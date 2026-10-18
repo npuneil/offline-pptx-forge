@@ -1,0 +1,319 @@
+{
+ "title": "Local AI for Traveling Consultants",
+ "client": "Contoso",
+ "slides": [
+  {
+   "layout": "title",
+   "kicker": "Pilot Proposal",
+   "title": "Surface Laptop Ultra with Local AI",
+   "subtitle": "Hybrid AI for consultants on the go",
+   "hero_icons": [
+    "laptop",
+    "wifi",
+    "shield",
+    "chat"
+   ]
+  },
+  {
+   "layout": "analogy",
+   "title": "Consultant Workflows",
+   "takeaway": "Like a chef with two kitchens",
+   "data": {
+    "concept": {
+     "label": "Consultant Drafting",
+     "icon": "document"
+    },
+    "analog": {
+     "label": "Chef Cooking",
+     "icon": "chef"
+    },
+    "pairs": [
+     {
+      "concept": "Client summaries",
+      "analog": "Recipes"
+     },
+     {
+      "concept": "Microsoft 365 Copilot",
+      "analog": "Main kitchen"
+     },
+     {
+      "concept": "Local AI",
+      "analog": "Side kitchen"
+     }
+    ]
+   },
+   "notes": "Consultants draft summaries using two AI lanes. Main kitchen (Copilot) for general work. Side kitchen (local AI) for sensitive, repeated tasks. Like a chef using both kitchens."
+  },
+  {
+   "layout": "stack",
+   "title": "Local AI Architecture",
+   "takeaway": "AI runs on device",
+   "data": {
+    "side_label": "On Device",
+    "layers": [
+     {
+      "label": "Local Models",
+      "detail": "28 open models",
+      "icon": "chip"
+     },
+     {
+      "label": "Processing",
+      "detail": "RTX Spark GPU",
+      "icon": "gpu"
+     },
+     {
+      "label": "Memory",
+      "detail": "128 GB RAM",
+      "icon": "memory"
+     }
+    ]
+   },
+   "notes": "Local AI runs entirely on the device. 28 open models are pre-installed. The RTX Spark GPU handles processing, with 128 GB of memory for complex tasks."
+  },
+  {
+   "layout": "flow",
+   "title": "Consultant Workflow",
+   "takeaway": "Two AI lanes for two tasks",
+   "data": {
+    "steps": [
+     {
+      "label": "Client Interview",
+      "detail": "Notes taken",
+      "icon": "camera"
+     },
+     {
+      "label": "Draft Summary",
+      "detail": "Copilot or local AI",
+      "icon": "document"
+     },
+     {
+      "label": "Review & Send",
+      "detail": "Final edits",
+      "icon": "check"
+     }
+    ]
+   },
+   "notes": "Consultants take notes during interviews. They draft summaries using either Copilot (for general tasks) or local AI (for sensitive, repeated work). Final review and send."
+  },
+  {
+   "layout": "compare",
+   "title": "Cloud vs Local AI",
+   "takeaway": "Local AI for sensitive data",
+   "data": {
+    "left": {
+     "title": "Cloud AI",
+     "icon": "cloud",
+     "points": [
+      "Requires internet",
+      "Data in cloud"
+     ]
+    },
+    "right": {
+     "title": "Local AI",
+     "icon": "shield",
+     "points": [
+      "Works offline",
+      "Data stays local"
+     ]
+    },
+    "verdict": "Local AI for sensitive, repeated drafting tasks"
+   },
+   "notes": "Cloud AI requires internet and sends data to the cloud. Local AI works offline and keeps data on device. Best for sensitive, repeated drafting work."
+  },
+  {
+   "layout": "memory",
+   "title": "Device Capacity",
+   "takeaway": "128 GB RAM for AI tasks",
+   "data": {
+    "capacity": 128,
+    "unit": "GB",
+    "capacity_label": "Memory",
+    "caption": "Surface Laptop Ultra with RTX Spark",
+    "blocks": [
+     {
+      "label": "Local Models",
+      "size": 30
+     },
+     {
+      "label": "Processing",
+      "size": 40
+     },
+     {
+      "label": "User Data",
+      "size": 20
+     }
+    ]
+   },
+   "notes": "The Surface Laptop Ultra has 128 GB of memory. It supports running 28 open models locally, with room for processing and user data."
+  },
+  {
+   "layout": "matrix",
+   "title": "AI Use Cases",
+   "takeaway": "Hybrid AI approach",
+   "data": {
+    "x_axis": "Sensitivity",
+    "y_axis": "Repetition",
+    "highlight": 1,
+    "quadrants": [
+     {
+      "label": "High Sensitivity, Low Repetition",
+      "detail": "Use Copilot",
+      "icon": "chat"
+     },
+     {
+      "label": "High Sensitivity, High Repetition",
+      "detail": "Use Local AI",
+      "icon": "shield"
+     },
+     {
+      "label": "Low Sensitivity, Low Repetition",
+      "detail": "Use Copilot",
+      "icon": "chat"
+     },
+     {
+      "label": "Low Sensitivity, High Repetition",
+      "detail": "Use Copilot",
+      "icon": "chat"
+     }
+    ]
+   },
+   "notes": "A hybrid approach. Use Copilot for sensitive low-repetition tasks and high-sensitivity, high-repetition tasks with local AI."
+  },
+  {
+   "layout": "bars",
+   "title": "Time Savings Estimate",
+   "takeaway": "Potential 27,600 hours saved annually",
+   "data": {
+    "unit": "hours",
+    "highlight": "Total Saved",
+    "icon": "timer",
+    "caption": "Estimate based on 5 min per summary",
+    "bars": [
+     {
+      "label": "1,200 consultants",
+      "value": 1200
+     },
+     {
+      "label": "6 summaries/week",
+      "value": 6
+     },
+     {
+      "label": "5 minutes saved",
+      "value": 5
+     },
+     {
+      "label": "46 weeks/year",
+      "value": 46
+     },
+     {
+      "label": "Total Saved",
+      "value": 27600
+     }
+    ]
+   },
+   "notes": "If local AI saves 5 minutes per summary, the potential annual time savings are 27,600 hours. This is an estimate to validate during the pilot."
+  },
+  {
+   "layout": "canvas",
+   "title": "Pilot Plan",
+   "takeaway": "10 users for 2 weeks",
+   "data": {
+    "elements": [
+     {
+      "type": "box",
+      "x": 0,
+      "y": 0,
+      "w": 4,
+      "h": 2,
+      "label": "Device: Surface Laptop Ultra",
+      "icon": "laptop",
+      "tone": "primary"
+     },
+     {
+      "type": "box",
+      "x": 5,
+      "y": 0,
+      "w": 4,
+      "h": 2,
+      "label": "Models: 28 open models",
+      "icon": "chip",
+      "tone": "accent1"
+     },
+     {
+      "type": "box",
+      "x": 10,
+      "y": 0,
+      "w": 2,
+      "h": 2,
+      "label": "Pilot: 10 users",
+      "icon": "people",
+      "tone": "accent2"
+     },
+     {
+      "type": "box",
+      "x": 0,
+      "y": 3,
+      "w": 4,
+      "h": 2,
+      "label": "Duration: 2 weeks",
+      "icon": "calendar",
+      "tone": "accent3"
+     },
+     {
+      "type": "box",
+      "x": 5,
+      "y": 3,
+      "w": 4,
+      "h": 2,
+      "label": "Metrics: Time, Quality, UX",
+      "icon": "chart",
+      "tone": "accent4"
+     },
+     {
+      "type": "box",
+      "x": 10,
+      "y": 3,
+      "w": 2,
+      "h": 2,
+      "label": "Goal: Validate use case",
+      "icon": "check",
+      "tone": "muted"
+     }
+    ]
+   },
+   "notes": "The pilot will test the local AI solution with 10 users for two weeks. Metrics include task time, draft quality, and user experience. Goal is to validate the use case."
+  },
+  {
+   "layout": "statement",
+   "title": "Key Insight",
+   "takeaway": "Local AI adds value without replacing Copilot",
+   "data": {
+    "icon": "layers",
+    "text": "Local AI enhances workflows, not replaces them",
+    "sub": "Hybrid approach for sensitive tasks"
+   },
+   "notes": "Local AI is not a replacement for Microsoft 365 Copilot. It adds a second lane for sensitive, repeated drafting work."
+  },
+  {
+   "layout": "cta",
+   "title": "Next Steps",
+   "takeaway": "Approve the pilot",
+   "data": {
+    "steps": [
+     {
+      "label": "Review proposal",
+      "detail": "10-user, 2-week pilot",
+      "icon": "document"
+     },
+     {
+      "label": "Confirm device specs",
+      "detail": "Surface Laptop Ultra",
+      "icon": "laptop"
+     }
+    ],
+    "ask": "Approve the pilot to validate local AI for consultants"
+   },
+   "notes": "We propose a 10-user, 2-week pilot with Surface Laptop Ultra. This will validate the use case and inform future decisions on local AI adoption."
+  }
+ ]
+}

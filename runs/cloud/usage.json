@@ -1,0 +1,160 @@
+{
+ "_source": "Copilot CLI local session store, assistant_usage_events (initiator=sub-agent), exact per-call counts",
+ "_method": "output_tokens/reasoning/api_seconds sum the content-generating calls; agent_* fields include agent bookkeeping calls (prompt view, final stop) and the ~23.8k-token agent system prompt",
+ "claude-opus-5.5-low": {
+  "contoso_sales": {
+   "agent_id": "44aea0f2-fd11-4a6d-b4c8-1d36b5ba8ec4",
+   "output_tokens": 3283,
+   "reasoning_tokens": 0,
+   "api_seconds": 27.5,
+   "truncated_calls": 0,
+   "agent_calls": 3,
+   "agent_input_tokens": 80420,
+   "agent_cache_read_tokens": 67923,
+   "agent_output_tokens": 3377,
+   "agent_model_seconds": 29.8
+  },
+  "zava_technical": {
+   "agent_id": "96c4084c-436f-4c56-9cc9-b79f63cb5067",
+   "output_tokens": 3489,
+   "reasoning_tokens": 0,
+   "api_seconds": 28.7,
+   "truncated_calls": 0,
+   "agent_calls": 3,
+   "agent_input_tokens": 81121,
+   "agent_cache_read_tokens": 68170,
+   "agent_output_tokens": 3582,
+   "agent_model_seconds": 32.0
+  }
+ },
+ "claude-opus-5.5-high": {
+  "contoso_sales": {
+   "agent_id": "663088fb-13e8-406a-a2cf-f15416721e78",
+   "output_tokens": 8562,
+   "reasoning_tokens": 4127,
+   "api_seconds": 79.0,
+   "truncated_calls": 0,
+   "agent_calls": 3,
+   "agent_input_tokens": 85699,
+   "agent_cache_read_tokens": 73558,
+   "agent_output_tokens": 8788,
+   "agent_model_seconds": 83.6
+  },
+  "zava_technical": {
+   "agent_id": "fa02f13b-e230-4ba6-91e6-67af36483802",
+   "output_tokens": 11131,
+   "reasoning_tokens": 6246,
+   "api_seconds": 97.4,
+   "truncated_calls": 0,
+   "agent_calls": 3,
+   "agent_input_tokens": 88763,
+   "agent_cache_read_tokens": 68170,
+   "agent_output_tokens": 11224,
+   "agent_model_seconds": 101.0
+  }
+ },
+ "claude-opus-5.5-max": {
+  "contoso_sales": {
+   "agent_id": "453f9570-973b-46ee-8af5-5a06378297b4",
+   "output_tokens": 69334,
+   "reasoning_tokens": 64479,
+   "api_seconds": 581.9,
+   "truncated_calls": 2,
+   "agent_calls": 5,
+   "agent_input_tokens": 295996,
+   "agent_cache_read_tokens": 222991,
+   "agent_output_tokens": 69478,
+   "agent_model_seconds": 586.0
+  },
+  "zava_technical": {
+   "agent_id": "1d73e015-d5d2-46bf-88b0-033e6e3c3e9b",
+   "output_tokens": 73028,
+   "reasoning_tokens": 67840,
+   "api_seconds": 630.8,
+   "truncated_calls": 2,
+   "agent_calls": 5,
+   "agent_input_tokens": 300685,
+   "agent_cache_read_tokens": 223737,
+   "agent_output_tokens": 73171,
+   "agent_model_seconds": 634.7
+  }
+ },
+ "gpt-6-astra-low": {
+  "contoso_sales": {
+   "agent_id": "7fc59c57-5b54-4474-b578-21fbd1023a70",
+   "output_tokens": 3067,
+   "reasoning_tokens": 108,
+   "api_seconds": 51.9,
+   "truncated_calls": 0,
+   "agent_calls": 3,
+   "agent_input_tokens": 46482,
+   "agent_cache_read_tokens": 41588,
+   "agent_output_tokens": 3115,
+   "agent_model_seconds": 57.2
+  },
+  "zava_technical": {
+   "agent_id": "6fa8dd49-6d78-486c-8775-88e4324207f5",
+   "output_tokens": 3752,
+   "reasoning_tokens": 30,
+   "api_seconds": 61.4,
+   "truncated_calls": 0,
+   "agent_calls": 3,
+   "agent_input_tokens": 47508,
+   "agent_cache_read_tokens": 41332,
+   "agent_output_tokens": 3801,
+   "agent_model_seconds": 66.7
+  }
+ },
+ "gpt-6-astra-high": {
+  "contoso_sales": {
+   "agent_id": "6902428d-8a75-487e-8ac6-468717ddcb77",
+   "output_tokens": 6494,
+   "reasoning_tokens": 2404,
+   "api_seconds": 119.6,
+   "truncated_calls": 0,
+   "agent_calls": 3,
+   "agent_input_tokens": 49909,
+   "agent_cache_read_tokens": 28315,
+   "agent_output_tokens": 6542,
+   "agent_model_seconds": 125.7
+  },
+  "zava_technical": {
+   "agent_id": "e424b262-92aa-4b28-9b7b-7debc33040df",
+   "output_tokens": 8534,
+   "reasoning_tokens": 3106,
+   "api_seconds": 154.1,
+   "truncated_calls": 0,
+   "agent_calls": 3,
+   "agent_input_tokens": 52290,
+   "agent_cache_read_tokens": 41332,
+   "agent_output_tokens": 8583,
+   "agent_model_seconds": 160.4
+  }
+ },
+ "gpt-6-astra-max": {
+  "contoso_sales": {
+   "agent_id": "d7a6d00b-fa75-465d-9ef0-bbc2bf6011f0",
+   "output_tokens": 12892,
+   "reasoning_tokens": 8058,
+   "api_seconds": 249.7,
+   "truncated_calls": 0,
+   "agent_calls": 3,
+   "agent_input_tokens": 56307,
+   "agent_cache_read_tokens": 28315,
+   "agent_output_tokens": 12985,
+   "agent_model_seconds": 261.6
+  },
+  "zava_technical": {
+   "agent_id": "4d48b598-d608-4ddf-b9bb-8d40ff91a2f9",
+   "output_tokens": 14775,
+   "reasoning_tokens": 9293,
+   "api_seconds": 285.3,
+   "truncated_calls": 0,
+   "agent_calls": 3,
+   "agent_input_tokens": 58531,
+   "agent_cache_read_tokens": 41332,
+   "agent_output_tokens": 14864,
+   "agent_model_seconds": 293.2
+  }
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "northwind_sales": [
+  "deck-5035",
+  "deck-5321"
+ ],
+ "woodgrove_technical": [
+  "deck-9207",
+  "deck-9415"
+ ],
+ "tailspin_sales": [
+  "deck-7110",
+  "deck-8132"
+ ],
+ "contoso_sales": [
+  "deck-2997",
+  "deck-9359",
+  "deck-9558"
+ ],
+ "zava_technical": [
+  "deck-1189",
+  "deck-3844",
+  "deck-7115"
+ ]
+}

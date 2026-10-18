@@ -1,0 +1,243 @@
+{
+ "title": "Local AI for Narrative Teams",
+ "client": "Tailspin Toys",
+ "slides": [
+  {
+   "layout": "title",
+   "kicker": "Pilot Proposal",
+   "title": "Surface Laptop Ultra with Local AI",
+   "subtitle": "For Embargoed Creative Work",
+   "hero_icons": [
+    "laptop",
+    "ai",
+    "lock",
+    "cloud"
+   ]
+  },
+  {
+   "layout": "analogy",
+   "title": "Creative Process",
+   "takeaway": "Like a chef’s kitchen, not a restaurant",
+   "data": {
+    "concept": {
+     "label": "Narrative Design",
+     "icon": "document"
+    },
+    "analog": {
+     "label": "Kitchen",
+     "icon": "chef"
+    },
+    "pairs": [
+     {
+      "concept": "Playtest Sessions",
+      "analog": "Ingredients"
+     },
+     {
+      "concept": "Feedback Digests",
+      "analog": "Recipes"
+     },
+     {
+      "concept": "Dialogue Drafts",
+      "analog": "Dishes"
+     }
+    ]
+   },
+   "notes": "Narrative design is like cooking. Playtest sessions are ingredients, feedback digests are recipes, and dialogue drafts are dishes. Local AI provides a dedicated kitchen space for embargoed work."
+  },
+  {
+   "layout": "stack",
+   "title": "Workflows",
+   "takeaway": "Two lanes: Copilot + Local AI",
+   "data": {
+    "side_label": "Workflow",
+    "layers": [
+     {
+      "label": "Microsoft 365 Copilot",
+      "detail": "Public tasks",
+      "icon": "cloud"
+     },
+     {
+      "label": "Local AI (Surface)",
+      "detail": "Embargoed work",
+      "icon": "lock"
+     }
+    ]
+   },
+   "notes": "Microsoft 365 Copilot handles public tasks, while local AI on Surface handles embargoed creative material. This hybrid approach ensures secure workflows without replacing existing tools."
+  },
+  {
+   "layout": "flow",
+   "title": "Current Workflow",
+   "takeaway": "40 minutes per digest today",
+   "data": {
+    "steps": [
+     {
+      "label": "Session Review",
+      "detail": "Watch footage",
+      "icon": "video"
+     },
+     {
+      "label": "Feedback Notes",
+      "detail": "Manual typing",
+      "icon": "edit"
+     },
+     {
+      "label": "Digest Draft",
+      "detail": "40 min average",
+      "icon": "document"
+     }
+    ]
+   },
+   "notes": "Each session review takes about 40 minutes to turn into a digest. Local AI can reduce this time significantly, especially for repetitive tasks like summarizing and drafting."
+  },
+  {
+   "layout": "memory",
+   "title": "Device Capacity",
+   "takeaway": "128 GB memory, 20 CPU cores",
+   "data": {
+    "capacity": 128,
+    "unit": "GB",
+    "capacity_label": "Memory",
+    "caption": "Surface Laptop Ultra with NVIDIA RTX Spark",
+    "blocks": [
+     {
+      "label": "Local AI Models",
+      "size": 32
+     },
+     {
+      "label": "System & Apps",
+      "size": 64
+     }
+    ]
+   },
+   "notes": "The Surface Laptop Ultra has 128 GB memory and 20 CPU cores. It supports 28 open models locally, ensuring performance for creative tasks without relying on cloud resources."
+  },
+  {
+   "layout": "compare",
+   "title": "Offline vs Online",
+   "takeaway": "Local AI works disconnected",
+   "data": {
+    "left": {
+     "title": "Online Work",
+     "icon": "cloud",
+     "points": [
+      "Relies on internet",
+      "Slower for drafts"
+     ]
+    },
+    "right": {
+     "title": "Local AI",
+     "icon": "laptop",
+     "points": [
+      "Works offline",
+      "Faster feedback"
+     ]
+    },
+    "verdict": "Ideal for offsite playtests and conventions."
+   },
+   "notes": "Offline use is validated in the pilot. Local AI works without internet, making it perfect for offsite playtest venues and conventions where connectivity is unreliable."
+  },
+  {
+   "layout": "matrix",
+   "title": "Use Cases",
+   "takeaway": "For embargoed creative work",
+   "data": {
+    "x_axis": "Network Access",
+    "y_axis": "Security Needs",
+    "highlight": 1,
+    "quadrants": [
+     {
+      "label": "Public Tasks",
+      "detail": "Use Copilot",
+      "icon": "cloud"
+     },
+     {
+      "label": "Secure Work",
+      "detail": "Local AI",
+      "icon": "lock"
+     },
+     {
+      "label": "Unsecure Tasks",
+      "detail": "Copilot or Local",
+      "icon": "gears"
+     },
+     {
+      "label": "Secure & Offline",
+      "detail": "Local AI only",
+      "icon": "laptop"
+     }
+    ]
+   },
+   "notes": "This matrix shows how local AI fits into the workflow. Secure and offline work is best handled by local AI, while public tasks use Copilot."
+  },
+  {
+   "layout": "bars",
+   "title": "Time Savings Estimate",
+   "takeaway": "2,475 hours/year (estimate)",
+   "data": {
+    "unit": "hours",
+    "highlight": "Estimate",
+    "icon": "timer",
+    "caption": "If 15 min saved per digest",
+    "bars": [
+     {
+      "label": "45 designers",
+      "value": 2475
+     }
+    ]
+   },
+   "notes": "Illustrative estimate: if local AI saves 15 minutes per digest, that's 2,475 hours/year. This will be validated during the pilot."
+  },
+  {
+   "layout": "canvas",
+   "title": "Pilot Plan",
+   "takeaway": "6 users, 2 weeks",
+   "data": {
+    "elements": [
+     {
+      "type": "box",
+      "x": 0,
+      "y": 0,
+      "w": 4,
+      "h": 2,
+      "label": "Users",
+      "icon": "person",
+      "tone": "primary"
+     },
+     {
+      "type": "box",
+      "x": 5,
+      "y": 0,
+      "w": 4,
+      "h": 2,
+      "label": "Duration",
+      "icon": "calendar",
+      "tone": "accent1"
+     },
+     {
+      "type": "box",
+      "x": 10,
+      "y": 0,
+      "w": 2,
+      "h": 2,
+      "label": "Goal",
+      "icon": "target",
+      "tone": "accent2"
+     }
+    ]
+   },
+   "notes": "The pilot involves 6 users over 2 weeks. It will measure digest time, draft quality, and user experience to validate the benefits of local AI."
+  },
+  {
+   "layout": "statement",
+   "title": "Pilot Ask",
+   "takeaway": "Approve 2-week pilot",
+   "data": {
+    "icon": "approve",
+    "text": "Support a 6-user, 2-week pilot",
+    "sub": "On Surface Laptop Ultra with local AI"
+   },
+   "notes": "We ask for approval to run a 2-week pilot with 6 users. This will validate time savings and usability for embargoed creative work."
+  }
+ ]
+}

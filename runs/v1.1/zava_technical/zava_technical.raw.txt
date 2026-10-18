@@ -1,0 +1,1261 @@
+{
+  "title": "Zava Technical Briefing",
+  "client": "Zava",
+  "slides": [
+    {
+      "layout": "title",
+      "kicker": "TECHNICAL BRIEFING FOR ZAVA ENGINEERING",
+      "title": "Local AI Stack Proven on Surface Laptop Ultra",
+      "subtitle": "10 developers, 2 weeks, no cloud calls",
+      "hero_icons": ["laptop", "ai", "chip", "memory"]
+    },
+    {
+      "layout": "compare",
+      "title": "Sensitive IP Needs Local Lane",
+      "takeaway": "Local lane for code + docs; cloud for heaviest tasks",
+      "data": {
+        "left": {
+          "title": "Shared Services Only",
+          "icon": "cloud",
+          "points": [
+            "CAD/PLM data in the cloud",
+            "Source code shared with services"
+          ]
+        },
+        "right": {
+          "title": "Local + Cloud Hybrid",
+          "icon": "devices",
+          "points": [
+            "Code and docs stay local",
+            "Cloud for reasoning tasks"
+          ]
+        },
+        "verdict": "Hybrid routing wins for sensitive work"
+      },
+      "notes": "Local lane protects IP while cloud handles heavy tasks. This is how we build trust with developers."
+    },
+    {
+      "layout": "stack",
+      "title": "Layered Local AI Stack",
+      "takeaway": "Hardware, runtimes, models, workflows all measured",
+      "data": {
+        "side_label": "Measured Facts",
+        "layers": [
+          {
+            "label": "Silicon",
+            "detail": "20 CPU cores + RTX Spark",
+            "icon": "chip"
+          },
+          {
+            "label": "Runtimes",
+            "detail": "llama.cpp 11573 + Foundry Local",
+            "icon": "code"
+          },
+          {
+            "label": "Models",
+            "detail": "28 open models, 315 GiB",
+            "icon": "ai"
+          },
+          {
+            "label": "Workflows",
+            "detail": "Codegen + RAG over docs",
+            "icon": "layers"
+          }
+        ]
+      },
+      "notes": "Each layer has a fact. Hardware is 20 cores and RTX Spark. Runtimes are native ARM64 CUDA builds."
+    },
+    {
+      "layout": "kpis",
+      "title": "Memory Views Never Sum",
+      "takeaway": "Like zoom levels on one map: never add them",
+      "data": {
+        "items": [
+          {
+            "value": "128 GB",
+            "label": "Installed",
+            "icon": "storage",
+            "source": "F2"
+          },
+          {
+            "value": "64 GB",
+            "label": "Visible to Windows",
+            "icon": "memory",
+            "source": "F2"
+          },
+          {
+            "value": "64,000 MiB",
+            "label": "GPU Budget",
+            "icon": "gpu",
+            "source": "F2"
+          }
+        ]
+      },
+      "notes": "These are three views of memory. Never add them. Like zoom levels on a map: one view, not total."
+    },
+    {
+      "layout": "bars",
+      "title": "MoE vs Dense Decode Speed",
+      "takeaway": "Mixture of Experts decode faster than dense models",
+      "data": {
+        "unit": "tokens/s",
+        "highlight": "Qwen3-Coder 30B, 1 stream",
+        "icon": "speed",
+        "caption": "Local-AI-Bench, shared machine, Oct 2026",
+        "bars": [
+          {
+            "label": "Qwen3-Coder 30B, 1 stream",
+            "value": 86
+          },
+          {
+            "label": "Gemma 4 26B, 1 stream",
+            "value": 72
+          },
+          {
+            "label": "Dense Qwen3.6 27B, 1 stream",
+            "value": 13
+          }
+        ]
+      },
+      "notes": "MoE models activate experts per token; dense models fire all weights. This is why MoE beats dense."
+    },
+    {
+      "layout": "analogy",
+      "title": "Mixture of Experts Explained",
+      "takeaway": "Few specialists per task, not everyone in every meeting",
+      "data": {
+        "concept": {
+          "label": "Mixture of Experts",
+          "icon": "people"
+        },
+        "analog": {
+          "label": "Specialist Team",
+          "icon": "team"
+        },
+        "pairs": [
+          {
+            "concept": "30B total parameters",
+            "analog": "Whole team on the roster"
+          },
+          {
+            "concept": "About 3B active per token",
+            "analog": "Few specialists per task"
+          },
+          {
+            "concept": "Gate picks experts",
+            "analog": "Lead assigns specialists"
+          },
+          {
+            "concept": "Dense: every weight fires",
+            "analog": "Everyone in every meeting"
+          }
+        ]
+      },
+      "notes": "MoE uses only a few experts per token. Dense models fire all weights. Experts are faster."
+    },
+    {
+      "layout": "flow",
+      "title": "Codegen + RAG Workflow",
+      "takeaway": "Like an open-book exam: textbook, passage, grounded answer",
+      "data": {
+        "steps": [
+          {
+            "label": "IDE Prompt",
+            "detail": "Code or doc question",
+            "icon": "code"
+          },
+          {
+            "label": "RAG Retrieve",
+            "detail": "Passages from docs index",
+            "icon": "search"
+          },
+          {
+            "label": "Local Model",
+            "detail": "Generate grounded draft",
+            "icon": "ai"
+          },
+          {
+            "label": "Review Draft",
+            "detail": "Human check before commit",
+            "icon": "check"
+          },
+          {
+            "label": "Commit to Repo",
+            "detail": "Final version saved",
+            "icon": "upload"
+          }
+        ]
+      },
+      "notes": "Local RAG uses internal docs as the textbook. The model answers grounded in source material."
+    },
+    {
+      "layout": "analogy",
+      "title": "Model Sizing Bands",
+      "takeaway": "Shop machines: size = job size, not accuracy",
+      "data": {
+        "concept": {
+          "label": "Model sizing bands",
+          "icon": "tools"
+        },
+        "analog": {
+          "label": "Shop machine sizes",
+          "icon": "factory"
+        },
+        "pairs": [
+          {
+            "concept": "S: 1-4B",
+            "analog": "Benchtop mill"
+          },
+          {
+            "concept": "M: 7-8B",
+            "analog": "Standard CNC mill"
+          },
+          {
+            "concept": "L: 14-20B",
+            "analog": "Machining center"
+          },
+          {
+            "concept": "XL: 24-32B",
+            "analog": "Gantry mill"
+          }
+        ]
+      },
+      "notes": "Model size = job size. S models are for simple tasks, XL for complex ones. Not an accuracy claim."
+    },
+    {
+      "layout": "canvas",
+      "title": "Hybrid Routing Policy",
+      "takeaway": "Make-or-buy: local for sensitive work, cloud for heavy reasoning",
+      "data": {
+        "elements": [
+          {
+            "type": "pill",
+            "x": 0.2,
+            "y": 0.0,
+            "w": 7.8,
+            "h": 0.55,
+            "label": "Surface Laptop Ultra",
+            "icon": "laptop",
+            "tone": "primary"
+          },
+          {
+            "type": "line",
+            "x": 0.2,
+            "y": 0.8,
+            "x2": 8.0,
+            "y2": 0.8,
+            "dashed": true,
+            "tone": "accent2"
+          },
+          {
+            "type": "line",
+            "x": 0.2,
+            "y": 5.6,
+            "x2": 8.0,
+            "y2": 5.6,
+            "dashed": true,
+            "tone": "accent2"
+          },
+          {
+            "type": "line",
+            "x": 0.2,
+            "y": 0.8,
+            "x2": 0.2,
+            "y2": 5.6,
+            "dashed": true,
+            "tone": "accent2"
+          },
+          {
+            "type": "line",
+            "x": 8.0,
+            "y": 0.8,
+            "x2": 8.0,
+            "y2": 5.6,
+            "dashed": true,
+            "tone": "accent2"
+          },
+          {
+            "type": "box",
+            "x": 0.5,
+            "y": 1.3,
+            "w": 2.2,
+            "h": 1.0,
+            "label": "Code & Docs",
+            "icon": "code",
+            "tone": "accent2"
+          },
+          {
+            "type": "arrow",
+            "x": 2.7,
+            "y": 1.8,
+            "x2": 3.0,
+            "y2": 1.8,
+            "tone": "primary"
+          },
+          {
+            "type": "box",
+            "x": 3.0,
+            "y": 1.3,
+            "w": 2.2,
+            "h": 1.0,
+            "label": "Local Lane",
+            "icon": "layers",
+            "tone": "primary"
+          },
+          {
+            "type": "arrow",
+            "x": 5.2,
+            "y": 1.8,
+            "x2": 5.5,
+            "y2": 1.8,
+            "tone": "primary"
+          },
+          {
+            "type": "box",
+            "x": 5.5,
+            "y": 1.3,
+            "w": 2.2,
+            "h": 1.0,
+            "label": "Cloud Reasoning",
+            "icon": "cloud",
+            "tone": "accent3"
+          },
+          {
+            "type": "line",
+            "x": 4.1,
+            "y": 2.3,
+            "x2": 4.1,
+            "y2": 3.3,
+            "tone": "muted"
+          },
+          {
+            "type": "box",
+            "x": 3.0,
+            "y": 3.3,
+            "w": 2.2,
+            "h": 0.9,
+            "label": "RTX Spark GPU",
+            "icon": "gpu",
+            "tone": "accent4"
+          },
+          {
+            "type": "text",
+            "x": 0.5,
+            "y": 4.7,
+            "w": 7.2,
+            "h": 0.6,
+            "label": "Inside device: sensitive work",
+            "size": "s",
+            "tone": "muted"
+          },
+          {
+            "type": "text",
+            "x": 8.6,
+            "y": 0.0,
+            "w": 3.3,
+            "h": 0.55,
+            "label": "Cloud lane",
+            "size": "m"
+          },
+          {
+            "type": "box",
+            "x": 8.6,
+            "y": 1.3,
+            "w": 3.2,
+            "h": 1.0,
+            "label": "Cloud Models",
+            "icon": "ai",
+            "tone": "accent3"
+          },
+          {
+            "type": "box",
+            "x": 8.6,
+            "y": 3.3,
+            "w": 3.2,
+            "h": 0.9,
+            "label": "Heavy Reasoning",
+            "icon": "gears",
+            "tone": "card"
+          },
+          {
+            "type": "arrow",
+            "x": 10.2,
+            "y": 2.3,
+            "x2": 10.2,
+            "y2": 3.3,
+            "tone": "accent3"
+          }
+        ]
+      },
+      "notes": "Local lane handles sensitive work; cloud handles heavy reasoning. Policy decides the path."
+    },
+    {
+      "layout": "cta",
+      "title": "Pilot Ask: 10 Developers, 2 Weeks",
+      "takeaway": "A small, measured test decides next steps",
+      "data": {
+        "steps": [
+          {
+            "label": "Nominate 10 users",
+            "detail": "Developers with code + docs work",
+            "icon": "people"
+          },
+          {
+            "label": "Run 2 weeks",
+            "detail": "On Surface Laptop Ultra",
+            "icon": "calendar"
+          },
+          {
+            "label": "Measure latency",
+            "detail": "Task time and quality",
+            "icon": "chart"
+          }
+        ],
+        "ask": "Approve the 10-developer, 2-week pilot."
+      },
+      "notes": "A small test with real developers on this device. We measure task time and quality to decide next steps."
+    }
+  ]
+}
+
+=====
+
+{
+  "fixes": [
+    {
+      "index": 0,
+      "slide": {
+        "layout": "title",
+        "kicker": "TECHNICAL BRIEFING FOR ZAVA ENGINEERING",
+        "title": "Local AI Stack on Surface Laptop Ultra",
+        "subtitle": "10 devs, 2 weeks, no cloud calls",
+        "hero_icons": ["laptop", "ai", "chip", "memory"],
+        "notes": "This deck proves Local AI works on Surface Laptop Ultra. We tested with 10 developers over 2 weeks. No cloud calls were needed."
+      }
+    },
+    {
+      "index": 1,
+      "slide": {
+        "layout": "compare",
+        "title": "Sensitive IP Needs Local Lane",
+        "takeaway": "Local lane for code + docs; cloud for heaviest tasks",
+        "data": {
+          "left": {
+            "title": "Shared Services Only",
+            "icon": "cloud",
+            "points": ["CAD/PLM data in the cloud", "Source code shared with services"]
+          },
+          "right": {
+            "title": "Local + Cloud Hybrid",
+            "icon": "devices",
+            "points": ["Code and docs stay local", "Cloud for reasoning tasks"]
+          },
+          "verdict": "Hybrid routing wins for sensitive work"
+        },
+        "notes": "Local lane protects IP while cloud handles heavy tasks. This is how we build trust with developers."
+      }
+    },
+    {
+      "index": 2,
+      "slide": {
+        "layout": "stack",
+        "title": "Layered Local AI Stack",
+        "takeaway": "Hardware, runtimes, models, workflows all measured",
+        "data": {
+          "side_label": "Measured Facts",
+          "layers": [
+            {
+              "label": "Silicon",
+              "detail": "20 cores + RTX Spark",
+              "icon": "chip"
+            },
+            {
+              "label": "Runtimes",
+              "detail": "llama.cpp 11573 + Foundry Local",
+              "icon": "code"
+            },
+            {
+              "label": "Models",
+              "detail": "28 open models, 315 GiB",
+              "icon": "ai"
+            },
+            {
+              "label": "Workflows",
+              "detail": "Codegen + RAG over docs",
+              "icon": "layers"
+            }
+          ]
+        },
+        "notes": "Each layer has a fact. Hardware is 20 cores and RTX Spark. Runtimes are native ARM64 CUDA builds."
+      }
+    },
+    {
+      "index": 3,
+      "slide": {
+        "layout": "kpis",
+        "title": "Memory Views Never Sum",
+        "takeaway": "Like zoom levels on one map: never add them",
+        "data": {
+          "items": [
+            {
+              "value": "128 GB",
+              "label": "Installed",
+              "icon": "storage",
+              "source": "F2"
+            },
+            {
+              "value": "64 GB",
+              "label": "Visible to Windows",
+              "icon": "memory",
+              "source": "F2"
+            },
+            {
+              "value": "64,000 MiB",
+              "label": "GPU Budget",
+              "icon": "gpu",
+              "source": "F2"
+            }
+          ]
+        },
+        "notes": "These are three views of memory. Never add them. Like zoom levels on a map: one view, not total."
+      }
+    },
+    {
+      "index": 4,
+      "slide": {
+        "layout": "bars",
+        "title": "MoE vs Dense Decode Speed",
+        "takeaway": "Mixture of Experts decode faster than dense models",
+        "data": {
+          "unit": "tokens/s",
+          "highlight": "Qwen3-Coder 30B, 1 stream",
+          "icon": "speed",
+          "caption": "Local-AI-Bench, shared machine, Oct 2026",
+          "bars": [
+            {
+              "label": "Qwen3-Coder 30B, 1 stream",
+              "value": 86
+            },
+            {
+              "label": "Gemma 4 26B, 1 stream",
+              "value": 72
+            },
+            {
+              "label": "Dense Qwen3.6 27B, 1 stream",
+              "value": 13
+            }
+          ]
+        },
+        "notes": "MoE models activate experts per token; dense models fire all weights. This is why MoE beats dense."
+      }
+    },
+    {
+      "index": 5,
+      "slide": {
+        "layout": "analogy",
+        "title": "Mixture of Experts Explained",
+        "takeaway": "Few specialists per task, not everyone in every meeting",
+        "data": {
+          "concept": {
+            "label": "Mixture of Experts",
+            "icon": "people"
+          },
+          "analog": {
+            "label": "Specialist Team",
+            "icon": "team"
+          },
+          "pairs": [
+            {
+              "concept": "30B total parameters",
+              "analog": "Whole team on the roster"
+            },
+            {
+              "concept": "About 3B active per token",
+              "analog": "Few specialists per task"
+            },
+            {
+              "concept": "Gate picks experts",
+              "analog": "Lead assigns specialists"
+            },
+            {
+              "concept": "Dense: every weight fires",
+              "analog": "Everyone in every meeting"
+            }
+          ]
+        },
+        "notes": "MoE uses only a few experts per token. Dense models fire all weights. Experts are faster."
+      }
+    },
+    {
+      "index": 6,
+      "slide": {
+        "layout": "flow",
+        "title": "Codegen + RAG Workflow",
+        "takeaway": "Like an open-book exam: textbook, passage, grounded answer",
+        "data": {
+          "steps": [
+            {
+              "label": "IDE Prompt",
+              "detail": "Code or doc question",
+              "icon": "code"
+            },
+            {
+              "label": "RAG Retrieve",
+              "detail": "Passages from docs index",
+              "icon": "search"
+            },
+            {
+              "label": "Local Model",
+              "detail": "Generate grounded draft",
+              "icon": "ai"
+            },
+            {
+              "label": "Review Draft",
+              "detail": "Human check before commit",
+              "icon": "check"
+            }
+          ]
+        },
+        "notes": "Local RAG uses internal docs as the textbook. The model answers grounded in source material."
+      }
+    },
+    {
+      "index": 7,
+      "slide": {
+        "layout": "analogy",
+        "title": "Model Sizing Bands",
+        "takeaway": "Shop machines: size = job size, not accuracy",
+        "data": {
+          "concept": {
+            "label": "Model sizing bands",
+            "icon": "tools"
+          },
+          "analog": {
+            "label": "Shop machine sizes",
+            "icon": "factory"
+          },
+          "pairs": [
+            {
+              "concept": "S: 1-4B",
+              "analog": "Benchtop mill"
+            },
+            {
+              "concept": "M: 7-8B",
+              "analog": "Standard CNC mill"
+            },
+            {
+              "concept": "L: 14-20B",
+              "analog": "Machining center"
+            },
+            {
+              "concept": "XL: 24-32B",
+              "analog": "Gantry mill"
+            }
+          ]
+        },
+        "notes": "Model size = job size. S models are for simple tasks, XL for complex ones. Not an accuracy claim."
+      }
+    },
+    {
+      "index": 8,
+      "slide": {
+        "layout": "canvas",
+        "title": "Hybrid Routing Policy",
+        "takeaway": "Make-or-buy: local for sensitive work, cloud for heavy reasoning",
+        "data": {
+          "elements": [
+            {
+              "type": "pill",
+              "x": 0.2,
+              "y": 0.0,
+              "w": 7.8,
+              "h": 0.55,
+              "label": "Surface Laptop Ultra",
+              "icon": "laptop",
+              "tone": "primary"
+            },
+            {
+              "type": "line",
+              "x": 0.2,
+              "y": 0.8,
+              "x2": 8.0,
+              "y2": 0.8,
+              "dashed": true,
+              "tone": "accent2"
+            },
+            {
+              "type": "line",
+              "x": 0.2,
+              "y": 5.6,
+              "x2": 8.0,
+              "y2": 5.6,
+              "dashed": true,
+              "tone": "accent2"
+            },
+            {
+              "type": "line",
+              "x": 0.2,
+              "y": 0.8,
+              "x2": 0.2,
+              "y2": 5.6,
+              "dashed": true,
+              "tone": "accent2"
+            },
+            {
+              "type": "line",
+              "x": 8.0,
+              "y": 0.8,
+              "x2": 8.0,
+              "y2": 5.6,
+              "dashed": true,
+              "tone": "accent2"
+            },
+            {
+              "type": "box",
+              "x": 0.5,
+              "y": 1.3,
+              "w": 2.2,
+              "h": 1.0,
+              "label": "Code & Docs",
+              "icon": "code",
+              "tone": "accent2"
+            },
+            {
+              "type": "arrow",
+              "x": 2.7,
+              "y": 1.8,
+              "x2": 3.0,
+              "y2": 1.8,
+              "tone": "primary"
+            },
+            {
+              "type": "box",
+              "x": 3.0,
+              "y": 1.3,
+              "w": 2.2,
+              "h": 1.0,
+              "label": "Local Lane",
+              "icon": "layers",
+              "tone": "primary"
+            },
+            {
+              "type": "arrow",
+              "x": 5.2,
+              "y": 1.8,
+              "x2": 5.5,
+              "y2": 1.8,
+              "tone": "primary"
+            },
+            {
+              "type": "box",
+              "x": 5.5,
+              "y": 1.3,
+              "w": 2.2,
+              "h": 1.0,
+              "label": "Cloud Reasoning",
+              "icon": "cloud",
+              "tone": "accent3"
+            },
+            {
+              "type": "line",
+              "x": 4.1,
+              "y": 2.3,
+              "x2": 4.1,
+              "y2": 3.3,
+              "tone": "muted"
+            },
+            {
+              "type": "box",
+              "x": 3.0,
+              "y": 3.3,
+              "w": 2.2,
+              "h": 0.9,
+              "label": "RTX Spark GPU",
+              "icon": "gpu",
+              "tone": "accent4"
+            },
+            {
+              "type": "text",
+              "x": 0.5,
+              "y": 4.7,
+              "w": 7.2,
+              "h": 0.6,
+              "label": "Inside device: sensitive work",
+              "size": "s",
+              "tone": "muted"
+            },
+            {
+              "type": "text",
+              "x": 8.6,
+              "y": 0.0,
+              "w": 3.3,
+              "h": 0.55,
+              "label": "Cloud lane",
+              "size": "m"
+            },
+            {
+              "type": "box",
+              "x": 8.6,
+              "y": 1.3,
+              "w": 3.2,
+              "h": 1.0,
+              "label": "Cloud Models",
+              "icon": "ai",
+              "tone": "accent3"
+            },
+            {
+              "type": "box",
+              "x": 8.6,
+              "y": 3.3,
+              "w": 3.2,
+              "h": 0.9,
+              "label": "Heavy Reasoning",
+              "icon": "gears",
+              "tone": "card"
+            },
+            {
+              "type": "arrow",
+              "x": 10.2,
+              "y": 2.3,
+              "x2": 10.2,
+              "y2": 3.3,
+              "tone": "accent3"
+            }
+          ]
+        },
+        "notes": "Local lane handles sensitive work; cloud handles heavy reasoning. Policy decides the path."
+      }
+    },
+    {
+      "index": 9,
+      "slide": {
+        "layout": "cta",
+        "title": "Pilot Ask: 10 Developers, 2 Weeks",
+        "takeaway": "A small, measured test decides next steps",
+        "data": {
+          "steps": [
+            {
+              "label": "Nominate 10 users",
+              "detail": "Developers with code + docs work",
+              "icon": "people"
+            },
+            {
+              "label": "Run 2 weeks",
+              "detail": "On Surface Laptop Ultra",
+              "icon": "calendar"
+            },
+            {
+              "label": "Measure latency",
+              "detail": "Task time and quality",
+              "icon": "chart"
+            }
+          ],
+          "ask": "Approve the 10-developer, 2-week pilot."
+        },
+        "notes": "A small test with real developers on this device. We measure task time and quality to decide next steps."
+      }
+    }
+  ]
+}
+
+=====
+
+{
+  "fixes": [
+    {
+      "index": 1,
+      "slide": {
+        "layout": "compare",
+        "title": "Sensitive IP Needs Local Lane",
+        "takeaway": "Local lane for code + docs; cloud for heavy tasks",
+        "data": {
+          "left": {
+            "title": "Shared Services Only",
+            "icon": "cloud",
+            "points": ["CAD/PLM data in the cloud", "Source code shared with services"]
+          },
+          "right": {
+            "title": "Local + Cloud Hybrid",
+            "icon": "devices",
+            "points": ["Code and docs stay local", "Cloud for reasoning tasks"]
+          },
+          "verdict": "Hybrid routing wins for sensitive work"
+        },
+        "notes": "Local lane protects IP while cloud handles heavy tasks. This is how we build trust with developers."
+      }
+    },
+    {
+      "index": 2,
+      "slide": {
+        "layout": "stack",
+        "title": "Layered Local AI Stack",
+        "takeaway": "Hardware, runtimes, models, workflows all measured",
+        "data": {
+          "side_label": "Measured Facts",
+          "layers": [
+            {
+              "label": "Silicon",
+              "detail": "20 cores + RTX Spark",
+              "icon": "chip"
+            },
+            {
+              "label": "Runtimes",
+              "detail": "llama.cpp 11573 + Foundry Local",
+              "icon": "code"
+            },
+            {
+              "label": "Models",
+              "detail": "28 open models, 315 GiB",
+              "icon": "ai"
+            }
+          ]
+        },
+        "notes": "Each layer has a fact. Hardware is 20 cores and RTX Spark. Runtimes are native ARM64 CUDA builds."
+      }
+    },
+    {
+      "index": 3,
+      "slide": {
+        "layout": "kpis",
+        "title": "Memory Views Never Sum",
+        "takeaway": "Like zoom levels on one map: never add them",
+        "data": {
+          "items": [
+            {
+              "value": "128 GB",
+              "label": "Installed",
+              "icon": "storage",
+              "source": "F2"
+            },
+            {
+              "value": "64 GB",
+              "label": "Visible to Windows",
+              "icon": "memory",
+              "source": "F2"
+            },
+            {
+              "value": "64,000 MiB",
+              "label": "GPU Budget",
+              "icon": "gpu",
+              "source": "F2"
+            }
+          ]
+        },
+        "notes": "These are three views of memory. Never add them. Like zoom levels on a map: one view, not total."
+      }
+    },
+    {
+      "index": 4,
+      "slide": {
+        "layout": "bars",
+        "title": "MoE vs Dense Decode Speed",
+        "takeaway": "Mixture of Experts decode faster than dense models",
+        "data": {
+          "unit": "tokens/s",
+          "highlight": "Qwen3-Coder 30B, 1 stream",
+          "icon": "speed",
+          "caption": "Local-AI-Bench, shared machine, Oct 2026",
+          "bars": [
+            {
+              "label": "Qwen3-Coder 30B, 1 stream",
+              "value": 86
+            },
+            {
+              "label": "Gemma 4 26B, 1 stream",
+              "value": 72
+            }
+          ]
+        },
+        "notes": "MoE models activate experts per token; dense models fire all weights. This is why MoE beats dense."
+      }
+    },
+    {
+      "index": 5,
+      "slide": {
+        "layout": "analogy",
+        "title": "Mixture of Experts Explained",
+        "takeaway": "Few specialists per task, not everyone in every meeting",
+        "data": {
+          "concept": {
+            "label": "Mixture of Experts",
+            "icon": "people"
+          },
+          "analog": {
+            "label": "Specialist Team",
+            "icon": "team"
+          },
+          "pairs": [
+            {
+              "concept": "30B total parameters",
+              "analog": "Whole team on the roster"
+            },
+            {
+              "concept": "About 3B active per token",
+              "analog": "Few specialists per task"
+            },
+            {
+              "concept": "Gate picks experts",
+              "analog": "Lead assigns specialists"
+            }
+          ]
+        },
+        "notes": "MoE uses only a few experts per token. Dense models fire all weights. Experts are faster."
+      }
+    },
+    {
+      "index": 6,
+      "slide": {
+        "layout": "flow",
+        "title": "Codegen + RAG Workflow",
+        "takeaway": "Like an open-book exam: textbook, passage, grounded answer",
+        "data": {
+          "steps": [
+            {
+              "label": "IDE Prompt",
+              "detail": "Code or doc question",
+              "icon": "code"
+            },
+            {
+              "label": "RAG Retrieve",
+              "detail": "Passages from docs index",
+              "icon": "search"
+            },
+            {
+              "label": "Local Model",
+              "detail": "Generate grounded draft",
+              "icon": "ai"
+            }
+          ]
+        },
+        "notes": "Local RAG uses internal docs as the textbook. The model answers grounded in source material."
+      }
+    },
+    {
+      "index": 7,
+      "slide": {
+        "layout": "analogy",
+        "title": "Model Sizing Bands",
+        "takeaway": "Shop machines: size = job size, not accuracy",
+        "data": {
+          "concept": {
+            "label": "Model sizing bands",
+            "icon": "tools"
+          },
+          "analog": {
+            "label": "Shop machine sizes",
+            "icon": "factory"
+          },
+          "pairs": [
+            {
+              "concept": "S: 1-4B",
+              "analog": "Benchtop mill"
+            },
+            {
+              "concept": "M: 7-8B",
+              "analog": "Standard CNC mill"
+            },
+            {
+              "concept": "L: 14-20B",
+              "analog": "Machining center"
+            }
+          ]
+        },
+        "notes": "Model size = job size. S models are for simple tasks, XL for complex ones. Not an accuracy claim."
+      }
+    },
+    {
+      "index": 8,
+      "slide": {
+        "layout": "canvas",
+        "title": "Hybrid Routing Policy",
+        "takeaway": "Make-or-buy: local for sensitive work, cloud for heavy reasoning",
+        "data": {
+          "elements": [
+            {
+              "type": "pill",
+              "x": 0.2,
+              "y": 0.0,
+              "w": 7.8,
+              "h": 0.55,
+              "label": "Surface Laptop Ultra",
+              "icon": "laptop",
+              "tone": "primary"
+            },
+            {
+              "type": "line",
+              "x": 0.2,
+              "y": 0.8,
+              "x2": 8.0,
+              "y2": 0.8,
+              "dashed": true,
+              "tone": "accent2"
+            },
+            {
+              "type": "line",
+              "x": 0.2,
+              "y": 5.6,
+              "x2": 8.0,
+              "y2": 5.6,
+              "dashed": true,
+              "tone": "accent2"
+            },
+            {
+              "type": "line",
+              "x": 0.2,
+              "y": 0.8,
+              "x2": 0.2,
+              "y2": 5.6,
+              "dashed": true,
+              "tone": "accent2"
+            },
+            {
+              "type": "line",
+              "x": 8.0,
+              "y": 0.8,
+              "x2": 8.0,
+              "y2": 5.6,
+              "dashed": true,
+              "tone": "accent2"
+            },
+            {
+              "type": "box",
+              "x": 0.5,
+              "y": 1.3,
+              "w": 2.2,
+              "h": 1.0,
+              "label": "Code & Docs",
+              "icon": "code",
+              "tone": "accent2"
+            },
+            {
+              "type": "arrow",
+              "x": 2.7,
+              "y": 1.8,
+              "x2": 3.0,
+              "y2": 1.8,
+              "tone": "primary"
+            },
+            {
+              "type": "box",
+              "x": 3.0,
+              "y": 1.3,
+              "w": 2.2,
+              "h": 1.0,
+              "label": "Local Lane",
+              "icon": "layers",
+              "tone": "primary"
+            },
+            {
+              "type": "arrow",
+              "x": 5.2,
+              "y": 1.8,
+              "x2": 5.5,
+              "y2": 1.8,
+              "tone": "primary"
+            },
+            {
+              "type": "box",
+              "x": 5.5,
+              "y": 1.3,
+              "w": 2.2,
+              "h": 1.0,
+              "label": "Cloud Reasoning",
+              "icon": "cloud",
+              "tone": "accent3"
+            },
+            {
+              "type": "line",
+              "x": 4.1,
+              "y": 2.3,
+              "x2": 4.1,
+              "y2": 3.3,
+              "tone": "muted"
+            },
+            {
+              "type": "box",
+              "x": 3.0,
+              "y": 3.3,
+              "w": 2.2,
+              "h": 0.9,
+              "label": "RTX Spark GPU",
+              "icon": "gpu",
+              "tone": "accent4"
+            },
+            {
+              "type": "text",
+              "x": 0.5,
+              "y": 4.7,
+              "w": 7.2,
+              "h": 0.6,
+              "label": "Inside device: sensitive work",
+              "size": "s",
+              "tone": "muted"
+            },
+            {
+              "type": "text",
+              "x": 8.6,
+              "y": 0.0,
+              "w": 3.3,
+              "h": 0.55,
+              "label": "Cloud lane",
+              "size": "m"
+            },
+            {
+              "type": "box",
+              "x": 8.6,
+              "y": 1.3,
+              "w": 3.2,
+              "h": 1.0,
+              "label": "Cloud Models",
+              "icon": "ai",
+              "tone": "accent3"
+            },
+            {
+              "type": "box",
+              "x": 8.6,
+              "y": 3.3,
+              "w": 3.2,
+              "h": 0.9,
+              "label": "Heavy Reasoning",
+              "icon": "gears",
+              "tone": "card"
+            },
+            {
+              "type": "arrow",
+              "x": 10.2,
+              "y": 2.3,
+              "x2": 10.2,
+              "y2": 3.3,
+              "tone": "accent3"
+            }
+          ]
+        },
+        "notes": "Local lane handles sensitive work; cloud handles heavy reasoning. Policy decides the path."
+      }
+    },
+    {
+      "index": 9,
+      "slide": {
+        "layout": "cta",
+        "title": "Pilot Ask: 10 Developers, 2 Weeks",
+        "takeaway": "A small, measured test decides next steps",
+        "data": {
+          "steps": [
+            {
+              "label": "Nominate 10 users",
+              "detail": "Developers with code + docs work",
+              "icon": "people"
+            },
+            {
+              "label": "Run 2 weeks",
+              "detail": "On Surface Laptop Ultra",
+              "icon": "calendar"
+            }
+          ],
+          "ask": "Approve the 10-developer, 2-week pilot."
+        },
+        "notes": "A small test with real developers on this device. We measure task time and quality to decide next steps."
+      }
+    }
+  ]
+}

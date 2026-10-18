@@ -1,0 +1,168 @@
+{
+  "title": "A Local AI Lane for Traveling Consultants",
+  "client": "Contoso",
+  "slides": [
+    {
+      "layout": "title",
+      "kicker": "Contoso pilot proposal",
+      "title": "A Local AI Lane for Traveling Consultants",
+      "subtitle": "Surface Laptop Ultra with NVIDIA RTX Spark, working alongside Microsoft 365 Copilot",
+      "hero_icons": ["laptop", "ai", "lock", "airplane"],
+      "notes": "Thank you for your time. The proposal is simple: give traveling consultants a local AI lane on their laptop for sensitive, repeated drafting, while Microsoft 365 Copilot stays exactly where it is. We'll cover the pain, how it works, the capacity at stake, and a small pilot to test it."
+    },
+    {
+      "layout": "kpis",
+      "title": "Summaries Eat Consultant Time",
+      "takeaway": "Turning interview notes into client summaries is frequent, repeated, and sensitive work.",
+      "data": {
+        "items": [
+          {"value": "1,200", "label": "Traveling consultants", "icon": "airplane", "source": "Of 4,000 Contoso employees"},
+          {"value": "~6", "label": "Summaries per consultant weekly", "icon": "document", "source": "Contoso data, approximate"},
+          {"value": "~25 min", "label": "To draft each summary", "icon": "timer", "source": "Contoso data, today's process"}
+        ]
+      },
+      "notes": "Start with the consultant's week. Of Contoso's 4,000 employees, 1,200 are traveling consultants. Each writes about 6 client summaries a week, and each takes about 25 minutes to draft today. The inputs are sensitive interview notes and site documents, and the work repeats every week. That's the job a local AI lane targets."
+    },
+    {
+      "layout": "statement",
+      "title": "Hybrid by Design",
+      "takeaway": "Microsoft 365 Copilot stays in place; local AI adds a second lane.",
+      "data": {
+        "icon": "layers",
+        "text": "Keep Copilot. Add a local lane.",
+        "sub": "Sensitive, repeated drafting runs on the laptop; everything else stays as today."
+      },
+      "notes": "This is the heart of the proposal. Microsoft 365 Copilot stays in place for everyday work; nothing is switched off. We add a second lane on the device for a specific job: sensitive, repeated drafting, like turning interview notes into client summaries. Hybrid, not either-or."
+    },
+    {
+      "layout": "analogy",
+      "title": "Like Downloads Before a Flight",
+      "takeaway": "About 30% of client sites restrict guest Wi-Fi; the model runs on-device.",
+      "data": {
+        "concept": {"label": "On-device AI model", "icon": "ai"},
+        "analog": {"label": "In-flight downloads", "icon": "airplane"},
+        "pairs": [
+          {"concept": "Models stored on laptop", "analog": "Shows saved before boarding"},
+          {"concept": "Drafting despite restricted Wi-Fi", "analog": "Watching without cabin Wi-Fi"},
+          {"concept": "28 open models installed", "analog": "A full downloaded library"},
+          {"concept": "Copilot when connected", "analog": "Streaming after landing"},
+          {"concept": "Pilot validates disconnected use", "analog": "Test playback before takeoff"}
+        ]
+      },
+      "notes": "About 30% of client sites restrict guest Wi-Fi. Think of a long flight: you download shows before boarding, so you can watch without cabin Wi-Fi. Local AI works the same way: 28 models already live on the laptop. Copilot picks up when you're connected, and the pilot validates disconnected use in real conditions."
+    },
+    {
+      "layout": "analogy",
+      "title": "Like the Safe in Your Hotel Room",
+      "takeaway": "Drafting runs on the laptop, so sensitive client notes needn't leave the device.",
+      "data": {
+        "concept": {"label": "On-device drafting", "icon": "laptop"},
+        "analog": {"label": "Hotel room safe", "icon": "lock"},
+        "pairs": [
+          {"concept": "Client notes and documents", "analog": "Passport and valuables"},
+          {"concept": "Model runs on laptop", "analog": "Safe built into room"},
+          {"concept": "No upload to draft", "analog": "No front-desk handoff"},
+          {"concept": "Copilot for everyday work", "analog": "Concierge for everything else"}
+        ]
+      },
+      "notes": "Consultants know the hotel safe. Your passport stays in your room; you don't hand it to the front desk. Local AI works the same way: the model runs on the laptop, so interview notes and site documents can be drafted into summaries without uploading them. Copilot, like the concierge, still handles everything else."
+    },
+    {
+      "layout": "canvas",
+      "title": "A Second Lane Beside Copilot",
+      "takeaway": "Copilot keeps everyday work; sensitive drafting stays inside the laptop boundary.",
+      "data": {
+        "elements": [
+          {"type": "circle", "x": 0.2, "y": 2.2, "w": 1.6, "h": 1.6, "label": "Consultant", "icon": "person", "tone": "primary"},
+          {"type": "arrow", "x": 1.8, "y": 2.6, "x2": 2.65, "y2": 1.5, "tone": "accent1"},
+          {"type": "arrow", "x": 1.8, "y": 3.4, "x2": 2.65, "y2": 4.5, "tone": "accent2"},
+          {"type": "text", "x": 2.7, "y": 0.15, "w": 4.0, "h": 0.5, "label": "Cloud lane", "size": "s", "tone": "accent1"},
+          {"type": "chevron", "x": 2.7, "y": 0.8, "w": 3.0, "h": 1.4, "label": "Everyday M365 work", "icon": "apps", "tone": "accent1"},
+          {"type": "chevron", "x": 5.8, "y": 0.8, "w": 3.0, "h": 1.4, "label": "Microsoft 365 Copilot", "icon": "cloud", "tone": "accent1"},
+          {"type": "chevron", "x": 8.9, "y": 0.8, "w": 3.0, "h": 1.4, "label": "Stays as today", "icon": "check", "tone": "accent1"},
+          {"type": "line", "x": 2.7, "y": 3.0, "x2": 11.9, "y2": 3.0, "label": "Laptop boundary", "tone": "muted", "dashed": true},
+          {"type": "chevron", "x": 2.7, "y": 3.8, "w": 3.0, "h": 1.4, "label": "Sensitive client notes", "icon": "document", "tone": "accent2"},
+          {"type": "chevron", "x": 5.8, "y": 3.8, "w": 3.0, "h": 1.4, "label": "Local model on GPU", "icon": "gpu", "tone": "accent2"},
+          {"type": "chevron", "x": 8.9, "y": 3.8, "w": 3.0, "h": 1.4, "label": "Draft stays on laptop", "icon": "lock", "tone": "accent2"},
+          {"type": "text", "x": 2.7, "y": 5.35, "w": 4.0, "h": 0.5, "label": "Local lane, on device", "size": "s", "tone": "accent2"}
+        ]
+      },
+      "notes": "Here's the architecture at a glance. Everyday Microsoft 365 work keeps flowing through Copilot in the cloud lane, exactly as today. Sensitive, repeated drafting takes the local lane: notes go to a model on the laptop's GPU, and the draft stays on the device. The consultant chooses the lane; the pilot tests that split in practice."
+    },
+    {
+      "layout": "stack",
+      "title": "Inside the Surface Laptop Ultra",
+      "takeaway": "An RTX GPU and 128 GB memory run large open models on-device.",
+      "data": {
+        "side_label": "All on the laptop",
+        "layers": [
+          {"label": "Consultant drafting", "detail": "Interview notes and site documents into summaries", "icon": "edit"},
+          {"label": "Local model catalog", "detail": "28 open models installed on this device", "icon": "library"},
+          {"label": "NVIDIA RTX Spark", "detail": "Blackwell RTX GPU runs the models", "icon": "gpu"},
+          {"label": "Surface Laptop Ultra", "detail": "20 CPU cores, 128 GB installed memory", "icon": "laptop"}
+        ]
+      },
+      "notes": "Here's what makes it possible. Surface Laptop Ultra pairs 20 CPU cores and 128 GB of installed memory with NVIDIA RTX Spark, a Blackwell RTX GPU. Think of memory as desk space: more room lets bigger models fit. 28 open models are already installed in the local catalog. Consultants only see the top layer: drafting."
+    },
+    {
+      "layout": "bars",
+      "title": "Fast Enough for Live Drafting",
+      "takeaway": "Gemma 4 26B generates about 72 tokens per second on this device.",
+      "data": {
+        "unit": "tokens/sec",
+        "highlight": "Gemma 4 26B",
+        "icon": "speed",
+        "caption": "Single stream, Local-AI-Bench, October 2026",
+        "bars": [
+          {"label": "Gemma 4 26B", "value": 72},
+          {"label": "Qwen3-Coder 30B", "value": 86}
+        ]
+      },
+      "notes": "Speed decides whether people actually use it. On this device, Gemma 4 26B generates about 72 tokens per second, and Qwen3-Coder 30B about 86, single stream, per Local-AI-Bench, October 2026. In plain terms, a draft appears while you watch. The pilot shows whether that speed turns into time saved on real summaries."
+    },
+    {
+      "layout": "flow",
+      "title": "Capacity Math: An Estimate to Test",
+      "takeaway": "Estimate to validate: 5 minutes saved per summary could mean 27,600 hours yearly.",
+      "data": {
+        "steps": [
+          {"label": "1,200 consultants", "detail": "Traveling consultants drafting client summaries", "icon": "people"},
+          {"label": "× 6 summaries", "detail": "Per consultant, every week", "icon": "document"},
+          {"label": "× 5 minutes saved", "detail": "Illustrative per summary, not yet measured", "icon": "timer"},
+          {"label": "× 46 working weeks", "detail": "Working weeks assumed per year", "icon": "calendar"},
+          {"label": "27,600 hours, estimated", "detail": "Per year; illustrative estimate to validate", "icon": "clock"}
+        ]
+      },
+      "notes": "Here's the illustrative math, and it's only an estimate to validate. If a local assistant saved 5 minutes per summary: 1,200 consultants times 6 summaries times 5 minutes times 46 working weeks equals 27,600 hours a year. We're not claiming that number. The pilot measures the real one, so any decision rests on Contoso's own data."
+    },
+    {
+      "layout": "timeline",
+      "title": "The Pilot: 10 Users, 2 Weeks",
+      "takeaway": "Measure task time, draft quality, user experience, and disconnected use on real work.",
+      "data": {
+        "milestones": [
+          {"when": "Now", "label": "Sponsors approve pilot", "icon": "approve"},
+          {"when": "Kickoff", "label": "Equip 10 consultants", "icon": "laptop"},
+          {"when": "14 days", "label": "Draft on real engagements", "icon": "edit"},
+          {"when": "Pilot end", "label": "Readout and decision", "icon": "flag"}
+        ]
+      },
+      "notes": "The ask is deliberately small: 10 consultants for 2 weeks of real client work. We'll measure task time, draft quality and user experience, and validate disconnected use at sites with restricted Wi-Fi. Copilot stays in place throughout. After 14 days, you decide with Contoso's own numbers, not ours."
+    },
+    {
+      "layout": "cta",
+      "title": "Approve the 10-User Pilot",
+      "takeaway": "A small, measured step: 10 consultants, 2 weeks, alongside Microsoft 365 Copilot.",
+      "data": {
+        "steps": [
+          {"label": "Approve pilot scope", "detail": "10 traveling consultants for 14 days", "icon": "approve"},
+          {"label": "Name pilot consultants", "detail": "Frequent travelers who draft client summaries", "icon": "people"},
+          {"label": "Agree success measures", "detail": "Task time, draft quality, user experience", "icon": "checklist"},
+          {"label": "Review results together", "detail": "Sponsors decide next steps on measured data", "icon": "chart"}
+        ],
+        "ask": "Approve a 2-week, 10-user pilot of local AI on Surface Laptop Ultra, alongside Copilot."
+      },
+      "notes": "Our ask today: approve a 2-week pilot for 10 traveling consultants on Surface Laptop Ultra with NVIDIA RTX Spark, running local AI alongside Microsoft 365 Copilot. Help us pick consultants, agree on success measures, and join the readout. If the data holds up, we'll plan next steps together."
+    }
+  ]
+}

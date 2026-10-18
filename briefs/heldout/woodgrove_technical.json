@@ -1,0 +1,44 @@
+{
+  "id": "woodgrove_technical",
+  "client": "Woodgrove Bank",
+  "pitch_type": "technical",
+  "audience": "Woodgrove data science and analytics engineering leadership, platform engineers and senior quant developers (about 220 people). Technical, risk-aware, want architecture and measured numbers.",
+  "objective": "Show how Surface Laptop Ultra with NVIDIA RTX Spark runs a local AI analytics stack (document extraction from loan files, RAG over credit-policy manuals, notebook code assistance, hybrid routing) and win a 12-analyst, 3-week technical pilot.",
+  "template_hint": "microsoft",
+  "slide_range": [8, 12],
+  "context": "Woodgrove Bank is a fictional retail and commercial bank. Its analysts and quant developers work with customer loan files and internal credit-policy manuals that contain personal and confidential data. Teams want document extraction, retrieval over policy manuals and notebook code help without sending customer data to shared services, while keeping cloud models for non-sensitive research. This deck itself was generated on a Surface Laptop Ultra by a local model.",
+  "facts": [
+    "Woodgrove has about 220 data scientists, analysts and quant developers.",
+    "The internal credit-policy library holds about 1,800 documents.",
+    "Device: Surface Laptop Ultra with NVIDIA RTX Spark N1X (Blackwell RTX GPU) and 20 CPU cores.",
+    "Memory: 128 GB installed; about 64 GB visible to Windows; nvidia-smi reports a 64,000 MiB GPU memory budget. These are distinct views of memory, never add them together.",
+    "Runtimes on this device: llama.cpp build 11573 native ARM64 with CUDA, and Foundry Local with the CUDA execution provider.",
+    "Local catalog: 28 open models installed, 315 GiB on disk.",
+    "Gemma 4 26B: about 72 tokens/s single stream and about 245 tokens/s aggregate across 8 streams.",
+    "Qwen3-Coder 30B (MoE, about 3B active parameters): about 86 tokens/s single-stream decode.",
+    "Dense Qwen3.6 27B: about 13 tokens/s single stream. MoE models activate only a few experts per token, so they decode several times faster than dense models of similar size.",
+    "Hybrid routing: customer loan files and policy documents go to the local lane; non-sensitive market research can route to cloud models.",
+    "Pilot: 12 analysts for 3 weeks (21 days), measuring extraction quality against a reviewed sample, latency and analyst experience.",
+    "All throughput numbers come from Local-AI-Bench on this device, October 2026, on a shared machine.",
+    "This deck was generated on this Surface Laptop Ultra by Qwen3-Coder 30B through llama.cpp, with no cloud calls."
+  ],
+  "required_topics": {
+    "hardware": ["rtx spark", "blackwell", "gpu", "20 cpu"],
+    "memory_views": ["128 gb", "64 gb", "64,000", "memory"],
+    "runtimes": ["llama.cpp", "foundry", "cuda"],
+    "throughput": ["tok/s", "tokens/s", "72", "86", "245"],
+    "moe_vs_dense": ["moe", "dense", "experts", "active"],
+    "doc_extraction_rag": ["loan file", "extraction", "extract", "policy", "rag", "retrieval"],
+    "notebook_code": ["notebook", "code", "python"],
+    "hybrid_routing": ["hybrid", "router", "routing", "cloud lane", "local lane"],
+    "made_on_device": ["this deck", "generated on", "made on", "this device"],
+    "pilot_ask": ["pilot", "12 analysts", "3 weeks", "three weeks", "21 days"]
+  },
+  "guardrails": [
+    "Never add the memory views together and never call system RAM dedicated VRAM.",
+    "Throughput is from a shared machine; do not present it as a guaranteed spec or a comparison against other devices.",
+    "Do not claim regulatory approval, compliance certification, air-gapped or certified offline operation.",
+    "Do not state model or extraction accuracy numbers; the pilot measures them.",
+    "Do not cite TOPS, Copilot+ certification, dollar savings or subscription replacement."
+  ]
+}

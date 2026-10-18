@@ -1,0 +1,6 @@
+{"claude-opus-5.5-low": {"contoso_sales": "44aea0f2-fd11-4a6d-b4c8-1d36b5ba8ec4", "zava_technical": "96c4084c-436f-4c56-9cc9-b79f63cb5067"},
+ "claude-opus-5.5-high": {"contoso_sales": "663088fb-13e8-406a-a2cf-f15416721e78", "zava_technical": "fa02f13b-e230-4ba6-91e6-67af36483802"},
+ "claude-opus-5.5-max": {"contoso_sales": "453f9570-973b-46ee-8af5-5a06378297b4", "zava_technical": "1d73e015-d5d2-46bf-88b0-033e6e3c3e9b"},
+ "gpt-6-astra-low": {"contoso_sales": "7fc59c57-5b54-4474-b578-21fbd1023a70", "zava_technical": "6fa8dd49-6d78-486c-8775-88e4324207f5"},
+ "gpt-6-astra-high": {"contoso_sales": "6902428d-8a75-487e-8ac6-468717ddcb77", "zava_technical": "e424b262-92aa-4b28-9b7b-7debc33040df"},
+ "gpt-6-astra-max": {"contoso_sales": "d7a6d00b-fa75-465d-9ef0-bbc2bf6011f0", "zava_technical": "4d48b598-d608-4ddf-b9bb-8d40ff91a2f9"}}

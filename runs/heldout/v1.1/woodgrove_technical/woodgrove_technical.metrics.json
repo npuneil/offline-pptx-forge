@@ -1,0 +1,305 @@
+{
+ "harness": "1.1",
+ "brief": "woodgrove_technical",
+ "template": "microsoft",
+ "lane": "local",
+ "model": "qwen3-coder-30b",
+ "llm_calls": 3,
+ "prompt_tokens": 16015,
+ "completion_tokens": 9400,
+ "decode_tps": 29.4,
+ "ttft_s": 38.083,
+ "generate_s": 447.68,
+ "render_s": 0.2,
+ "total_s": 447.88,
+ "power": {
+  "seconds": 447.65,
+  "samples": 1718,
+  "gpu_avg_w": 39.2,
+  "gpu_peak_w": 57.5,
+  "gpu_wh": 4.8695,
+  "platform_wh": 1.2435,
+  "total_wh": 6.113
+ },
+ "economics": {
+  "lane": "local",
+  "energy_wh": 6.113,
+  "cost_usd": 0.000795,
+  "co2e_g": 2.243,
+  "water_ml": 0.0,
+  "basis": "measured GPU board power (nvidia-smi, 250 ms) + 10 W platform allowance; electricity only"
+ },
+ "grade": {
+  "auto_score": 91.0,
+  "auto_grade": "A-",
+  "scores": {
+   "visual_richness": 22.9,
+   "text_lightness": 15.3,
+   "analogy": 15,
+   "brief_coverage": 15.0,
+   "claim_discipline": 12.8,
+   "structure": 10.0
+  },
+  "detail": {
+   "visual_richness": {
+    "infographic_share": 1.0,
+    "distinct_layouts": 7,
+    "icons_per_slide": 3.9,
+    "canvas_diagrams": 1
+   },
+   "text_lightness": {
+    "avg_words_per_slide": 37.1,
+    "max_words": 53
+   },
+   "analogy": {
+    "analogy_slides": 2,
+    "analogy_cue_slides": 4
+   },
+   "brief_coverage": {
+    "covered": 10.0,
+    "topics": 10,
+    "missing": []
+   },
+   "claim_discipline": {
+    "numbers_on_canvas": 40,
+    "untraceable": [
+     {
+      "slide": 8,
+      "value": 14.0,
+      "text": "L: 14-20B"
+     },
+     {
+      "slide": 8,
+      "value": 24.0,
+      "text": "XL: 24-32B"
+     },
+     {
+      "slide": 8,
+      "value": 32.0,
+      "text": "XL: 24-32B"
+     },
+     {
+      "slide": 11,
+      "value": 14.0,
+      "text": "Pilot Ask: 10 Developers, 14 Days"
+     },
+     {
+      "slide": 11,
+      "value": 14.0,
+      "text": "Run 14 days"
+     },
+     {
+      "slide": 11,
+      "value": 14.0,
+      "text": "Approve the 10-user, 14-day pilot."
+     }
+    ],
+    "guardrail_violations": []
+   },
+   "structure": {
+    "strict_json": true,
+    "slides": 11,
+    "notes_slides": 11,
+    "fallbacks": 0,
+    "overflows": 0,
+    "shrunk_texts": 3
+   }
+  }
+ },
+ "pptx": "runs/heldout/v1.1/woodgrove_technical/woodgrove_technical-microsoft.pptx",
+ "render_summary": [
+  {
+   "index": 0,
+   "layout": "title",
+   "words": 20,
+   "overflows": 0,
+   "shrunk": 0,
+   "icons": 4,
+   "issues": []
+  },
+  {
+   "index": 1,
+   "layout": "compare",
+   "words": 43,
+   "overflows": 0,
+   "shrunk": 0,
+   "icons": 7,
+   "issues": []
+  },
+  {
+   "index": 2,
+   "layout": "stack",
+   "words": 43,
+   "overflows": 0,
+   "shrunk": 0,
+   "icons": 4,
+   "issues": []
+  },
+  {
+   "index": 3,
+   "layout": "kpis",
+   "words": 32,
+   "overflows": 0,
+   "shrunk": 1,
+   "icons": 3,
+   "issues": []
+  },
+  {
+   "index": 4,
+   "layout": "bars",
+   "words": 38,
+   "overflows": 0,
+   "shrunk": 0,
+   "icons": 1,
+   "issues": []
+  },
+  {
+   "index": 5,
+   "layout": "analogy",
+   "words": 53,
+   "overflows": 0,
+   "shrunk": 0,
+   "icons": 2,
+   "issues": []
+  },
+  {
+   "index": 6,
+   "layout": "flow",
+   "words": 40,
+   "overflows": 0,
+   "shrunk": 0,
+   "icons": 5,
+   "issues": []
+  },
+  {
+   "index": 7,
+   "layout": "analogy",
+   "words": 32,
+   "overflows": 0,
+   "shrunk": 0,
+   "icons": 2,
+   "issues": []
+  },
+  {
+   "index": 8,
+   "layout": "canvas",
+   "words": 38,
+   "overflows": 0,
+   "shrunk": 1,
+   "icons": 7,
+   "issues": []
+  },
+  {
+   "index": 9,
+   "layout": "kpis",
+   "words": 33,
+   "overflows": 0,
+   "shrunk": 1,
+   "icons": 4,
+   "issues": []
+  },
+  {
+   "index": 10,
+   "layout": "cta",
+   "words": 36,
+   "overflows": 0,
+   "shrunk": 0,
+   "icons": 4,
+   "issues": []
+  }
+ ],
+ "lint_history": [
+  {
+   "pass": "draft",
+   "issues": 12,
+   "codes": [
+    "fit",
+    "notes",
+    "numbers",
+    "words"
+   ]
+  },
+  {
+   "pass": "repair1",
+   "issues": 11,
+   "accepted": true,
+   "fixed_slides": 10,
+   "codes": [
+    "fit",
+    "numbers",
+    "words"
+   ]
+  },
+  {
+   "pass": "repair2",
+   "issues": 11,
+   "accepted": false,
+   "fixed_slides": 9,
+   "codes": [
+    "fit",
+    "numbers",
+    "words"
+   ]
+  }
+ ],
+ "lint_remaining": [
+  {
+   "slide": 1,
+   "code": "words",
+   "msg": "43 visible words; cut to <= 28 (shorter details, fewer items)"
+  },
+  {
+   "slide": 2,
+   "code": "words",
+   "msg": "43 visible words; cut to <= 28 (shorter details, fewer items)"
+  },
+  {
+   "slide": 3,
+   "code": "fit",
+   "msg": "some text does not fit its shape; shorten the longest labels/details"
+  },
+  {
+   "slide": 4,
+   "code": "words",
+   "msg": "38 visible words; cut to <= 28 (shorter details, fewer items)"
+  },
+  {
+   "slide": 5,
+   "code": "words",
+   "msg": "53 visible words; cut to <= 28 (shorter details, fewer items)"
+  },
+  {
+   "slide": 6,
+   "code": "words",
+   "msg": "40 visible words; cut to <= 28 (shorter details, fewer items)"
+  },
+  {
+   "slide": 7,
+   "code": "numbers",
+   "msg": "numbers not in ALLOWED NUMBERS: 14, 24, 32; replace with allowed numbers or words"
+  },
+  {
+   "slide": 8,
+   "code": "words",
+   "msg": "38 visible words; cut to <= 28 (shorter details, fewer items)"
+  },
+  {
+   "slide": 8,
+   "code": "fit",
+   "msg": "some text does not fit its shape; shorten the longest labels/details"
+  },
+  {
+   "slide": 9,
+   "code": "words",
+   "msg": "36 visible words; cut to <= 28 (shorter details, fewer items)"
+  },
+  {
+   "slide": 9,
+   "code": "numbers",
+   "msg": "numbers not in ALLOWED NUMBERS: 14; replace with allowed numbers or words"
+  }
+ ],
+ "measured_facts": [
+  "Measured during this run on this device: 448 s drafting time, 9,400 tokens generated, 6.1 Wh energy, 0 cloud calls."
+ ]
+}

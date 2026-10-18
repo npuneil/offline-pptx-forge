@@ -1,0 +1,1130 @@
+{
+ "title": "Teaching Laptop Ultra to Teach Laptop Ultra",
+ "client": "Benchmark story",
+ "slides": [
+  {
+   "layout": "title",
+   "kicker": "Offline PPTX Forge | benchmark story",
+   "title": "Teaching Laptop Ultra to Teach Laptop Ultra",
+   "subtitle": "16 decks scored, 2 briefs, 1 round of frontier distillation",
+   "hero_icons": [
+    "chart",
+    "laptop",
+    "gpu",
+    "leaf"
+   ],
+   "notes": "This is the story of a pitch-deck generator that runs entirely on a Surface Laptop Ultra. We built it, graded it against frontier cloud models, let it learn from them once, and measured what changed."
+  },
+  {
+   "layout": "kpis",
+   "title": "The Test: Customer Decks, Zero Cloud Calls",
+   "takeaway": "Same prompt, same renderer, same rubric for every lane.",
+   "data": {
+    "items": [
+     {
+      "value": "2",
+      "label": "Briefs: Contoso sales, Zava technical",
+      "icon": "document",
+      "source": "fictional clients"
+     },
+     {
+      "value": "3",
+      "label": "Templates to choose from",
+      "icon": "layers",
+      "source": "MS, Surface, Ultra"
+     },
+     {
+      "value": "6",
+      "label": "Cloud configs: Opus + Astra",
+      "icon": "cloud",
+      "source": "low, high, max"
+     },
+     {
+      "value": "4",
+      "label": "Criteria: cost, CO2, time, quality",
+      "icon": "target",
+      "source": "graded per deck"
+     }
+    ]
+   },
+   "notes": "Two fictional customers: an executive sales pitch for Contoso and an engineering briefing for Zava. Each lane got the identical brief. Cloud specs went through the same renderer and rubric as the local ones, so only the model and harness differ."
+  },
+  {
+   "layout": "canvas",
+   "title": "How It Works: Everything Stays on the Laptop",
+   "takeaway": "Brief in, native PowerPoint out; drafting and rendering run on-device.",
+   "data": {
+    "elements": [
+     {
+      "type": "text",
+      "x": 0.3,
+      "y": 0.0,
+      "w": 9.0,
+      "h": 0.5,
+      "size": "s",
+      "tone": "primary",
+      "label": "SURFACE LAPTOP ULTRA | NVIDIA RTX SPARK"
+     },
+     {
+      "type": "line",
+      "x": 0.2,
+      "y": 0.55,
+      "x2": 9.65,
+      "y2": 0.55,
+      "tone": "accent2",
+      "dashed": true
+     },
+     {
+      "type": "line",
+      "x": 9.65,
+      "y": 0.55,
+      "x2": 9.65,
+      "y2": 5.75,
+      "tone": "accent2",
+      "dashed": true
+     },
+     {
+      "type": "line",
+      "x": 9.65,
+      "y": 5.75,
+      "x2": 0.2,
+      "y2": 5.75,
+      "tone": "accent2",
+      "dashed": true
+     },
+     {
+      "type": "line",
+      "x": 0.2,
+      "y": 5.75,
+      "x2": 0.2,
+      "y2": 0.55,
+      "tone": "accent2",
+      "dashed": true
+     },
+     {
+      "type": "box",
+      "x": 0.5,
+      "y": 0.9,
+      "w": 1.7,
+      "h": 1.05,
+      "icon": "document",
+      "label": "Brief"
+     },
+     {
+      "type": "arrow",
+      "x": 2.2,
+      "y": 1.42,
+      "x2": 2.7,
+      "y2": 1.42
+     },
+     {
+      "type": "box",
+      "x": 2.7,
+      "y": 0.9,
+      "w": 2.4,
+      "h": 1.05,
+      "icon": "ai",
+      "label": "Qwen3-Coder 30B",
+      "tone": "primary"
+     },
+     {
+      "type": "arrow",
+      "x": 5.1,
+      "y": 1.42,
+      "x2": 5.5,
+      "y2": 1.42
+     },
+     {
+      "type": "box",
+      "x": 5.5,
+      "y": 0.9,
+      "w": 1.7,
+      "h": 1.05,
+      "icon": "code",
+      "label": "JSON spec",
+      "tone": "accent1"
+     },
+     {
+      "type": "arrow",
+      "x": 7.2,
+      "y": 1.42,
+      "x2": 7.6,
+      "y2": 1.42
+     },
+     {
+      "type": "box",
+      "x": 7.6,
+      "y": 0.9,
+      "w": 1.8,
+      "h": 1.05,
+      "icon": "layers",
+      "label": "Renderer",
+      "tone": "accent2"
+     },
+     {
+      "type": "arrow",
+      "x": 8.5,
+      "y": 1.95,
+      "x2": 8.5,
+      "y2": 2.65
+     },
+     {
+      "type": "box",
+      "x": 7.6,
+      "y": 2.65,
+      "w": 1.8,
+      "h": 1.05,
+      "icon": "checklist",
+      "label": "Lint",
+      "tone": "accent3"
+     },
+     {
+      "type": "line",
+      "x": 7.6,
+      "y": 3.17,
+      "x2": 3.9,
+      "y2": 3.17,
+      "label": "targeted fixes"
+     },
+     {
+      "type": "arrow",
+      "x": 3.9,
+      "y": 3.17,
+      "x2": 3.9,
+      "y2": 1.95
+     },
+     {
+      "type": "arrow",
+      "x": 8.5,
+      "y": 3.7,
+      "x2": 8.5,
+      "y2": 4.4
+     },
+     {
+      "type": "box",
+      "x": 7.6,
+      "y": 4.4,
+      "w": 1.8,
+      "h": 1.05,
+      "icon": "download",
+      "label": "PPTX",
+      "tone": "accent4"
+     },
+     {
+      "type": "text",
+      "x": 0.5,
+      "y": 4.55,
+      "w": 6.8,
+      "h": 0.8,
+      "size": "s",
+      "tone": "muted",
+      "label": "Measured per deck: seconds, tokens, watt-hours (nvidia-smi)"
+     },
+     {
+      "type": "box",
+      "x": 10.0,
+      "y": 0.9,
+      "w": 1.9,
+      "h": 1.05,
+      "icon": "cloud",
+      "label": "Cloud APIs",
+      "tone": "muted"
+     },
+     {
+      "type": "text",
+      "x": 9.85,
+      "y": 2.1,
+      "w": 2.2,
+      "h": 0.9,
+      "size": "l",
+      "align": "c",
+      "tone": "primary",
+      "label": "0 calls"
+     }
+    ]
+   },
+   "notes": "The local model only writes a JSON blueprint. A deterministic renderer turns it into native, editable shapes and charts. In v1.1 a lint step checks the rendered deck and sends targeted fixes back to the model. The cloud is never called."
+  },
+  {
+   "layout": "analogy",
+   "title": "Like an Architect and a Builder",
+   "takeaway": "The model designs; deterministic code builds to spec.",
+   "data": {
+    "concept": {
+     "label": "Forge pipeline",
+     "icon": "gears"
+    },
+    "analog": {
+     "label": "Architect + builder",
+     "icon": "home"
+    },
+    "pairs": [
+     {
+      "concept": "LLM writes JSON spec",
+      "analog": "Architect draws blueprint"
+     },
+     {
+      "concept": "Renderer draws shapes",
+      "analog": "Builder follows the plan"
+     },
+     {
+      "concept": "Lint checks the render",
+      "analog": "Inspector walks the site"
+     },
+     {
+      "concept": "Templates",
+      "analog": "Finish packages"
+     }
+    ]
+   },
+   "notes": "Separating design from construction is why a 30B local model can produce clean slides: it never has to draw. Swapping templates is like swapping finishes; the structure stays."
+  },
+  {
+   "layout": "canvas",
+   "title": "One Spec, Three Templates",
+   "takeaway": "Pick Microsoft, Surface or Surface Ultra at build time, or re-render later.",
+   "data": {
+    "elements": [
+     {
+      "type": "text",
+      "x": 0.0,
+      "y": 3.0236842105263166,
+      "w": 3.8582028029678477,
+      "h": 0.55,
+      "label": "Microsoft",
+      "size": "m",
+      "align": "c"
+     },
+     {
+      "type": "text",
+      "x": 0.0,
+      "y": 3.5542105263157904,
+      "w": 3.8582028029678477,
+      "h": 0.45,
+      "label": "re-rendered in 0.14 s",
+      "size": "s",
+      "align": "c",
+      "tone": "muted"
+     },
+     {
+      "type": "text",
+      "x": 4.0708985985160755,
+      "y": 3.0236842105263166,
+      "w": 3.8582028029678477,
+      "h": 0.55,
+      "label": "Surface",
+      "size": "m",
+      "align": "c"
+     },
+     {
+      "type": "text",
+      "x": 4.0708985985160755,
+      "y": 3.5542105263157904,
+      "w": 3.8582028029678477,
+      "h": 0.45,
+      "label": "re-rendered in 0.12 s",
+      "size": "s",
+      "align": "c",
+      "tone": "muted"
+     },
+     {
+      "type": "text",
+      "x": 8.141797197032151,
+      "y": 3.0236842105263166,
+      "w": 3.8582028029678477,
+      "h": 0.55,
+      "label": "Surface Ultra",
+      "size": "m",
+      "align": "c"
+     },
+     {
+      "type": "text",
+      "x": 8.141797197032151,
+      "y": 3.5542105263157904,
+      "w": 3.8582028029678477,
+      "h": 0.45,
+      "label": "re-rendered in 0.13 s",
+      "size": "s",
+      "align": "c",
+      "tone": "muted"
+     },
+     {
+      "type": "pill",
+      "x": 0.0,
+      "y": 4.45,
+      "w": 12.0,
+      "h": 0.95,
+      "icon": "layers",
+      "tone": "card",
+      "label": "1 JSON spec, 3 templates, 0 LLM calls to restyle"
+     }
+    ]
+   },
+   "notes": "Same Contoso v1.1 slide, three templates. Re-rendering the full 11-slide deck took 0.12 to 0.14 seconds per template on this laptop, measured while building this story deck."
+  },
+  {
+   "layout": "bars",
+   "title": "Round 1: The Laptop Came Last",
+   "takeaway": "v1.0 scored 19.5/50 with the blind judge; frontier scored 36 to 40.5.",
+   "data": {
+    "unit": "/50",
+    "highlight": "Local v1.0",
+    "icon": "people",
+    "caption": "Blind judge, anonymized slide sheets, mean of 2 briefs",
+    "bars": [
+     {
+      "label": "Local v1.0",
+      "value": 19.5
+     },
+     {
+      "label": "Opus low",
+      "value": 36.0
+     },
+     {
+      "label": "Opus high",
+      "value": 40.0
+     },
+     {
+      "label": "Opus max",
+      "value": 40.5
+     },
+     {
+      "label": "Astra low",
+      "value": 39.5
+     },
+     {
+      "label": "Astra high",
+      "value": 39.0
+     },
+     {
+      "label": "Astra max",
+      "value": 40.5
+     }
+    ]
+   },
+   "notes": "Our first harness was fast and cheap, and it passed most automated checks, but the blind judge saw label titles, mixed-unit charts and floating diagram nodes. It came last on both briefs."
+  },
+  {
+   "layout": "bars",
+   "title": "Frontier Bought Quality With Tokens",
+   "takeaway": "Opus max used 21x Opus low's tokens for +4.5 judge points.",
+   "data": {
+    "unit": "tok",
+    "highlight": "Opus max",
+    "icon": "ai",
+    "caption": "Exact output tokens per deck, incl. reasoning",
+    "bars": [
+     {
+      "label": "Opus low",
+      "value": 3386
+     },
+     {
+      "label": "Opus high",
+      "value": 9846
+     },
+     {
+      "label": "Opus max",
+      "value": 71181
+     },
+     {
+      "label": "Astra low",
+      "value": 3410
+     },
+     {
+      "label": "Astra high",
+      "value": 7514
+     },
+     {
+      "label": "Astra max",
+      "value": 13834
+     }
+    ]
+   },
+   "notes": "Reasoning effort mostly bought polish. Opus max hit its 32k output cap twice per brief. That reasoning is expensive to buy per deck, so we captured it once instead."
+  },
+  {
+   "layout": "compare",
+   "title": "What Frontier Did That v1.0 Didn't",
+   "takeaway": "The judge's notes became the v1.1 playbook.",
+   "data": {
+    "left": {
+     "title": "v1.0 habits",
+     "icon": "laptop",
+     "points": [
+      "Label titles",
+      "Mixed-unit charts",
+      "Floating diagram nodes",
+      "Back-to-back analogies"
+     ]
+    },
+    "right": {
+     "title": "Frontier habits",
+     "icon": "star",
+     "points": [
+      "Insight titles",
+      "Like-for-like charts",
+      "Connected diagrams",
+      "Analogies that map caveats"
+     ]
+    },
+    "verdict": "Distill the habits, not the weights."
+   },
+   "notes": "We studied the best frontier decks and the judge's critiques, then wrote down the habits: a slot-by-slot story arc, an analogy bank, worked examples and checks a script can enforce."
+  },
+  {
+   "layout": "analogy",
+   "title": "Distillation Is Like an Apprenticeship",
+   "takeaway": "Same apprentice, better playbook.",
+   "data": {
+    "concept": {
+     "label": "Harness v1.1",
+     "icon": "ai"
+    },
+    "analog": {
+     "label": "Apprentice",
+     "icon": "people"
+    },
+    "pairs": [
+     {
+      "concept": "Frontier decks",
+      "analog": "Master's portfolio"
+     },
+     {
+      "concept": "Blind judge notes",
+      "analog": "Studio critique"
+     },
+     {
+      "concept": "Lint rules",
+      "analog": "Pre-flight checklist"
+     },
+     {
+      "concept": "Weights unchanged",
+      "analog": "Same apprentice"
+     }
+    ]
+   },
+   "notes": "No fine-tuning. The local model is identical in v1.0 and v1.1; only the program around it changed."
+  },
+  {
+   "layout": "flow",
+   "title": "v1.1: Draft, Check, Repair",
+   "takeaway": "Lint issues fell from 30 to 24 across both decks before grading.",
+   "data": {
+    "steps": [
+     {
+      "label": "Deck arc",
+      "detail": "Slot-by-slot story",
+      "icon": "map"
+     },
+     {
+      "label": "Analogy bank",
+      "detail": "Caveat-mapped analogies",
+      "icon": "idea"
+     },
+     {
+      "label": "JSON draft",
+      "detail": "Local model, JSON mode",
+      "icon": "code"
+     },
+     {
+      "label": "Render + lint",
+      "detail": "Deterministic checks",
+      "icon": "checklist"
+     },
+     {
+      "label": "Targeted repair",
+      "detail": "Keep only improvements",
+      "icon": "wrench"
+     }
+    ]
+   },
+   "notes": "Each v1.1 deck used 3 local model passes: one draft and up to two repair passes. A repair is kept only if it reduces lint issues."
+  },
+  {
+   "layout": "canvas",
+   "title": "Zava: Judge 18 to 41 of 50",
+   "takeaway": "Same model, same renderer; only the harness changed.",
+   "data": {
+    "elements": [
+     {
+      "type": "arrow",
+      "x": 5.67353668590272,
+      "y": 2.5578947368421057,
+      "x2": 6.326463314097279,
+      "y2": 2.5578947368421057,
+      "tone": "primary"
+     },
+     {
+      "type": "text",
+      "x": 0.2981698268755153,
+      "y": 5.242105263157894,
+      "w": 5.256652926628194,
+      "h": 0.6,
+      "align": "c",
+      "size": "m",
+      "label": "v1.0 | 12 slides | judge 18/50"
+     },
+     {
+      "type": "text",
+      "x": 6.44517724649629,
+      "y": 5.242105263157894,
+      "w": 5.256652926628194,
+      "h": 0.6,
+      "align": "c",
+      "size": "m",
+      "tone": "primary",
+      "label": "v1.1 | 11 slides | judge 41/50"
+     }
+    ]
+   },
+   "notes": "Left is v1.0, right is v1.1, both exported from the real decks. v1.1 opens on why local matters for CAD and source-code IP, keeps the speed chart like-for-like, and ends on measured proof that this laptop built the deck."
+  },
+  {
+   "layout": "canvas",
+   "title": "Contoso: Judge 21 to 37 of 50",
+   "takeaway": "Exec story: hotel-safe and offline-maps analogies, sponsor-ready ask.",
+   "data": {
+    "elements": [
+     {
+      "type": "arrow",
+      "x": 5.67353668590272,
+      "y": 2.5578947368421057,
+      "x2": 6.326463314097279,
+      "y2": 2.5578947368421057,
+      "tone": "primary"
+     },
+     {
+      "type": "text",
+      "x": 0.2981698268755153,
+      "y": 5.242105263157894,
+      "w": 5.256652926628194,
+      "h": 0.6,
+      "align": "c",
+      "size": "m",
+      "label": "v1.0 | 11 slides | judge 21/50"
+     },
+     {
+      "type": "text",
+      "x": 6.44517724649629,
+      "y": 5.242105263157894,
+      "w": 5.256652926628194,
+      "h": 0.6,
+      "align": "c",
+      "size": "m",
+      "tone": "primary",
+      "label": "v1.1 | 11 slides | judge 37/50"
+     }
+    ]
+   },
+   "notes": "The judge still flagged v1.1 Contoso for label titles and one overstated Wi-Fi line, which feeds the v1.2 backlog."
+  },
+  {
+   "layout": "kpis",
+   "title": "One Round: D to B",
+   "takeaway": "Quality rose sharply with model weights unchanged.",
+   "data": {
+    "items": [
+     {
+      "value": "63 → 86",
+      "label": "Overall score",
+      "icon": "chart",
+      "source": "rubric + judge"
+     },
+     {
+      "value": "2.0x",
+      "label": "Blind judge: 19.5 → 39 /50",
+      "icon": "people",
+      "source": "mean of 2 briefs"
+     },
+     {
+      "value": "86 → 93",
+      "label": "Auto rubric /100",
+      "icon": "checklist",
+      "source": "rubric 1.0.1"
+     },
+     {
+      "value": "0",
+      "label": "Weight updates",
+      "icon": "ai",
+      "source": "prompt + program only"
+     }
+    ]
+   },
+   "notes": "Overall is half automated rubric, half blind judge. v1.1 lint targets some rubric checks, so the judge-only jump from 19.5 to 39 is the cleaner signal."
+  },
+  {
+   "layout": "canvas",
+   "title": "Frontier-Band Quality at Laptop Cost",
+   "takeaway": "v1.1 judge 39 sits inside the cloud band (36-40.5) at 692x lower cost.",
+   "data": {
+    "elements": [
+     {
+      "type": "line",
+      "x": 1.2,
+      "y": 5.0,
+      "x2": 11.7,
+      "y2": 5.0
+     },
+     {
+      "type": "line",
+      "x": 1.2,
+      "y": 0.6,
+      "x2": 1.2,
+      "y2": 5.0
+     },
+     {
+      "type": "text",
+      "x": 1.052173913043478,
+      "y": 5.05,
+      "w": 1.2,
+      "h": 0.42,
+      "label": "$0.10",
+      "size": "s",
+      "align": "c",
+      "tone": "muted"
+     },
+     {
+      "type": "text",
+      "x": 3.313043478260869,
+      "y": 5.05,
+      "w": 1.2,
+      "h": 0.42,
+      "label": "$1",
+      "size": "s",
+      "align": "c",
+      "tone": "muted"
+     },
+     {
+      "type": "text",
+      "x": 5.573913043478262,
+      "y": 5.05,
+      "w": 1.2,
+      "h": 0.42,
+      "label": "$10",
+      "size": "s",
+      "align": "c",
+      "tone": "muted"
+     },
+     {
+      "type": "text",
+      "x": 7.834782608695653,
+      "y": 5.05,
+      "w": 1.2,
+      "h": 0.42,
+      "label": "$100",
+      "size": "s",
+      "align": "c",
+      "tone": "muted"
+     },
+     {
+      "type": "text",
+      "x": 10.095652173913043,
+      "y": 5.05,
+      "w": 1.2,
+      "h": 0.42,
+      "label": "$1,000",
+      "size": "s",
+      "align": "c",
+      "tone": "muted"
+     },
+     {
+      "type": "text",
+      "x": 0.15,
+      "y": 3.966666666666667,
+      "w": 0.95,
+      "h": 0.42,
+      "label": "20",
+      "size": "s",
+      "align": "r",
+      "tone": "muted"
+     },
+     {
+      "type": "text",
+      "x": 0.15,
+      "y": 2.4,
+      "w": 0.95,
+      "h": 0.42,
+      "label": "30",
+      "size": "s",
+      "align": "r",
+      "tone": "muted"
+     },
+     {
+      "type": "text",
+      "x": 0.15,
+      "y": 0.833333333333333,
+      "w": 0.95,
+      "h": 0.42,
+      "label": "40",
+      "size": "s",
+      "align": "r",
+      "tone": "muted"
+     },
+     {
+      "type": "text",
+      "x": 3.4,
+      "y": 5.45,
+      "w": 6.4,
+      "h": 0.5,
+      "label": "Cost per 1,000 decks (log scale)",
+      "size": "s",
+      "align": "c",
+      "tone": "muted"
+     },
+     {
+      "type": "text",
+      "x": 0.0,
+      "y": 0.0,
+      "w": 2.6,
+      "h": 0.45,
+      "label": "Blind judge /50",
+      "size": "s",
+      "tone": "muted"
+     },
+     {
+      "type": "box",
+      "x": 7.694108979715053,
+      "y": 0.5549999999999999,
+      "w": 3.8029272057175385,
+      "h": 1.6050000000000002,
+      "tone": "card"
+     },
+     {
+      "type": "circle",
+      "x": 7.744108979715053,
+      "y": 0.15499999999999992,
+      "w": 0.33635614179719703,
+      "h": 0.42947368421052634,
+      "tone": "accent1"
+     },
+     {
+      "type": "text",
+      "x": 8.16046512151225,
+      "y": 0.05499999999999994,
+      "w": 1.0,
+      "h": 0.42,
+      "label": "Opus",
+      "size": "s",
+      "tone": "muted"
+     },
+     {
+      "type": "circle",
+      "x": 9.094108979715052,
+      "y": 0.15499999999999992,
+      "w": 0.33635614179719703,
+      "h": 0.42947368421052634,
+      "tone": "accent2"
+     },
+     {
+      "type": "text",
+      "x": 9.510465121512249,
+      "y": 0.05499999999999994,
+      "w": 1.0,
+      "h": 0.42,
+      "label": "Astra",
+      "size": "s",
+      "tone": "muted"
+     },
+     {
+      "type": "circle",
+      "x": 7.975930908816455,
+      "y": 1.4952631578947368,
+      "w": 0.33635614179719703,
+      "h": 0.42947368421052634,
+      "tone": "accent1"
+     },
+     {
+      "type": "circle",
+      "x": 8.964643289844899,
+      "y": 0.8685964912280699,
+      "w": 0.33635614179719703,
+      "h": 0.42947368421052634,
+      "tone": "accent1"
+     },
+     {
+      "type": "circle",
+      "x": 10.878858114533994,
+      "y": 0.7902631578947368,
+      "w": 0.33635614179719703,
+      "h": 0.42947368421052634,
+      "tone": "accent1"
+     },
+     {
+      "type": "circle",
+      "x": 8.881806598881049,
+      "y": 0.9469298245614035,
+      "w": 0.33635614179719703,
+      "h": 0.42947368421052634,
+      "tone": "accent2"
+     },
+     {
+      "type": "circle",
+      "x": 9.608798214441105,
+      "y": 1.0252631578947367,
+      "w": 0.33635614179719703,
+      "h": 0.42947368421052634,
+      "tone": "accent2"
+     },
+     {
+      "type": "circle",
+      "x": 10.188855617180671,
+      "y": 0.7902631578947368,
+      "w": 0.33635614179719703,
+      "h": 0.42947368421052634,
+      "tone": "accent2"
+     },
+     {
+      "type": "text",
+      "x": 7.394108979715053,
+      "y": 2.21,
+      "w": 4.402927205717538,
+      "h": 0.45,
+      "label": "Frontier cloud: 6 configs",
+      "size": "s",
+      "align": "c"
+     },
+     {
+      "type": "text",
+      "x": 7.394108979715053,
+      "y": 2.6100000000000003,
+      "w": 4.402927205717538,
+      "h": 0.45,
+      "label": "$74-$1,430 | judge 36-40.5",
+      "size": "s",
+      "align": "c",
+      "tone": "muted"
+     },
+     {
+      "type": "circle",
+      "x": 1.455234772200074,
+      "y": 3.9943684210526316,
+      "w": 0.4708985985160758,
+      "h": 0.6012631578947368,
+      "tone": "muted"
+     },
+     {
+      "type": "text",
+      "x": 2.040684071458112,
+      "y": 3.795,
+      "w": 3.4,
+      "h": 0.5,
+      "label": "Local v1.0",
+      "size": "m",
+      "tone": null
+     },
+     {
+      "type": "text",
+      "x": 2.040684071458112,
+      "y": 4.295,
+      "w": 3.6,
+      "h": 0.45,
+      "label": "judge 19.5 | $0.10",
+      "size": "s",
+      "tone": "muted"
+     },
+     {
+      "type": "circle",
+      "x": 2.8069270152516577,
+      "y": 0.9393684210526314,
+      "w": 0.4708985985160758,
+      "h": 0.6012631578947368,
+      "tone": "primary"
+     },
+     {
+      "type": "text",
+      "x": 3.3923763145096957,
+      "y": 0.7399999999999998,
+      "w": 3.4,
+      "h": 0.5,
+      "label": "Local v1.1",
+      "size": "m",
+      "tone": "primary"
+     },
+     {
+      "type": "text",
+      "x": 3.3923763145096957,
+      "y": 1.2399999999999998,
+      "w": 3.6,
+      "h": 0.45,
+      "label": "judge 39 | $0.41",
+      "size": "s",
+      "tone": "muted"
+     },
+     {
+      "type": "arrow",
+      "x": 1.890684071458112,
+      "y": 3.945,
+      "x2": 2.8923763145096957,
+      "y2": 1.6399999999999997,
+      "tone": "primary"
+     },
+     {
+      "type": "arrow",
+      "x": 3.5423763145096956,
+      "y": 2.75,
+      "x2": 7.594108979715053,
+      "y2": 2.75,
+      "tone": "accent3",
+      "dashed": true
+     },
+     {
+      "type": "text",
+      "x": 3.6423763145096957,
+      "y": 2.85,
+      "w": 4.0,
+      "h": 0.5,
+      "label": "692x cheaper than cloud median",
+      "size": "s",
+      "tone": "accent3"
+     }
+    ]
+   },
+   "notes": "Cost per 1,000 decks: local v1.1 $0.41 in electricity versus $285 at the cloud median list price. Device and subscriptions are excluded for both lanes. Parity, not a win: Opus max and Astra max scored 40.5."
+  },
+  {
+   "layout": "kpis",
+   "title": "Per 1,000 Decks: Less Energy, Zero Water",
+   "takeaway": "Measured local power vs published cloud per-token estimates.",
+   "data": {
+    "items": [
+     {
+      "value": "3.2 kWh",
+      "label": "Local v1.1 energy",
+      "icon": "bolt",
+      "source": "nvidia-smi + 10 W"
+     },
+     {
+      "value": "9.4 kWh",
+      "label": "Cloud median energy",
+      "icon": "cloud",
+      "source": "1.1 Wh per 1k tokens"
+     },
+     {
+      "value": "31 L",
+      "label": "Cloud water avoided",
+      "icon": "drop",
+      "source": "3.6 mL per 1k tokens"
+     },
+     {
+      "value": "2.3 kg",
+      "label": "CO2e avoided",
+      "icon": "leaf",
+      "source": "0.367 kg per kWh"
+     }
+    ]
+   },
+   "notes": "Local GPU power was measured on a shared GPU that other workloads were also using, so local energy is overstated. Cloud energy and water use published per-token estimates."
+  },
+  {
+   "layout": "bars",
+   "title": "The Trade-Off: Drafting Time",
+   "takeaway": "v1.1 needs 241 s: slower than the 108 s cloud median, faster than Astra max.",
+   "data": {
+    "unit": "s",
+    "highlight": "Local v1.1",
+    "icon": "timer",
+    "caption": "Local: wall-clock. Cloud: API generation seconds.",
+    "bars": [
+     {
+      "label": "Local v1.0",
+      "value": 64
+     },
+     {
+      "label": "Local v1.1",
+      "value": 241
+     },
+     {
+      "label": "Opus low",
+      "value": 28
+     },
+     {
+      "label": "Opus high",
+      "value": 88
+     },
+     {
+      "label": "Opus max",
+      "value": 606
+     },
+     {
+      "label": "Astra low",
+      "value": 57
+     },
+     {
+      "label": "Astra high",
+      "value": 137
+     },
+     {
+      "label": "Astra max",
+      "value": 268
+     }
+    ]
+   },
+   "notes": "Three passes on a shared server slot made v1.1 3.8x slower than v1.0. The best-quality cloud config, Astra max, took 268 s."
+  },
+  {
+   "layout": "kpis",
+   "title": "Self-Grade: Quality Up, Speed Down",
+   "takeaway": "Composite B+ to C+: time is now the gap to close.",
+   "data": {
+    "items": [
+     {
+      "value": "D → B",
+      "label": "Deck grade",
+      "icon": "star",
+      "source": "overall score"
+     },
+     {
+      "value": "A+",
+      "label": "Cost savings (held)",
+      "icon": "money",
+      "source": "vs cloud median"
+     },
+     {
+      "value": "A → B",
+      "label": "Sustainability",
+      "icon": "leaf",
+      "source": "energy + water"
+     },
+     {
+      "value": "A+ → F",
+      "label": "Time to generate",
+      "icon": "timer",
+      "source": "vs cloud median"
+     }
+    ]
+   },
+   "notes": "Composite is an equal-weight mean of the four criteria: 89.6 for v1.0 and 78.4 for v1.1. The deck got much better; drafting time is what v1.2 has to win back."
+  },
+  {
+   "layout": "cta",
+   "title": "Next: v1.2 Keeps Quality, Wins Back Time",
+   "takeaway": "Every step is measurable with this same benchmark.",
+   "data": {
+    "steps": [
+     {
+      "label": "Fix judge flags",
+      "detail": "Hedge claims, fix boundaries",
+      "icon": "checklist"
+     },
+     {
+      "label": "Dedicated GPU slot",
+      "detail": "No shared-server contention",
+      "icon": "gpu"
+     },
+     {
+      "label": "Early-stop repair",
+      "detail": "Skip passes that can't win",
+      "icon": "timer"
+     },
+     {
+      "label": "Held-out briefs",
+      "detail": "Prove it generalizes",
+      "icon": "target"
+     }
+    ],
+    "ask": "Run v1.2 on new briefs and re-benchmark."
+   },
+   "notes": "Both briefs informed v1.1, so the honest next test is unseen briefs. Rendered offline by the Forge renderer; every number comes from bench/results.json."
+  }
+ ]
+}

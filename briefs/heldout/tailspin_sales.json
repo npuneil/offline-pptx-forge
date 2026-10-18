@@ -1,0 +1,38 @@
+{
+  "id": "tailspin_sales",
+  "client": "Tailspin Toys",
+  "pitch_type": "sales",
+  "audience": "Tailspin Toys studio leadership: Head of Production, CTO and Creative Director. Creative and business-minded, not deeply technical about AI.",
+  "objective": "Win approval for a 2-week, 6-user pilot of Surface Laptop Ultra with NVIDIA RTX Spark running local AI for narrative designers and producers, alongside Microsoft 365 Copilot.",
+  "template_hint": "surface_ultra",
+  "slide_range": [8, 12],
+  "context": "Tailspin Toys is a fictional game studio. Narrative designers and producers turn playtest sessions and design reviews into feedback digests and dialogue-draft variations. Scripts, story beats and build footage for unannounced games are under embargo, and teams often work at offsite playtest venues and conventions with unreliable networks. Tailspin uses Microsoft 365 Copilot for everyday work and will keep it; the pitch adds a local AI lane on the device for embargoed creative material, not a replacement.",
+  "facts": [
+    "Tailspin Toys has about 400 staff.",
+    "45 narrative designers and producers each run about 5 playtest or design-review sessions per week.",
+    "Turning one session into a feedback digest takes about 40 minutes today.",
+    "Scripts, story beats and build footage for unannounced games are under embargo.",
+    "Illustrative capacity: if a local assistant saved 15 minutes per digest, 45 people x 5 digests x 15 minutes x 44 working weeks = 2,475 hours per year. Unvalidated; the pilot measures the real number.",
+    "Device: Surface Laptop Ultra with NVIDIA RTX Spark (Blackwell RTX GPU, 20 CPU cores, 128 GB installed memory).",
+    "On this device, Gemma 4 26B decodes at about 72 tokens per second (single stream, Local-AI-Bench, October 2026).",
+    "28 open models are installed in the local catalog on this device.",
+    "Microsoft 365 Copilot stays in place; local AI adds a second lane (hybrid).",
+    "Pilot: 6 users for 2 weeks (14 days), measuring digest time, draft quality and user experience."
+  ],
+  "required_topics": {
+    "creative_pain": ["playtest", "digest", "feedback", "40 min", "minutes"],
+    "embargo": ["embargo", "unannounced", "script", "story beats", "confidential"],
+    "offsite": ["offsite", "venue", "convention", "network", "wi-fi"],
+    "hybrid_with_copilot": ["copilot", "hybrid", "two lanes", "both lanes", "cloud lane"],
+    "capacity_value": ["2,475", "hours", "capacity"],
+    "device": ["surface laptop ultra", "rtx spark", "surface"],
+    "pilot_ask": ["pilot", "6 users", "2 weeks", "two weeks", "14 days"]
+  },
+  "guardrails": [
+    "Do not claim dollar savings, ROI, faster shipping or sales impact.",
+    "Do not claim local AI replaces Microsoft 365 Copilot, writers or any subscription.",
+    "Do not claim air-gapped, leak-proof or certified offline operation; say disconnected use is validated in the pilot.",
+    "Do not cite TOPS or Copilot+ PC certification.",
+    "The 2,475 hours figure is illustrative and must be labeled as an estimate to validate."
+  ]
+}

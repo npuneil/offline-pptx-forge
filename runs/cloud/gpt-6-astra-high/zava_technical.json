@@ -1,0 +1,588 @@
+{
+  "title": "Zava Local AI Developer Stack",
+  "client": "Zava",
+  "slides": [
+    {
+      "layout": "title",
+      "kicker": "Zava engineering",
+      "title": "Local AI, Built On This Device",
+      "subtitle": "Surface Laptop Ultra with NVIDIA RTX Spark",
+      "hero_icons": ["laptop", "gpu", "code", "shield"],
+      "notes": "This deck was generated on this Surface Laptop Ultra by Qwen3-Coder 30B through llama.cpp, with no cloud calls. For Zava's approximately 150 developers and architects, the opportunity is local code assistance and retrieval over sensitive engineering documents, while retaining a controlled cloud option for the heaviest tasks."
+    },
+    {
+      "layout": "stack",
+      "title": "Hardware Meets Native Developer Runtimes",
+      "takeaway": "Native CUDA runtimes connect developer workflows to a substantial local model catalog.",
+      "data": {
+        "side_label": "Developer to silicon",
+        "layers": [
+          {
+            "label": "Developer workflows",
+            "detail": "Code generation, internal RAG and hybrid routing",
+            "icon": "code"
+          },
+          {
+            "label": "Local model catalog",
+            "detail": "28 open models; 315 GiB on disk",
+            "icon": "library"
+          },
+          {
+            "label": "Native CUDA runtimes",
+            "detail": "llama.cpp ARM64 CUDA; Foundry Local CUDA execution provider",
+            "icon": "gears"
+          },
+          {
+            "label": "RTX Spark N1X",
+            "detail": "Blackwell RTX GPU; 20 CPU cores",
+            "icon": "chip"
+          }
+        ]
+      },
+      "notes": "The hardware is Surface Laptop Ultra with NVIDIA RTX Spark N1X. Installed runtimes are llama.cpp build 11573, native ARM64 with CUDA, and Foundry Local with the CUDA execution provider. The catalog contains 28 open models occupying 315 GiB on disk. Developer workflows shown here are the proposed integration layer, not a claim that every integration is already deployed."
+    },
+    {
+      "layout": "kpis",
+      "title": "Memory Views Are Not Additive",
+      "takeaway": "Installed memory, Windows visibility and GPU budget are distinct views, not extra pools.",
+      "data": {
+        "items": [
+          {
+            "value": "128 GB",
+            "label": "Installed memory",
+            "icon": "memory",
+            "source": "Brief: installed memory"
+          },
+          {
+            "value": "About 64 GB",
+            "label": "Windows visible",
+            "icon": "monitor",
+            "source": "Brief: Windows visibility"
+          },
+          {
+            "value": "64,000 MiB",
+            "label": "GPU memory budget",
+            "icon": "gpu",
+            "source": "nvidia-smi"
+          }
+        ]
+      },
+      "notes": "These are distinct reporting views: installed memory, memory visible to Windows, and the GPU memory budget reported by nvidia-smi. Never add them together. System RAM is not dedicated VRAM. Model files, runtime allocations and working context must be evaluated against observed availability rather than an invented combined capacity."
+    },
+    {
+      "layout": "analogy",
+      "title": "MoE Is An Expert Workshop",
+      "takeaway": "Selected experts work on each token; total parameters do not equal active computation.",
+      "data": {
+        "concept": {
+          "label": "Mixture of experts",
+          "icon": "ai"
+        },
+        "analog": {
+          "label": "Specialist workshop",
+          "icon": "tools"
+        },
+        "pairs": [
+          {
+            "concept": "Expert selection",
+            "analog": "Job dispatch"
+          },
+          {
+            "concept": "Active parameters",
+            "analog": "Assigned specialists"
+          },
+          {
+            "concept": "Total parameters",
+            "analog": "Available workshop staff"
+          },
+          {
+            "concept": "Dense computation",
+            "analog": "Whole crew working"
+          }
+        ]
+      },
+      "notes": "Qwen3-Coder 30B is an MoE model with about 3B active parameters. The installed Q4_K_M file is 17.3 GiB; file size is not total runtime memory. Sparse expert activation can accelerate decode relative to similarly sized dense models. The workshop analogy explains computation, not accuracy or guaranteed speed."
+    },
+    {
+      "layout": "bars",
+      "title": "Single-Stream Decode: Measured, Not Guaranteed",
+      "takeaway": "Observed decode rates differ sharply; parameter count alone cannot predict interactive speed.",
+      "data": {
+        "unit": "tokens/s",
+        "highlight": "Qwen3-Coder 30B",
+        "icon": "speed",
+        "caption": "Approximate · Local-AI-Bench · October 2026 · shared machine",
+        "bars": [
+          {
+            "label": "Qwen3-Coder 30B",
+            "value": 86
+          },
+          {
+            "label": "Gemma 4 26B",
+            "value": 72
+          },
+          {
+            "label": "Qwen3.6 27B",
+            "value": 13
+          }
+        ]
+      },
+      "notes": "Local-AI-Bench measured these approximate single-stream decode rates on this shared device in October 2026. Qwen3-Coder 30B also measured about 0.13 seconds to first token. Dense Qwen3.6 27B measured about 13 tokens/s. These observations illustrate the MoE-versus-dense compute distinction; they are neither guaranteed specifications nor comparisons against other devices or measures of answer quality."
+    },
+    {
+      "layout": "kpis",
+      "title": "Aggregate Throughput Is Not Per-User Speed",
+      "takeaway": "Concurrent throughput describes total work; each developer's latency still needs validation.",
+      "data": {
+        "items": [
+          {
+            "value": "About 140 tokens/s",
+            "label": "Qwen3-Coder 30B",
+            "icon": "multitask",
+            "source": "Local-AI-Bench; 4 streams; October 2026; shared machine"
+          },
+          {
+            "value": "About 245 tokens/s",
+            "label": "Gemma 4 26B",
+            "icon": "network",
+            "source": "Local-AI-Bench; 8 streams; October 2026; shared machine"
+          }
+        ]
+      },
+      "notes": "Qwen3-Coder measured about 140 tokens/s aggregate across 4 concurrent streams; Gemma measured about 245 across 8. These totals come from Local-AI-Bench on this shared device in October 2026. Different concurrency levels are not a controlled model comparison. Aggregate rates are not per-user rates and do not establish pilot capacity or latency guarantees."
+    },
+    {
+      "layout": "hub",
+      "title": "Size Bands Guide Planning, Not Quality",
+      "takeaway": "Use parameter bands to shortlist candidates, then test Zava's actual tasks.",
+      "data": {
+        "center": {
+          "label": "Parameter planning bands",
+          "icon": "sliders"
+        },
+        "spokes": [
+          {
+            "label": "S: 1–4B",
+            "icon": "cube"
+          },
+          {
+            "label": "M: 7–8B",
+            "icon": "layers"
+          },
+          {
+            "label": "L: 14–20B",
+            "icon": "database"
+          },
+          {
+            "label": "XL: 24–32B",
+            "icon": "server"
+          }
+        ]
+      },
+      "notes": "B denotes billions of parameters. These bands are planning estimates, not accuracy tiers or memory guarantees. Evaluate quantization, active computation, context needs and available memory alongside task acceptance and latency. Larger parameter counts do not establish better answers. Select pilot candidates using representative Zava coding and retrieval tasks."
+    },
+    {
+      "layout": "analogy",
+      "title": "RAG Works Like An Engineering Library",
+      "takeaway": "Retrieve authorized reference material locally, then generate answers grounded in those excerpts.",
+      "data": {
+        "concept": {
+          "label": "Local RAG",
+          "icon": "search"
+        },
+        "analog": {
+          "label": "Engineering library",
+          "icon": "library"
+        },
+        "pairs": [
+          {
+            "concept": "Internal documents",
+            "analog": "Controlled shelves"
+          },
+          {
+            "concept": "Permissioned retrieval",
+            "analog": "Authorized reference librarian"
+          },
+          {
+            "concept": "Retrieved excerpts",
+            "analog": "Selected reference pages"
+          },
+          {
+            "concept": "Cited answer",
+            "analog": "Explanation with sources"
+          }
+        ]
+      },
+      "notes": "The proposed RAG design treats internal engineering documents as a controlled reference library. Retrieval supplies relevant, authorized excerpts to the local model; it does not imply retraining on every document. Citations make checking easier but do not guarantee correctness. Document permissions, retrieval relevance and citation fidelity require pilot validation."
+    },
+    {
+      "layout": "canvas",
+      "title": "Local Code And RAG Architecture",
+      "takeaway": "Code uses local inference directly; RAG adds permission-filtered context from a local index.",
+      "data": {
+        "elements": [
+          {
+            "type": "text",
+            "x": 0,
+            "y": 0,
+            "w": 12,
+            "h": 0.45,
+            "label": "Proposed local lane",
+            "size": "m",
+            "tone": "primary"
+          },
+          {
+            "type": "box",
+            "x": 0,
+            "y": 1.1,
+            "w": 1.8,
+            "h": 1,
+            "label": "IDE / chat",
+            "icon": "code",
+            "tone": "primary"
+          },
+          {
+            "type": "box",
+            "x": 2.2,
+            "y": 1.1,
+            "w": 1.7,
+            "h": 1,
+            "label": "Local API",
+            "icon": "plug",
+            "tone": "accent1"
+          },
+          {
+            "type": "box",
+            "x": 4.3,
+            "y": 1.1,
+            "w": 2.2,
+            "h": 1,
+            "label": "CUDA runtimes",
+            "icon": "gears",
+            "tone": "accent1"
+          },
+          {
+            "type": "box",
+            "x": 7,
+            "y": 1.1,
+            "w": 2.1,
+            "h": 1,
+            "label": "Local models",
+            "icon": "ai",
+            "tone": "accent2"
+          },
+          {
+            "type": "box",
+            "x": 9.7,
+            "y": 1.1,
+            "w": 2.1,
+            "h": 1,
+            "label": "Code / cited answers",
+            "icon": "document",
+            "tone": "accent3"
+          },
+          {
+            "type": "arrow",
+            "x": 1.8,
+            "y": 1.6,
+            "x2": 2.2,
+            "y2": 1.6,
+            "tone": "primary"
+          },
+          {
+            "type": "arrow",
+            "x": 3.9,
+            "y": 1.6,
+            "x2": 4.3,
+            "y2": 1.6,
+            "tone": "primary"
+          },
+          {
+            "type": "arrow",
+            "x": 6.5,
+            "y": 1.6,
+            "x2": 7,
+            "y2": 1.6,
+            "tone": "primary"
+          },
+          {
+            "type": "arrow",
+            "x": 9.1,
+            "y": 1.6,
+            "x2": 9.7,
+            "y2": 1.6,
+            "tone": "primary"
+          },
+          {
+            "type": "box",
+            "x": 0,
+            "y": 4.3,
+            "w": 1.8,
+            "h": 0.9,
+            "label": "Internal docs",
+            "icon": "folder",
+            "tone": "accent4"
+          },
+          {
+            "type": "box",
+            "x": 2.2,
+            "y": 4.3,
+            "w": 1.7,
+            "h": 0.9,
+            "label": "Chunk + embed",
+            "icon": "layers",
+            "tone": "accent4"
+          },
+          {
+            "type": "box",
+            "x": 4.3,
+            "y": 4.3,
+            "w": 2.2,
+            "h": 0.9,
+            "label": "Local index",
+            "icon": "database",
+            "tone": "accent4"
+          },
+          {
+            "type": "box",
+            "x": 4.3,
+            "y": 2.8,
+            "w": 2.2,
+            "h": 0.9,
+            "label": "Permissioned retrieval",
+            "icon": "key",
+            "tone": "accent2"
+          },
+          {
+            "type": "arrow",
+            "x": 1.8,
+            "y": 4.75,
+            "x2": 2.2,
+            "y2": 4.75,
+            "tone": "accent4"
+          },
+          {
+            "type": "arrow",
+            "x": 3.9,
+            "y": 4.75,
+            "x2": 4.3,
+            "y2": 4.75,
+            "tone": "accent4"
+          },
+          {
+            "type": "arrow",
+            "x": 5.4,
+            "y": 4.3,
+            "x2": 5.4,
+            "y2": 3.7,
+            "tone": "accent4"
+          },
+          {
+            "type": "arrow",
+            "x": 3.05,
+            "y": 2.1,
+            "x2": 4.3,
+            "y2": 3.25,
+            "label": "Docs query",
+            "tone": "accent2"
+          },
+          {
+            "type": "arrow",
+            "x": 5.4,
+            "y": 2.8,
+            "x2": 5.4,
+            "y2": 2.1,
+            "label": "Context",
+            "tone": "accent2"
+          },
+          {
+            "type": "text",
+            "x": 7,
+            "y": 3.2,
+            "w": 4.8,
+            "h": 0.65,
+            "label": "Sensitive IP stays local",
+            "size": "m",
+            "tone": "primary"
+          }
+        ]
+      },
+      "notes": "Proposed application layer: IDE/chat calls a local API. Code generation uses a local model directly. RAG chunks and embeds approved internal documents locally, retrieves permission-filtered context, and requests cited answers. llama.cpp ARM64 CUDA or Foundry Local's CUDA execution provider runs inference. Validate retrieval access controls and citations during the pilot."
+    },
+    {
+      "layout": "canvas",
+      "title": "Hybrid Routing Enforces A Data Boundary",
+      "takeaway": "Keep sensitive work local; send heavy tasks to cloud only after policy approval.",
+      "data": {
+        "elements": [
+          {
+            "type": "text",
+            "x": 0,
+            "y": 0,
+            "w": 5,
+            "h": 0.5,
+            "label": "Proposed routing policy",
+            "size": "m",
+            "tone": "primary"
+          },
+          {
+            "type": "box",
+            "x": 0,
+            "y": 2.4,
+            "w": 2,
+            "h": 1.1,
+            "label": "Developer request",
+            "icon": "code",
+            "tone": "primary"
+          },
+          {
+            "type": "hexagon",
+            "x": 3,
+            "y": 2.4,
+            "w": 2,
+            "h": 1.1,
+            "label": "Routing policy",
+            "icon": "filter",
+            "tone": "accent2"
+          },
+          {
+            "type": "box",
+            "x": 6.2,
+            "y": 0.8,
+            "w": 2.5,
+            "h": 1.2,
+            "label": "Local lane",
+            "icon": "laptop",
+            "tone": "accent1"
+          },
+          {
+            "type": "text",
+            "x": 8.9,
+            "y": 1,
+            "w": 3,
+            "h": 0.8,
+            "label": "Code + internal docs",
+            "size": "m",
+            "tone": "accent1"
+          },
+          {
+            "type": "box",
+            "x": 6.1,
+            "y": 4,
+            "w": 2.2,
+            "h": 1.2,
+            "label": "Cloud approval",
+            "icon": "shield",
+            "tone": "accent4"
+          },
+          {
+            "type": "box",
+            "x": 9,
+            "y": 4,
+            "w": 2.6,
+            "h": 1.2,
+            "label": "Cloud lane",
+            "icon": "cloud",
+            "tone": "accent3"
+          },
+          {
+            "type": "arrow",
+            "x": 2,
+            "y": 2.95,
+            "x2": 3,
+            "y2": 2.95,
+            "tone": "primary"
+          },
+          {
+            "type": "arrow",
+            "x": 5,
+            "y": 2.65,
+            "x2": 6.2,
+            "y2": 1.4,
+            "label": "Sensitive / frequent",
+            "tone": "accent1"
+          },
+          {
+            "type": "arrow",
+            "x": 5,
+            "y": 3.2,
+            "x2": 6.1,
+            "y2": 4.6,
+            "label": "Heaviest reasoning",
+            "tone": "accent4"
+          },
+          {
+            "type": "arrow",
+            "x": 8.3,
+            "y": 4.6,
+            "x2": 9,
+            "y2": 4.6,
+            "tone": "accent3"
+          },
+          {
+            "type": "text",
+            "x": 6.1,
+            "y": 5.35,
+            "w": 5.5,
+            "h": 0.55,
+            "label": "Approved content only",
+            "size": "m",
+            "tone": "accent4"
+          }
+        ]
+      },
+      "notes": "The proposed router checks sensitivity before complexity. Sensitive code and internal-document context remain local. Heaviest reasoning is cloud-eligible only when its input is approved for egress; otherwise retain it locally. Routing, authentication and outbound controls must be verified in the pilot. Local inference is not an air-gap or certification claim."
+    },
+    {
+      "layout": "flow",
+      "title": "Pilot Measures Developer Value, Not Hype",
+      "takeaway": "Evaluate accepted work, experienced latency and developer feedback on representative Zava tasks.",
+      "data": {
+        "steps": [
+          {
+            "label": "Acceptance rate",
+            "detail": "Track accepted suggestions against offered suggestions.",
+            "icon": "check"
+          },
+          {
+            "label": "Latency",
+            "detail": "Capture first-token and end-to-end timings under realistic concurrency.",
+            "icon": "timer"
+          },
+          {
+            "label": "Developer experience",
+            "detail": "Collect usefulness, friction and trust feedback.",
+            "icon": "people"
+          }
+        ]
+      },
+      "notes": "Agree representative coding, internal-document retrieval and routing tasks before the pilot. Define acceptance consistently and record model, runtime, context and concurrency for latency observations. Collect developer feedback alongside results. Validate permission filtering, citations and outbound policy. Agree decision criteria before testing rather than inventing success thresholds from benchmark throughput."
+    },
+    {
+      "layout": "cta",
+      "title": "Approve Zava's Local AI Pilot",
+      "takeaway": "Commit 10 developers for 2 weeks, then decide using measured evidence.",
+      "data": {
+        "steps": [
+          {
+            "label": "Nominate developers",
+            "detail": "Select 10 developers across representative engineering workflows.",
+            "icon": "team"
+          },
+          {
+            "label": "Run technical pilot",
+            "detail": "Test code generation, internal RAG and hybrid routing.",
+            "icon": "calendar"
+          },
+          {
+            "label": "Review outcomes",
+            "detail": "Assess acceptance rate, latency and developer experience.",
+            "icon": "chart"
+          }
+        ],
+        "ask": "Approve the 10-developer, 2-week technical pilot."
+      },
+      "notes": "Authorize 10 developers for 2 weeks, or 14 days. Confirm a platform owner, approved internal documents and representative coding tasks. Measure acceptance rate, latency and developer experience, with routing and data-handling checks. Use the results to decide whether and where local AI belongs in Zava's developer platform; do not extrapolate shared-machine throughput into a service guarantee."
+    }
+  ]
+}

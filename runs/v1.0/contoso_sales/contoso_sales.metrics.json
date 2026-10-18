@@ -1,0 +1,183 @@
+{
+ "harness": "1.0",
+ "brief": "contoso_sales",
+ "template": "microsoft",
+ "lane": "local",
+ "model": "qwen3-coder-30b",
+ "llm_calls": 1,
+ "prompt_tokens": 1752,
+ "completion_tokens": 2238,
+ "decode_tps": 41.7,
+ "ttft_s": 1.065,
+ "generate_s": 54.79,
+ "render_s": 0.19,
+ "total_s": 54.99,
+ "power": {
+  "seconds": 54.78,
+  "samples": 212,
+  "gpu_avg_w": 38.0,
+  "gpu_peak_w": 56.7,
+  "gpu_wh": 0.5778,
+  "platform_wh": 0.1522,
+  "total_wh": 0.7299
+ },
+ "economics": {
+  "lane": "local",
+  "energy_wh": 0.73,
+  "cost_usd": 9.5e-05,
+  "co2e_g": 0.268,
+  "water_ml": 0.0,
+  "basis": "measured GPU board power (nvidia-smi, 250 ms) + 10 W platform allowance; electricity only"
+ },
+ "grade": {
+  "auto_score": 84.9,
+  "auto_grade": "B",
+  "scores": {
+   "visual_richness": 21.0,
+   "text_lightness": 20.0,
+   "analogy": 6.0,
+   "brief_coverage": 12.9,
+   "claim_discipline": 15.0,
+   "structure": 10.0
+  },
+  "detail": {
+   "visual_richness": {
+    "infographic_share": 0.89,
+    "distinct_layouts": 8,
+    "icons_per_slide": 3.1,
+    "canvas_diagrams": 1
+   },
+   "text_lightness": {
+    "avg_words_per_slide": 25.9,
+    "max_words": 34
+   },
+   "analogy": {
+    "analogy_slides": 1,
+    "analogy_cue_slides": 0
+   },
+   "brief_coverage": {
+    "covered": 6.0,
+    "topics": 7,
+    "missing": [
+     "connectivity"
+    ]
+   },
+   "claim_discipline": {
+    "numbers_on_canvas": 23,
+    "untraceable": [],
+    "guardrail_violations": []
+   },
+   "structure": {
+    "strict_json": true,
+    "slides": 11,
+    "notes_slides": 10,
+    "fallbacks": 0,
+    "overflows": 0,
+    "shrunk_texts": 0
+   }
+  }
+ },
+ "pptx": "runs/v1.0/contoso_sales/contoso_sales-microsoft.pptx",
+ "render_summary": [
+  {
+   "index": 0,
+   "layout": "title",
+   "words": 15,
+   "overflows": 0,
+   "shrunk": 0,
+   "icons": 4,
+   "issues": []
+  },
+  {
+   "index": 1,
+   "layout": "analogy",
+   "words": 24,
+   "overflows": 0,
+   "shrunk": 0,
+   "icons": 2,
+   "issues": []
+  },
+  {
+   "index": 2,
+   "layout": "stack",
+   "words": 22,
+   "overflows": 0,
+   "shrunk": 0,
+   "icons": 3,
+   "issues": []
+  },
+  {
+   "index": 3,
+   "layout": "flow",
+   "words": 23,
+   "overflows": 0,
+   "shrunk": 0,
+   "icons": 3,
+   "issues": []
+  },
+  {
+   "index": 4,
+   "layout": "compare",
+   "words": 30,
+   "overflows": 0,
+   "shrunk": 0,
+   "icons": 7,
+   "issues": []
+  },
+  {
+   "index": 5,
+   "layout": "memory",
+   "words": 31,
+   "overflows": 0,
+   "shrunk": 0,
+   "icons": 1,
+   "issues": []
+  },
+  {
+   "index": 6,
+   "layout": "matrix",
+   "words": 34,
+   "overflows": 0,
+   "shrunk": 0,
+   "icons": 4,
+   "issues": []
+  },
+  {
+   "index": 7,
+   "layout": "bars",
+   "words": 31,
+   "overflows": 0,
+   "shrunk": 0,
+   "icons": 1,
+   "issues": []
+  },
+  {
+   "index": 8,
+   "layout": "canvas",
+   "words": 29,
+   "overflows": 0,
+   "shrunk": 0,
+   "icons": 6,
+   "issues": []
+  },
+  {
+   "index": 9,
+   "layout": "statement",
+   "words": 21,
+   "overflows": 0,
+   "shrunk": 0,
+   "icons": 1,
+   "issues": []
+  },
+  {
+   "index": 10,
+   "layout": "cta",
+   "words": 25,
+   "overflows": 0,
+   "shrunk": 0,
+   "icons": 3,
+   "issues": []
+  }
+ ],
+ "preview_s": 4.9
+}

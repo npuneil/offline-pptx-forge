@@ -1,0 +1,582 @@
+{
+  "title": "Zava's Local AI Developer Stack",
+  "client": "Zava",
+  "slides": [
+    {
+      "layout": "title",
+      "kicker": "ZAVA TECHNICAL PILOT",
+      "title": "Zava's Local AI Developer Stack",
+      "subtitle": "Surface Laptop Ultra with NVIDIA RTX Spark",
+      "hero_icons": ["laptop", "gpu", "code", "shield"],
+      "takeaway": "Protect engineering IP locally; keep an approved cloud lane for heavier reasoning.",
+      "notes": "Zava's source code and CAD/PLM data are sensitive IP. This proposal keeps frequent coding and internal-document work local while reserving a controlled cloud path for the heaviest reasoning. We will inspect the stack, distinguish memory views, examine measured throughput and agree a technical pilot. The goal is evidence, not a device-wide performance promise."
+    },
+    {
+      "layout": "stack",
+      "title": "From Developer Workflows To Silicon",
+      "takeaway": "Local models and CUDA runtimes connect developer workflows to the device.",
+      "data": {
+        "side_label": "Local developer stack",
+        "layers": [
+          {
+            "label": "Developer workflows",
+            "detail": "Code generation and internal engineering document retrieval",
+            "icon": "code"
+          },
+          {
+            "label": "Installed models",
+            "detail": "28 open models; 315 GiB on disk",
+            "icon": "library"
+          },
+          {
+            "label": "Runtime alternatives",
+            "detail": "llama.cpp ARM64 CUDA; Foundry Local CUDA execution provider",
+            "icon": "gears"
+          },
+          {
+            "label": "Surface Laptop Ultra",
+            "detail": "RTX Spark N1X; Blackwell RTX GPU; 20 CPU cores",
+            "icon": "gpu"
+          }
+        ]
+      },
+      "notes": "Surface Laptop Ultra uses NVIDIA RTX Spark N1X, a Blackwell RTX GPU, and 20 CPU cores. The installed runtimes are llama.cpp build 11573, native ARM64 with CUDA, and Foundry Local with its CUDA execution provider. They are alternative serving paths, not serial stages. The local catalog contains 28 open models occupying 315 GiB."
+    },
+    {
+      "layout": "kpis",
+      "title": "Memory Views Are Not Additive",
+      "takeaway": "Installed memory, Windows visibility and GPU budgeting describe distinct views, not separate pools.",
+      "data": {
+        "items": [
+          {
+            "value": "128 GB",
+            "label": "Installed memory",
+            "icon": "memory",
+            "source": "Device configuration"
+          },
+          {
+            "value": "~64 GB",
+            "label": "Windows-visible memory",
+            "icon": "monitor",
+            "source": "Windows visibility"
+          },
+          {
+            "value": "64,000 MiB",
+            "label": "GPU memory budget",
+            "icon": "gpu",
+            "source": "nvidia-smi"
+          }
+        ]
+      },
+      "notes": "These are distinct views of memory on the same device. The installed capacity is 128 GB; about 64 GB is visible to Windows; nvidia-smi reports a 64,000 MiB GPU budget. Never add them together or label system RAM dedicated VRAM. Validate model fit alongside context and workload memory during the pilot."
+    },
+    {
+      "layout": "bars",
+      "title": "Measured Decode On This Device",
+      "takeaway": "These shared-machine measurements guide testing, not guaranteed production throughput.",
+      "data": {
+        "unit": "tokens/s",
+        "highlight": "Qwen3-Coder 30B",
+        "icon": "speed",
+        "caption": "Approximate decode; Local-AI-Bench, October 2026; shared machine",
+        "bars": [
+          {
+            "label": "Qwen3-Coder 30B",
+            "value": 86
+          },
+          {
+            "label": "Gemma 4 26B",
+            "value": 72
+          },
+          {
+            "label": "Qwen3.6 27B",
+            "value": 13
+          }
+        ]
+      },
+      "notes": "Local-AI-Bench measured approximate single-stream decode on this device in October 2026: Qwen3-Coder 30B at 86 tokens/s, Gemma 4 26B at 72, and dense Qwen3.6 27B at 13. The machine was shared. These are observations, not guaranteed specifications or comparisons with other devices. Decode throughput does not establish task accuracy or total interaction latency."
+    },
+    {
+      "layout": "kpis",
+      "title": "Concurrency Changes Aggregate Throughput",
+      "takeaway": "Aggregate tokens describe shared serving capacity, not each developer's response speed.",
+      "data": {
+        "items": [
+          {
+            "value": "~140 tokens/s",
+            "label": "Qwen3-Coder 30B aggregate",
+            "icon": "multitask",
+            "source": "4 streams; Local-AI-Bench, October 2026; shared machine"
+          },
+          {
+            "value": "~245 tokens/s",
+            "label": "Gemma 4 26B aggregate",
+            "icon": "network",
+            "source": "8 streams; Local-AI-Bench, October 2026; shared machine"
+          },
+          {
+            "value": "0.13 s",
+            "label": "Qwen3-Coder first token",
+            "icon": "timer",
+            "source": "Qwen3-Coder 30B; Local-AI-Bench, October 2026; shared machine"
+          }
+        ]
+      },
+      "notes": "Qwen3-Coder 30B reached about 140 tokens/s across 4 concurrent streams. Gemma 4 26B reached about 245 tokens/s across 8. These aggregate results do not describe per-request speed or equal-load comparisons. Qwen3-Coder's measured first-token latency was 0.13 seconds. Source: Local-AI-Bench, this device, October 2026, shared machine; not guaranteed specifications."
+    },
+    {
+      "layout": "analogy",
+      "title": "MoE Works Like A Specialist Workshop",
+      "takeaway": "MoE selects specialists per token; dense models engage broader computation.",
+      "data": {
+        "concept": {
+          "label": "Mixture of experts",
+          "icon": "ai"
+        },
+        "analog": {
+          "label": "Specialist workshop",
+          "icon": "tools"
+        },
+        "pairs": [
+          {
+            "concept": "Full model weights",
+            "analog": "Stocked workshop"
+          },
+          {
+            "concept": "Token router",
+            "analog": "Job dispatcher"
+          },
+          {
+            "concept": "Active experts",
+            "analog": "Selected specialists"
+          },
+          {
+            "concept": "Dense computation",
+            "analog": "Whole crew engaged"
+          }
+        ]
+      },
+      "notes": "Qwen3-Coder 30B is MoE, with about 3B active parameters per token. Its Q4_K_M file is 17.3 GiB. Selecting specialists reduces active computation; it does not shrink the stored model to the active parameter count. Dense Qwen3.6 27B engages broader computation each token. The measured decode difference is not evidence of greater accuracy."
+    },
+    {
+      "layout": "hub",
+      "title": "Model Bands Guide Fit, Not Accuracy",
+      "takeaway": "Choose parameter bands for planning, then measure quality on representative Zava tasks.",
+      "data": {
+        "center": {
+          "label": "Model fit",
+          "icon": "sliders"
+        },
+        "spokes": [
+          {
+            "label": "S: 1–4B",
+            "icon": "chip"
+          },
+          {
+            "label": "M: 7–8B",
+            "icon": "cube"
+          },
+          {
+            "label": "L: 14–20B",
+            "icon": "layers"
+          },
+          {
+            "label": "XL: 24–32B",
+            "icon": "server"
+          }
+        ]
+      },
+      "notes": "S spans 1–4B parameters, M 7–8B, L 14–20B and XL 24–32B. These are planning estimates, not accuracy tiers. Start with representative code and document tasks, then assess model fit alongside context, latency and acceptance rate. A larger parameter count does not demonstrate higher quality."
+    },
+    {
+      "layout": "analogy",
+      "title": "RAG Is Your Engineering Librarian",
+      "takeaway": "RAG brings relevant internal passages into a local model's answer context.",
+      "data": {
+        "concept": {
+          "label": "Internal document RAG",
+          "icon": "search"
+        },
+        "analog": {
+          "label": "Engineering librarian",
+          "icon": "library"
+        },
+        "pairs": [
+          {
+            "concept": "Local embeddings",
+            "analog": "Subject catalog"
+          },
+          {
+            "concept": "Vector retrieval",
+            "analog": "Find relevant pages"
+          },
+          {
+            "concept": "Prompt context",
+            "analog": "Open selected references"
+          },
+          {
+            "concept": "Local generation",
+            "analog": "Draft the answer"
+          },
+          {
+            "concept": "Source links",
+            "analog": "Return to originals"
+          }
+        ]
+      },
+      "notes": "Proposed pilot RAG: ingest approved engineering documents, chunk and embed locally, retrieve relevant passages, and supply them as context to local generation. The librarian analogy separates retrieval from model knowledge. Retain source links so engineers can inspect evidence. Retrieval can miss relevant passages, and generated answers require review. Keep CAD/PLM data within approved local access boundaries."
+    },
+    {
+      "layout": "canvas",
+      "title": "Local By Default, Cloud By Policy",
+      "takeaway": "Keep sensitive work local; approve non-sensitive payloads before cloud reasoning.",
+      "data": {
+        "elements": [
+          {
+            "type": "line",
+            "x": 0.15,
+            "y": 0.85,
+            "x2": 8.95,
+            "y2": 0.85,
+            "label": "",
+            "tone": "accent1",
+            "dashed": true
+          },
+          {
+            "type": "line",
+            "x": 8.95,
+            "y": 0.85,
+            "x2": 8.95,
+            "y2": 5.55,
+            "label": "",
+            "tone": "accent1",
+            "dashed": true
+          },
+          {
+            "type": "line",
+            "x": 8.95,
+            "y": 5.55,
+            "x2": 0.15,
+            "y2": 5.55,
+            "label": "",
+            "tone": "accent1",
+            "dashed": true
+          },
+          {
+            "type": "line",
+            "x": 0.15,
+            "y": 5.55,
+            "x2": 0.15,
+            "y2": 0.85,
+            "label": "",
+            "tone": "accent1",
+            "dashed": true
+          },
+          {
+            "type": "text",
+            "x": 0.4,
+            "y": 0.25,
+            "w": 3.1,
+            "h": 0.4,
+            "label": "Proposed local lane",
+            "size": "m",
+            "tone": "accent1"
+          },
+          {
+            "type": "text",
+            "x": 5.85,
+            "y": 0.1,
+            "w": 3.35,
+            "h": 0.35,
+            "label": "Heavy task candidates",
+            "size": "s",
+            "tone": "accent3"
+          },
+          {
+            "type": "line",
+            "x": 3.925,
+            "y": 1.4,
+            "x2": 3.925,
+            "y2": 0.55,
+            "label": "",
+            "tone": "accent3",
+            "dashed": true
+          },
+          {
+            "type": "line",
+            "x": 3.925,
+            "y": 0.55,
+            "x2": 10.475,
+            "y2": 0.55,
+            "label": "",
+            "tone": "accent3",
+            "dashed": true
+          },
+          {
+            "type": "arrow",
+            "x": 10.475,
+            "y": 0.55,
+            "x2": 10.475,
+            "y2": 1.4,
+            "label": "",
+            "tone": "accent3",
+            "dashed": true
+          },
+          {
+            "type": "box",
+            "x": 0.4,
+            "y": 1.4,
+            "w": 1.85,
+            "h": 0.85,
+            "label": "Developer tools",
+            "icon": "code",
+            "tone": "primary"
+          },
+          {
+            "type": "hexagon",
+            "x": 3,
+            "y": 1.4,
+            "w": 1.85,
+            "h": 0.85,
+            "label": "Policy router",
+            "icon": "sliders",
+            "tone": "accent1"
+          },
+          {
+            "type": "box",
+            "x": 6.05,
+            "y": 1.4,
+            "w": 2.45,
+            "h": 0.85,
+            "label": "Local inference",
+            "icon": "ai",
+            "tone": "accent1"
+          },
+          {
+            "type": "text",
+            "x": 5.75,
+            "y": 0.95,
+            "w": 3.1,
+            "h": 0.35,
+            "label": "llama.cpp / Foundry Local",
+            "size": "s",
+            "tone": "muted"
+          },
+          {
+            "type": "hexagon",
+            "x": 9.3,
+            "y": 1.4,
+            "w": 2.35,
+            "h": 0.85,
+            "label": "Approval gate",
+            "icon": "shield",
+            "tone": "accent3"
+          },
+          {
+            "type": "box",
+            "x": 9.3,
+            "y": 4,
+            "w": 2.35,
+            "h": 0.9,
+            "label": "Cloud reasoning",
+            "icon": "cloud",
+            "tone": "accent3"
+          },
+          {
+            "type": "box",
+            "x": 0.4,
+            "y": 4,
+            "w": 1.85,
+            "h": 0.9,
+            "label": "Approved internal docs",
+            "icon": "folder",
+            "tone": "accent2"
+          },
+          {
+            "type": "box",
+            "x": 3,
+            "y": 4,
+            "w": 1.85,
+            "h": 0.9,
+            "label": "Local embedder",
+            "icon": "cube",
+            "tone": "accent2"
+          },
+          {
+            "type": "box",
+            "x": 6.05,
+            "y": 4,
+            "w": 2.45,
+            "h": 0.9,
+            "label": "Local retrieval index",
+            "icon": "database",
+            "tone": "accent2"
+          },
+          {
+            "type": "arrow",
+            "x": 2.25,
+            "y": 1.825,
+            "x2": 3,
+            "y2": 1.825,
+            "label": "",
+            "tone": "primary",
+            "dashed": false
+          },
+          {
+            "type": "arrow",
+            "x": 4.85,
+            "y": 1.825,
+            "x2": 6.05,
+            "y2": 1.825,
+            "label": "Local tasks",
+            "tone": "accent1",
+            "dashed": false
+          },
+          {
+            "type": "arrow",
+            "x": 2.25,
+            "y": 4.45,
+            "x2": 3,
+            "y2": 4.45,
+            "label": "",
+            "tone": "accent2",
+            "dashed": false
+          },
+          {
+            "type": "arrow",
+            "x": 4.85,
+            "y": 4.45,
+            "x2": 6.05,
+            "y2": 4.45,
+            "label": "",
+            "tone": "accent2",
+            "dashed": false
+          },
+          {
+            "type": "arrow",
+            "x": 4.4,
+            "y": 2.25,
+            "x2": 6.3,
+            "y2": 4,
+            "label": "RAG query",
+            "tone": "accent2",
+            "dashed": false
+          },
+          {
+            "type": "arrow",
+            "x": 7.3,
+            "y": 4,
+            "x2": 7.3,
+            "y2": 2.25,
+            "label": "Context",
+            "tone": "accent2",
+            "dashed": false
+          },
+          {
+            "type": "arrow",
+            "x": 10.475,
+            "y": 2.25,
+            "x2": 10.475,
+            "y2": 4,
+            "label": "No sensitive IP",
+            "tone": "accent3",
+            "dashed": true
+          },
+          {
+            "type": "text",
+            "x": 9.2,
+            "y": 5.1,
+            "w": 2.55,
+            "h": 0.35,
+            "label": "Otherwise stay local",
+            "size": "s",
+            "tone": "muted"
+          },
+          {
+            "type": "text",
+            "x": 0.4,
+            "y": 5.1,
+            "w": 3.4,
+            "h": 0.35,
+            "label": "CAD/PLM and source code",
+            "size": "s",
+            "tone": "muted"
+          }
+        ]
+      },
+      "notes": "Proposed pilot architecture: developer requests enter a policy router. Code and internal-document work stay local; approved documents feed local embeddings and retrieval. Retrieved passages ground local inference through either runtime. Only approved, non-sensitive heavy-reasoning payloads may leave for cloud models. Deny uncertain outbound requests; enforce document permissions and inspect egress. These controls are design requirements, not claimed certifications."
+    },
+    {
+      "layout": "flow",
+      "title": "Validate The Developer Loop",
+      "takeaway": "Treat generation as a reviewed draft, then measure the developer experience.",
+      "data": {
+        "steps": [
+          {
+            "label": "Ask locally",
+            "detail": "Request code generation or internal-document answers",
+            "icon": "chat"
+          },
+          {
+            "label": "Retrieve context",
+            "detail": "Find approved engineering passages when relevant",
+            "icon": "search"
+          },
+          {
+            "label": "Draft response",
+            "detail": "Generate code or answers using local inference",
+            "icon": "ai"
+          },
+          {
+            "label": "Review and test",
+            "detail": "Inspect source evidence and run existing tests",
+            "icon": "checklist"
+          },
+          {
+            "label": "Capture outcomes",
+            "detail": "Measure acceptance, latency and developer experience",
+            "icon": "chart"
+          }
+        ]
+      },
+      "notes": "Pilot representative, permissioned tasks: code generation, code explanation and internal-document questions. Retrieve context when useful, not automatically for every request. Engineers review changes and source evidence, then run existing tests. Capture acceptance rate, latency and developer experience. Agree acceptance criteria before starting; do not treat throughput as a productivity measurement."
+    },
+    {
+      "layout": "statement",
+      "title": "Made On The Device It Explains",
+      "takeaway": "Surface Laptop Ultra is both the platform and the demonstration.",
+      "data": {
+        "icon": "laptop",
+        "text": "Generated on this device",
+        "sub": "Qwen3-Coder 30B through llama.cpp; no cloud calls."
+      },
+      "notes": "The supplied provenance states that this deck was generated on Surface Laptop Ultra by Qwen3-Coder 30B through llama.cpp, with no cloud calls. This is evidence about the deck-generation workload, not blanket assurance for code or RAG tasks. The pilot measures those separately."
+    },
+    {
+      "layout": "cta",
+      "title": "Approve Zava's Local AI Pilot",
+      "takeaway": "Start with 10 developers for 2 weeks; expand only on measured evidence.",
+      "data": {
+        "steps": [
+          {
+            "label": "Select pilot team",
+            "detail": "10 developers covering coding and document retrieval",
+            "icon": "team"
+          },
+          {
+            "label": "Run real tasks",
+            "detail": "2 weeks using approved code and engineering documents",
+            "icon": "calendar"
+          },
+          {
+            "label": "Review evidence",
+            "detail": "Acceptance rate, latency and developer experience",
+            "icon": "chart"
+          }
+        ],
+        "ask": "Approve the 10-developer, 2-week technical pilot."
+      },
+      "notes": "Choose a pilot owner and representative developers, define approved data boundaries and agree acceptance criteria before starting. Run local code generation and internal-document RAG, with policy-approved cloud routing for eligible heavy reasoning. After 2 weeks, review acceptance rate, latency and developer experience together. Decide next steps from evidence, not peak throughput."
+    }
+  ]
+}
